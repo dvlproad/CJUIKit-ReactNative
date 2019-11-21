@@ -18,6 +18,7 @@ import CJTextButton from "./button/CJTextButton";
 import CJImageButton from "./button/CJImageButton";
 import CJTextImageButton from "./button/CJTextImageButton";
 import CJImageTextButton from "./button/CJImageTextButton";
+import CJEditSubmitButton from "./button/CJEditSubmitButton";
 
 // navigation 导航栏(含路由)
 // import CJNavigationFactory from "./navigation/CJNavigationFactory";
@@ -50,6 +51,7 @@ var CJBaseUIKit = {
   CJImageButton,
   CJTextImageButton,
   CJImageTextButton,
+  CJEditSubmitButton,
 
   // navigation 导航栏(含路由)
   // CJNavigationFactory, //(不要引用该类，即请将该类实现复制一遍在具体APP中再自己相应修改一下即可)

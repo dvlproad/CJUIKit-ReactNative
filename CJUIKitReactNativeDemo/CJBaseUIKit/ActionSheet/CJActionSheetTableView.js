@@ -1,7 +1,7 @@
 /**
  * CJActionSheetTableView.js
  *
- * @Description: ActionSheet中不含①顶部标题与③底部取消部分的内容区域列表视图
+ * @Description: 【单选】ActionSheet中不含①顶部标题与③底部取消部分的内容区域【单选】列表视图
  *
  * @author      ciyouzen
  * @email       dvlproad@163.com

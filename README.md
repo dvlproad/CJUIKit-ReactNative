@@ -14,3 +14,18 @@ CJUIKit-ReactNative
 ①安装 `react-navigation`
 
 `npm install react-navigation --save` 或 `yarn add react-navigation`
+
+②安装 react-native-gesture-handler 
+
+```
+$ npm install --save react-native-gesture-handler
+# or with yarn
+# yarn add react-native-gesture-handler
+```
+
+1. 链接所有依赖项:
+
+```
+$ react-native link
+```
+

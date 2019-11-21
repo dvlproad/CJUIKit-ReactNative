@@ -1,7 +1,7 @@
 /**
  * CJActionSheetComponent.js
  *
- * @Description: ActionSheet中含①顶部标题、②内容区域列表、③底部取消部分的整体视图
+ * @Description: 【单选】ActionSheet中含①顶部标题、②内容区域列表、③底部取消部分的整体视图
  *
  * @author      ciyouzen
  * @email       dvlproad@163.com
@@ -19,11 +19,11 @@ let screenBottomHeight = Platform.OS === 'ios' ? screenHeight >= 812 ? 34 : 0 : 
 
 export default class CJActionSheetComponent extends Component {
     static defaultProps = {
-        actionTitle: '',
+        headerTitle: '',
     };
     static propTypes = {
-        actionTitle: PropTypes.string, //头部
-        cancel: PropTypes.func,     // 取消操作
+        headerTitle: PropTypes.string,  // 顶部标题
+        cancel: PropTypes.func,         // 取消操作
         children: PropTypes.oneOfType([PropTypes.object, PropTypes.array]),
     };
 
@@ -34,7 +34,7 @@ export default class CJActionSheetComponent extends Component {
                 onPress={this.props.cancel}
                 activeOpacity={0.9}>
                 <View style={{position: 'absolute', bottom: 0, left: 0, right: 0, backgroundColor: '#fff'}}>
-                    {this.props.actionTitle ? <CJActionSheetTitle actionTitle={this.props.actionTitle} /> : null}
+                    {this.props.headerTitle ? <CJActionSheetHeader actionTitle={this.props.headerTitle} /> : null}
                     {this.props.children}
                     <View style={{borderTopWidth: 10, borderTopColor: '#F1EFF0'}}></View>
                     <CJActionSheetTableCell actionName={'取消'}
@@ -50,7 +50,7 @@ export default class CJActionSheetComponent extends Component {
     }
 }
 
-class CJActionSheetTitle extends Component {
+class CJActionSheetHeader extends Component {
     static propTypes = {
         actionTitle: PropTypes.string,
     };

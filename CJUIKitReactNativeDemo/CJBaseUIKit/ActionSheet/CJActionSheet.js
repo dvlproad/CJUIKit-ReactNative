@@ -1,4 +1,14 @@
-// CJActionSheet.js
+/**
+ * CJActionSheet.js
+ *
+ * @Description: 【单选】的ActionSheet
+ *
+ * @author      ciyouzen
+ * @email       dvlproad@163.com
+ * @date        2019-11-18 01:07:17
+ *
+ * Copyright (c) dvlproad. All rights reserved.
+ */
 
 /*
 CJActionSheet: 最基础的ActionSheet使用示例
@@ -66,11 +76,11 @@ let actionSheetMaxHeight = screenHeight - actionSheetTop;   //整个完整的act
 
 export class CJActionSheet extends Component {
     static propTypes = {
-        actionTitle: PropTypes.string, //头部
+        headerTitle: PropTypes.string, //头部
     };
 
     static defaultProps = {
-        actionTitle: '',
+        headerTitle: '',
     };
 
     constructor(props) {
@@ -118,7 +128,7 @@ export class CJActionSheet extends Component {
         return (
             <CJActionSheetFactory visible={this.state.visible}
                                   animationType={'none'}
-                                  actionTitle={this.props.actionTitle}
+                                  headerTitle={this.props.headerTitle}
                                   cancel={() => {
                                       this.hide();
                                       // this.dealAction(this.state.clickCancel);
@@ -143,7 +153,7 @@ export class CJActionSheetFactory extends Component {
     static propTypes = {
         visible: PropTypes.bool,
         animationType: PropTypes.string, //模态弹出效果
-        actionTitle: PropTypes.string, //头部
+        headerTitle: PropTypes.string, //头部
         cancel: PropTypes.func, // 取消操作
         children: PropTypes.oneOfType([PropTypes.object, PropTypes.array]),
     };
@@ -152,7 +162,7 @@ export class CJActionSheetFactory extends Component {
         visible: false,
         animationType: 'slide',
 
-        actionTitle: '',
+        headerTitle: '',
     };
 
 
@@ -167,9 +177,10 @@ export class CJActionSheetFactory extends Component {
                    transparent={true}
                    onRequestClose={() => { }}
             >
-                <CJActionSheetComponent actionTitle={this.props.actionTitle}
-                                        cancel={this.props.cancel}
-                                        children={this.props.children}
+                <CJActionSheetComponent
+                    headerTitle={this.props.headerTitle}
+                    cancel={this.props.cancel}
+                    children={this.props.children}
                 />
             </Modal>
         );
