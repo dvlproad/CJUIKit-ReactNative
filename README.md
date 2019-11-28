@@ -29,3 +29,19 @@ $ npm install --save react-native-gesture-handler
 $ react-native link
 ```
 
+
+
+
+
+```
+yarn add react-native-root-toast
+yarn add react-native-svg
+
+```
+
+
+
+
+
+
+
