@@ -30,7 +30,7 @@ export default class CJSectionTableView extends Component {
         return (
             <CJTableViewCell
                 text={moduleModel.title}
-                detailText={moduleModel.valueText}
+                detailText={moduleModel.detailText}
                 clickAction={() => (
                     this.props.clickModuleModel(moduleModel)
                 )}

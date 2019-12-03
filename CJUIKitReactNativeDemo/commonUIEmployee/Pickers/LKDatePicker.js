@@ -70,7 +70,7 @@ export default class LKDatePicker extends CJDatePicker {
      * @param date    弹出时候选中的日期(new Date())
      */
     showWithDate(date) {
-        super.showWithDate();
+        super.showWithDate(date);
     }
 
     /**

@@ -32,8 +32,34 @@ export default class LKDemoChooseBasePage extends Component {
         }
     }
 
+    /**
+     * 子类请重写此类
+     * @returns {null}
+     */
     renderChooseComponents() {
+        // let chooseComponents = [];
+        // chooseComponents.push(this.getDatePicker1());
+        // chooseComponents.push(this.getDatePicker2());
+        // return chooseComponents;
         return null;
+    }
+
+    /**
+     * 更新detailText
+     * @param section
+     * @param row
+     * @param detailText
+     */
+    updateIndexPathWithDetailText(section, row, detailText) {
+        let sectionDataModel = this.state.sectionDataModels[section];
+        let dataModel = sectionDataModel.data[row];
+        dataModel.detailText = detailText;
+
+        this.setState({
+            sectionDataModels: this.state.sectionDataModels,
+        }, ()=>{
+
+        })
     }
 
 

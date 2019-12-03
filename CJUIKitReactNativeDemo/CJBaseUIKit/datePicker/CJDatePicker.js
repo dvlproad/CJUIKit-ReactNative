@@ -137,7 +137,7 @@ export default class CJDatePicker extends Component {
             hasCreate: needCreateAtFirst,
             noCover: false,
 
-            selectedValues: ['2017', '6', '30'],    // 注意：目前月份不能成06
+            selectedValues: props.selectedValues,
         }
     }
 

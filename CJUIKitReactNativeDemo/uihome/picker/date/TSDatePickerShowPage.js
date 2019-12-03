@@ -1,12 +1,19 @@
-//TSDatePickerShowPage.js
+/**
+ * TSDatePickerShowPage.js
+ *
+ * @Description: 测试datePicker弹出时候的各种情况
+ *
+ * @author      chaoqian.li
+ * @date        2019-12-04 01:08:16
+ */
 import React, { Component } from 'react';
-import {View, Alert} from 'react-native';
 import {
     LKDemoChooseBasePage,
-    LKActionSheet,
-    LKMultipleChooseActionSheet,
-    LKToast,
+} from "../../../commonUIDemo/commonUIDemo";
+
+import {
     LKDatePicker,
+    LKToast,
 } from "../../../lkcui/lkcui";
 
 export default class TSDatePickerShowPage extends LKDemoChooseBasePage {
@@ -17,14 +24,15 @@ export default class TSDatePickerShowPage extends LKDemoChooseBasePage {
             dealIndex: 0,
 
             sectionDataModels: [
-                { key: "事项选择",
+                {
+                    key: "弹出时选中的值",
                     data: [
                         {
                             title: "每次均为上次选中时间",
                             detailText: '2019-06-06',
                             clickButtonHandle: (moduleModel) => {
-                                this.state.dealIndex = 1;
-                                this.datePicker.show();
+                                this.state.dealIndex = 0;
+                                this.datePicker1.show();
                             },
                         },
                         {
@@ -32,14 +40,38 @@ export default class TSDatePickerShowPage extends LKDemoChooseBasePage {
                             detailText: '2000-02-29',
                             clickButtonHandle: (moduleModel) => {
                                 this.state.dealIndex = 1;
-                                this.datePicker.showWithDateString('2000-02-29');
+                                this.datePicker2.showWithDateString('2000-02-29');
+                            },
+                        },
+                    ]
+                },
+                {
+                    key: "弹出时所带的蒙层",
+                    data: [
+                        {
+                            title: "带蒙层",
+                            detailText: null,
+                            clickButtonHandle: (moduleModel) => {
+                                this.datePicker3.show();
                             },
                         },
                         {
-                            title: "弹出日期控件",
+                            title: "不带蒙层",
+                            detailText: null,
                             clickButtonHandle: (moduleModel) => {
-                                this.state.dealIndex = 1;
-                                this.datePicker.show();
+                                this.datePicker3.showWithNoCover();
+                            },
+                        },
+                    ]
+                },
+                {
+                    key: "自定义工具栏的日期选择器",
+                    data: [
+                        {
+                            title: "左键自定义为'重置'",
+                            detailText: null,
+                            clickButtonHandle: (moduleModel) => {
+                                this.customToolbarDatePicker.show();
                             },
                         },
                     ]
@@ -50,33 +82,62 @@ export default class TSDatePickerShowPage extends LKDemoChooseBasePage {
 
 
     renderChooseComponents() {
+        let chooseComponents = [];
+        chooseComponents.push(this.getDatePicker1());
+        chooseComponents.push(this.getDatePicker2());
+        chooseComponents.push(this.getDatePicker3());
+        chooseComponents.push(this.getDatePicker4());
+        return chooseComponents;
+    }
+
+    getDatePicker1(){
         return (
-                <LKDatePicker ref={ref => this.datePicker = ref}
-                              onPickerConfirm={(dateString)=>{
-                                  let sectionDataModel = this.state.sectionDataModels[0];
-                                  let dataModel = sectionDataModel.data[this.state.dealIndex];
-                                  dataModel.detailText = dateString;
+            <LKDatePicker ref={ref => this.datePicker1 = ref}
+                          selectedValues={['2019', '6', '6']}   // 不能有多余的0，如6月不能写06，而是写6
+                          onPickerConfirm={(dateString)=>{
+                              this.updateIndexPathWithDetailText(0, this.state.dealIndex, dateString);
+                          }}
+            />
+        )
+    }
 
+    getDatePicker2(){
+        return (
+            <LKDatePicker ref={ref => this.datePicker2 = ref}
+                          selectedValues={['2000', '2', '29']}
+                          onPickerConfirm={(dateString)=>{
+                              this.updateIndexPathWithDetailText(0, this.state.dealIndex, dateString);
+                          }}
+            />
+        )
+    }
 
-                                  // this.state.sectionDataModels[index] = item;
-                                  this.setState({
-                                      sectionDataModels: this.state.sectionDataModels,
-                                  }, ()=>{
+    getDatePicker3(){
+        return (
+            <LKDatePicker ref={ref => this.datePicker3 = ref}
+                          selectedValues={['2000', '2', '29']}
+                          onPickerConfirm={(dateString)=>{
+                              LKToast.showMessage('我只是测试蒙层使用的datePicker')
+                          }}
+            />
+        )
+    }
 
-                                  })
+    getDatePicker4(){
+        return (
+            <LKDatePicker ref={ref => this.customToolbarDatePicker = ref}
+                          selectedValues={['2000', '2', '29']}
+                          cancelText={'重置'}
+                          cancelTextSize={17}
+                          cancelTextColor={'#172991'}
 
-                                  // if (this.state.dealIndex == 0) {
-                                  //     this.setState({
-                                  //         dateString1: dateString
-                                  //     })
-                                  // } else if (this.state.dealIndex == 1) {
-                                  //     this.setState({
-                                  //         dateString2: dateString
-                                  //     })
-                                  // }
-                              }}
-                />
-
+                          onCoverPress={()=>{
+                              LKToast.showMessage('点击空白区域');
+                          }}
+                          onPickerConfirm={(dateString)=>{
+                              LKToast.showMessage('我只是测试蒙层使用的datePicker')
+                          }}
+            />
         )
     }
 }

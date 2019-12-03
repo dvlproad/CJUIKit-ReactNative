@@ -1,4 +1,11 @@
-// DatePickerPage_01ComJS.js
+/**
+ * TSDatePickerFramePage.js
+ *
+ * @Description: 测试自定义datePicker位置
+ *
+ * @author      chaoqian.li
+ * @date        2019-12-04 02:51:57
+ */
 
 import React, { Component } from 'react';
 import {View} from 'react-native';
@@ -11,7 +18,7 @@ import {
 } from '../../../lkcui/lkcui';
 
 
-export default class DatePickerPage_02ComJS extends Component {
+export default class TSDatePickerFramePage extends Component {
 
     constructor(props) {
         super(props);
@@ -31,7 +38,7 @@ export default class DatePickerPage_02ComJS extends Component {
                         width: 180,
                         backgroundColor:'red'
                     }}
-                    title={this.state.dateString1}
+                    normalTitle={this.state.dateString1}
                     onPress={()=>{
 
                     }}

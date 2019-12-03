@@ -46,9 +46,9 @@ import TSPopupManagerPage from "./actionsheet/TSPopupManagerPage";
 import TSPickerAllHomePage, { PickerChildHomePages } from "./picker/TSPickerAllHomePage";
 
 
-export const UIRoutePage = 'UIHomePage';
-// export const UIRoutePage = 'PickerDateHomePage';
-// export const UIRoutePage = 'TSButtonHomePage';
+// export const UIRoutePage = 'UIHomePage';
+export const UIRoutePage = 'PickerDateHomePage';
+// export const UIRoutePage = 'TSDatePickerShowPage';
 export const UIPages = {
     UIHomePage: {
         screen: UIHomePage,
