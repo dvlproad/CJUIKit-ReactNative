@@ -8,7 +8,9 @@ import {
     LKDemoTableHomeComponent,
     LKDemoCollectionHomeComponent,
     LKDemoChooseBasePage,
+} from "../commonUIDemo/commonUIDemo";
 
+import {
     // navigation 导航栏(含路由)
     LKNavigationFactory,
     LuckinRoute,
@@ -25,11 +27,11 @@ import {
     LKImageLookHomeComponent,
     LKImageActionCollectionView,
     LKImageActionHomeComponent,
+    LKDescriptionBasePage,
 
     // 日期选择
     LKDatePickShowType,
     LKDatePickerCreateTimeType,
-    LKComJSDatePicker,
     LKDatePicker,
 
     // 地区选择
@@ -60,11 +62,11 @@ var LKCUI = {
     LKImageLookHomeComponent,
     LKImageActionCollectionView,
     LKImageActionHomeComponent,
+    LKDescriptionBasePage,
 
     // 日期选择
     LKDatePickShowType,
     LKDatePickerCreateTimeType,
-    LKComJSDatePicker,
     LKDatePicker,
     /**
      * <LKDatePicker ref={ref => this.datePicker = ref} />

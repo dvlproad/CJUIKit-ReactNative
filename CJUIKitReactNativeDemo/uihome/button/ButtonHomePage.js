@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import {
     LKNavigationFactory,
     LKDemoTableHomeComponent
-} from "../../commonUI/luckincommonui";
+} from "../../lkcui/lkcui";
 
 export default class ButtonHomePage extends LKDemoTableHomeComponent {
     static navigationOptions = ({ navigation }) => {
@@ -19,16 +19,12 @@ export default class ButtonHomePage extends LKDemoTableHomeComponent {
                     key: "Button",
                     data: [
                         {
-                            title: "RNButtonPage",
-                            nextPageName: "RNButtonPage"
+                            title: "设置按钮背景色的ButtonBGPage",
+                            nextPageName: "TSButtonBGPage"
                         },
                         {
-                            title: "EditSubmitButtonPage",
-                            nextPageName: "EditSubmitButtonPage"
-                        },
-                        {
-                            title: "ButtonColorPage",
-                            nextPageName: "ButtonColorPage"
+                            title: "TSEditSubmitButtonPage",
+                            nextPageName: "TSEditSubmitButtonPage"
                         },
                     ]
                 },
@@ -37,34 +33,23 @@ export default class ButtonHomePage extends LKDemoTableHomeComponent {
     }
 }
 
-//ButtonPages
-import RNButtonPage from "./RNButtonPage";
-import EditSubmitButtonPage from "./EditSubmitButtonPage";
-import ButtonColorPage from "./ButtonColorPage";
+/**
+ * ButtonChildPages
+ */
+import TSButtonBGPage from "./TSButtonBGPage";
+import TSEditSubmitButtonPage from "./TSEditSubmitButtonPage";
 
-export const ButtonPages = {
-    ButtonHomePage: {
-        screen: ButtonHomePage,
+export const ButtonChildPages = {
+    TSButtonBGPage: {
+        screen: TSButtonBGPage,
         navigationOptions: () => ({
-            title: `ButtonHomePage`,
+            title: `TSButtonBGPage`,
         }),
     },
-    RNButtonPage: {
-        screen: RNButtonPage,
+    TSEditSubmitButtonPage: {
+        screen: TSEditSubmitButtonPage,
         navigationOptions: () => ({
-            title: `RNButtonPage`,
-        }),
-    },
-    EditSubmitButtonPage: {
-        screen: EditSubmitButtonPage,
-        navigationOptions: () => ({
-            title: `EditSubmitButtonPage`,
-        }),
-    },
-    ButtonColorPage: {
-        screen: ButtonColorPage,
-        navigationOptions: () => ({
-            title: `ButtonColorPage`,
+            title: `TSEditSubmitButtonPage`,
         }),
     },
 }

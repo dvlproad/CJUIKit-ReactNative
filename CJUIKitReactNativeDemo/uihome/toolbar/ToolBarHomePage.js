@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import {ScrollView, Button, Text, View, TouchableWithoutFeedback} from 'react-native';
 import {
     LKNavigationFactory,
-} from "../../commonUI/luckincommonui";
+} from "../../lkcui/lkcui";
 import CJBottomToolbar from "../../CJBaseUIKit/base/CJBottomToolbar";
 
 export default class ToolBarHomePage extends Component {

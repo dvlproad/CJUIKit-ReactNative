@@ -1,4 +1,4 @@
-// LKNavigationFactory.js
+// LKDemoNavigationFactory.js
 
 import React, { Component } from 'react';
 import {
@@ -9,7 +9,7 @@ import { Button } from "react-native";
 import { CJBackButtonFactory } from "../../CJBaseUIKit/navigation/CJNavigationFactory";
 import MiniApp from "../../bridge_modules_js/MiniApp";
 
-export default class LKNavigationFactory {
+export default class LKDemoNavigationFactory {
     /**
      * 创建会从包内返回到壳APP的导航栏
      *

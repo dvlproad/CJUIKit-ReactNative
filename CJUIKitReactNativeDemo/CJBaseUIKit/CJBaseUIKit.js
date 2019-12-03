@@ -18,7 +18,6 @@ import CJTextButton from "./button/CJTextButton";
 import CJImageButton from "./button/CJImageButton";
 import CJTextImageButton from "./button/CJTextImageButton";
 import CJImageTextButton from "./button/CJImageTextButton";
-import CJEditSubmitButton from "./button/CJEditSubmitButton";
 
 // navigation 导航栏(含路由)
 // import CJNavigationFactory from "./navigation/CJNavigationFactory";
@@ -34,7 +33,7 @@ import CJImageLookCollectionView from "./collectionView/CJImageLookCollectionVie
 import CJImageActionCollectionView from "./collectionView/CJImageActionCollectionView";
 
 // datePicker 日期选择器
-import CJBaseDatePicker, {CJDatePickShowType} from "./datePicker/CJBaseDatePicker";
+import {CJDatePickShowType} from "./datePicker/CJDatePickerUtil";
 import CJDatePicker, {CJDatePickerCreateTimeType} from "./datePicker/CJDatePicker";
 
 // areaPicker 地区选择器
@@ -51,7 +50,6 @@ var CJBaseUIKit = {
   CJImageButton,
   CJTextImageButton,
   CJImageTextButton,
-  CJEditSubmitButton,
 
   // navigation 导航栏(含路由)
   // CJNavigationFactory, //(不要引用该类，即请将该类实现复制一遍在具体APP中再自己相应修改一下即可)
@@ -69,7 +67,6 @@ var CJBaseUIKit = {
   // datePicker 日期选择器
   CJDatePickShowType,         // 日期器的选择样式
   CJDatePickerCreateTimeType, // 日期选择器创建的时机
-  CJBaseDatePicker,
   CJDatePicker,
 
   // areaPicker 地区选择器

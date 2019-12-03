@@ -33,7 +33,15 @@ export default class CJBaseDialog extends CJBaseComponent {
         return this.state._isShow;
     }
 
+    /**
+     * 显示选择器
+     */
     show(callback, state = {}) {
+        state = Object.assign(state, {_isNoCover: false});
+        this.showEvent(callback, state);
+    }
+
+    showEvent(callback, state = {}) {
         this.setState({
             _isShow: true,
             ...state
@@ -50,9 +58,12 @@ export default class CJBaseDialog extends CJBaseComponent {
         });
     }
 
+    /**
+     * 弹出选择器，并且不带背景
+     */
     showWithNoCover(callback, state = {}) {
-        this.state._isNoCover = true;
-        this.show(callback, state);
+        state = Object.assign(state, {_isNoCover: true});
+        this.showEvent(callback, state);
     }
 
     dismiss(callback) {
@@ -100,7 +111,7 @@ export default class CJBaseDialog extends CJBaseComponent {
             top: 0,
             backgroundColor: 0x00000050
         };
-        if (this.state._isNoCover) {
+        if (this.state && this.state._isNoCover) {
             viewStyle = {
                 top: 0,
                 backgroundColor: 'transparent'
