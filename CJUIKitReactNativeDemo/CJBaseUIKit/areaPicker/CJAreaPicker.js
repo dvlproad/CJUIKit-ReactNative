@@ -118,7 +118,7 @@ export default class CJAreaPicker extends Component {
 
             this.areaPicker.show();
         } else {
-            //LKToastUtil.showMessage('Error：你还未创建日期选择器');
+            //LKToast.showMessage('Error：你还未创建日期选择器');
         }
     }
 

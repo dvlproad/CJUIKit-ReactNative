@@ -33,7 +33,7 @@ import CJCollectionCell  from '../../CJBaseUIKit/CJBaseUIKit';
 
                     buttonIndex={index}
                     clickButtonHandle={()=>{
-                            LKToastUtil.showMessage('点击图片');
+                            LKToast.showMessage('点击图片');
                         }}
 
                     onLoadComplete={(buttonIndex)=>{

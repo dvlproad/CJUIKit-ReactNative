@@ -1,11 +1,11 @@
-//ButtonHomePage.js
+//TSButtonHomePage.js
 import React, { Component } from 'react';
 import {
     LKNavigationFactory,
     LKDemoTableHomeComponent
 } from "../../lkcui/lkcui";
 
-export default class ButtonHomePage extends LKDemoTableHomeComponent {
+export default class TSButtonHomePage extends LKDemoTableHomeComponent {
     static navigationOptions = ({ navigation }) => {
         return LKNavigationFactory.backPageNavigationOptions({ navigation }, `按钮`)
     };

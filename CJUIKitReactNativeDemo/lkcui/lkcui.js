@@ -22,6 +22,14 @@ import {
     LKActionSheet,
     LKMultipleChooseActionSheet,
 
+    // button
+    LKImageButton,
+    LKTextButton,
+    LKBlueBGButton,
+    LKEditSubmitButton,
+    // bottomButton
+    LKBlueBGBottomTextButton,
+
     // collection
     LKEntryHomeComponent,
     LKImageLookHomeComponent,
@@ -56,6 +64,14 @@ var LKCUI = {
     // ActionSheet
     LKActionSheet,
     LKMultipleChooseActionSheet,
+
+    // button
+    LKImageButton,
+    LKTextButton,
+    LKBlueBGButton,
+    LKEditSubmitButton,
+    // bottomButton
+    LKBlueBGBottomTextButton,
 
     // collection
     LKEntryHomeComponent,

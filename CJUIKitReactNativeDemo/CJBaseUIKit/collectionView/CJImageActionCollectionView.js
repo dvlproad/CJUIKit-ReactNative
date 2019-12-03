@@ -24,7 +24,7 @@ import { CJImageLookCollectionView } from '../../CJBaseUIKit/CJBaseUIKit';
                     minimumLineSpacing={10}
                     dataModels={this.state.moduleModels}
                     clickButtonHandle={(index)=>{
-                        LKToastUtil.showMessage("点击浏览图片" + index);
+                        LKToast.showMessage("点击浏览图片" + index);
                     }}
                     imageLoadedCountChange={(imageLoadedCount, isImageAllLoaded)=>{
                         let message = '';

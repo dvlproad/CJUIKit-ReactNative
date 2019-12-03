@@ -42,7 +42,7 @@ export default class LKDemoChooseBasePage extends Component {
         const listWidth = screenWidth;
 
         return (
-            <View>
+            <View style={{ flex: 1 }}>
                 <CJSectionTableView
                     sectionDataModels={this.state.sectionDataModels}
                     clickModuleModel={this._execModuleModel}

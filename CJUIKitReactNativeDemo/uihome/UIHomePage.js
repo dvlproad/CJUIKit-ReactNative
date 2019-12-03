@@ -12,7 +12,7 @@ export default class UIHomePage extends LKDemoTableHomeComponent {
             sectionDataModels: [
                 { key: "组件",
                     data: [
-                        { title: "Button", nextPageName: "ButtonHomePage" },
+                        { title: "Button(按钮)", nextPageName: "TSButtonHomePage" },
                         { title: "ToolBar(工具器)", nextPageName: "ToolBarHomePage" },
                     ]
                 },
@@ -20,6 +20,7 @@ export default class UIHomePage extends LKDemoTableHomeComponent {
                     data: [
                         { title: "ActionSheet", nextPageName: "TSActionSheetPage" },
                         { title: "PopupManager(弹窗管理)", nextPageName: "TSPopupManagerPage" },
+                        { title: "Picker(选择器)", nextPageName: "TSPickerAllHomePage" },
                     ]
                 },
             ],
@@ -32,7 +33,7 @@ export default class UIHomePage extends LKDemoTableHomeComponent {
 //UIPages
 
 //button
-import ButtonHomePage, { ButtonChildPages } from "./button/ButtonHomePage";
+import TSButtonHomePage, { ButtonChildPages } from "./button/TSButtonHomePage";
 
 //toolbar
 import ToolBarHomePage from "./toolbar/ToolBarHomePage";
@@ -41,10 +42,13 @@ import ToolBarHomePage from "./toolbar/ToolBarHomePage";
 import TSActionSheetPage from "./actionsheet/TSActionSheetPage";
 import TSPopupManagerPage from "./actionsheet/TSPopupManagerPage";
 
+// 选择器 Picker
+import TSPickerAllHomePage, { PickerChildHomePages } from "./picker/TSPickerAllHomePage";
+
 
 export const UIRoutePage = 'UIHomePage';
 // export const UIRoutePage = 'PickerDateHomePage';
-// export const UIRoutePage = 'ButtonHomePage';
+// export const UIRoutePage = 'TSButtonHomePage';
 export const UIPages = {
     UIHomePage: {
         screen: UIHomePage,
@@ -53,10 +57,10 @@ export const UIPages = {
         }),
     },
 
-    ButtonHomePage: {
-        screen: ButtonHomePage,
+    TSButtonHomePage: {
+        screen: TSButtonHomePage,
         navigationOptions: () => ({
-            title: `ButtonHomePage`,
+            title: `TSButtonHomePage`,
         }),
     },
     ...ButtonChildPages,
@@ -81,4 +85,14 @@ export const UIPages = {
             title: `弹窗管理`,
         }),
     },
+
+
+    // 选择器 Picker
+    TSPickerAllHomePage: {
+        screen: TSPickerAllHomePage,
+        navigationOptions: () => ({
+            title: `TSPickerAllHomePage`,
+        }),
+    },
+    ...PickerChildHomePages,
 };

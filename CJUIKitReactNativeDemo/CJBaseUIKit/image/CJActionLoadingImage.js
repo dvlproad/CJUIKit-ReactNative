@@ -20,10 +20,10 @@ import CJActionLoadingImage  from '../../commonUI/image/LKActionLoadingImage';
                     uploadType={CJImageUploadType.Uploading}
                     uploadProgress={60}
                     clickButtonHandle={()=>{
-                        LKToastUtil.showMessage('点击图片');
+                        LKToast.showMessage('点击图片');
                     }}
                     deleteImageHandle={()=>{
-                        LKToastUtil.showMessage('点击删除');
+                        LKToast.showMessage('点击删除');
                     }}
                 />
  */

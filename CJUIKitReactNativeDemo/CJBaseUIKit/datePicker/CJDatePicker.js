@@ -19,7 +19,7 @@ import { CJDatePicker } from "../../CJBaseUIKit/CJBaseUIKit";
                     this.birthdayDatePicker.showWithDateString(
                         '',
                         (dateString)=>{
-                            LKToastUtil.showMessage(dateString)
+                            LKToast.showMessage(dateString)
                         }
                     )
                 }
