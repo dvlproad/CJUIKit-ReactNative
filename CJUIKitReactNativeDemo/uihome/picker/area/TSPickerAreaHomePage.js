@@ -19,8 +19,8 @@ export default class TSPickerAreaHomePage extends LKDemoTableHomeComponent {
                 {
                     key: "Area",
                     data: [
-                        {title: "TSPickerAreaPage", nextPageName: "TSPickerAreaPage"},
-                        {title: "PopupManagerPage", nextPageName: "PopupManagerPage"},
+                        {title: "弹出时候的各种情况 TSAreaPickerShowPage", nextPageName: "TSAreaPickerShowPage"},
+                        // {title: "自定义datePicker位置 TSDatePickerFramePage", nextPageName: "TSDatePickerFramePage"},
                     ]
                 }
             ]
@@ -30,18 +30,11 @@ export default class TSPickerAreaHomePage extends LKDemoTableHomeComponent {
 
 
 // PickerAreaChildPages
-import TSPickerAreaPage from "./TSPickerAreaPage";
-import PopupManagerPage from "./TSPopupManagerPage";
+import TSAreaPickerShowPage from "./TSAreaPickerShowPage";
 
 export const PickerAreaChildPages = {
-    TSPickerAreaPage: {
-        screen: TSPickerAreaPage,
-        navigationOptions: () => ({
-            title: `地区选择相关`,
-        }),
-    },
-    PopupManagerPage: {
-        screen: PopupManagerPage,
+    TSAreaPickerShowPage: {
+        screen: TSAreaPickerShowPage,
         navigationOptions: () => ({
             title: `地区选择相关`,
         }),

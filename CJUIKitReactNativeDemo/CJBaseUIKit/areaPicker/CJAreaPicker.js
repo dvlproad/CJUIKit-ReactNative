@@ -78,7 +78,7 @@ export default class CJAreaPicker extends Component {
     /**
      * 显示地区选择器(地区默认值为上次点击"确认"的值)
      */
-    showWithLastAreaSelectedValues() {
+    show() {
         this.tryShowAreaPicker();
     }
 

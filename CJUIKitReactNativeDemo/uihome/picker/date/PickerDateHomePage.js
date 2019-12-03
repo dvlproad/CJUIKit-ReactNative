@@ -19,8 +19,8 @@ export default class PickerDateHomePage extends LKDemoTableHomeComponent {
                 {
                     key: "SingleDate--JS",
                     data: [
-                        {title: "自定义datePicker位置 TSDatePickerFramePage", nextPageName: "TSDatePickerFramePage"},
                         {title: "弹出时候的各种情况 TSDatePickerShowPage", nextPageName: "TSDatePickerShowPage"},
+                        {title: "自定义datePicker位置 TSDatePickerFramePage", nextPageName: "TSDatePickerFramePage"},
                     ]
                 },
             ]
