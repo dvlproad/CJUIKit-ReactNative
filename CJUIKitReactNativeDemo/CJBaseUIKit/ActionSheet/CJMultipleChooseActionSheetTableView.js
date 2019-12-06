@@ -16,6 +16,7 @@ import {FlatList, StyleSheet, Text, Image, TouchableOpacity} from "react-native"
 export default class CJMultipleChooseActionSheetTableView extends Component {
     static propTypes = {
         itemModels: PropTypes.array,
+
         actionCellHeight: PropTypes.number,
         listMaxHeight: PropTypes.number,
         clickItemCompleteBlock: PropTypes.func,
@@ -25,6 +26,7 @@ export default class CJMultipleChooseActionSheetTableView extends Component {
         itemModels: [
             // {'mainTitle': '拍摄'},
         ],
+
         actionCellHeight: 50,
         listMaxHeight: 100,
         clickItemCompleteBlock: (selectedItemModels) => {},

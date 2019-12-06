@@ -9,66 +9,13 @@
  *
  * Copyright (c) dvlproad. All rights reserved.
  */
-
-/*
-CJActionSheet: 最基础的ActionSheet使用示例
-
-import {
-    CJActionSheet,
-} from '../CJBaseUIKit/CJBaseUIKit';
-
-
-<CJActionSheet ref={ref => this.photoCameraSheet = ref} />
-
-        showPhotoCameraSheet() {
-            this.photoCameraSheet.showWithItems([
-                {
-                    mainTitle: "拍摄",
-                    actionBlock: ()=>{
-                        console.log("你点击了'拍摄'");
-                    },
-                },
-                {
-                    mainTitle: "从手机相册选择",
-                    actionBlock: ()=>{
-                        console.log("你点击了'从手机相册选择'");
-                    },
-                },
-            ]);
-        }
-
- */
-
-/* CJActionSheetFactory: 最基础的ActionSheet使用示例
-
-import {
-    CJActionSheetFactory,
-    CJActionSheetTableCell,
-} from '../CJBaseUIKit/CJBaseUIKit';
-
-                <CJActionSheetFactory actionTitle={'请选择'}
-                                      visible={this.state.showAction}
-                                      cancel={()=>{this.setState({showAction:false})}}
-                >
-                    <CJActionSheetTableCell actionName={'我是按钮一'}
-                                 onPress={()=>{
-                                     alert("你点击了按钮一")
-                                 }}
-                    />
-                    <CJActionSheetTableCell actionName={'我是按钮二'}
-                                 onPress={()=>{
-                                     alert("你点击了按钮一")
-                                 }}
-                    />
-                </CJActionSheetFactory>
- */
-
 import React, { Component } from 'react';
-import { Modal, FlatList, Dimensions, Platform } from 'react-native';
+import {Modal, Dimensions, Platform, ViewPropTypes, View} from 'react-native';
 import PropTypes from 'prop-types';
 import CJActionSheetComponent  from "./CJActionSheetComponent";
 import CJActionSheetTableView from './CJActionSheetTableView';
 
+const viewPropTypes = ViewPropTypes || View.propTypes;
 let screenHeight = Dimensions.get('window').height;
 let screenBottomHeight = Platform.OS === 'ios' ? screenHeight >= 812 ? 34 : 0 : 0;
 let actionSheetTop = 120;
@@ -76,36 +23,59 @@ let actionSheetMaxHeight = screenHeight - actionSheetTop;   //整个完整的act
 
 export class CJActionSheet extends Component {
     static propTypes = {
-        headerTitle: PropTypes.string, //头部
+        showHeader: PropTypes.bool,
+        headerTitle: PropTypes.string,      //头部
+
+        showSeparateLine: PropTypes.bool,   // 是否显示分隔线
+        bottomLineColor: PropTypes.string,  // 分割线的颜色
+
+        blankBGColor: PropTypes.string,
+        actionSheetStyle: viewPropTypes.style,
+
+        itemModels: PropTypes.array,
+        clickItemHandle: PropTypes.func,
+
+        onCoverPress: PropTypes.func,
+        cancelHandle: PropTypes.func,
     };
 
     static defaultProps = {
+        showHeader: false,
         headerTitle: '',
+
+        showSeparateLine: true,
+        bottomLineColor: '#eee',
+
+        blankBGColor: 'rgba(40,40,40,0.4)',
+        actionSheetStyle: {
+            borderTopLeftRadius: 0,
+            borderTopRightRadius: 0,
+        },
+
+        itemModels: [
+            {
+                mainTitle: "拍摄",
+            },
+        ],
+        clickItemHandle: (itemModel, index) => { },
+
+        onCoverPress: () => { },
+        cancelHandle: () => { },
     };
 
     constructor(props) {
         super(props);
         this.state = {
-            itemModels: [
-                {
-                    mainTitle: "拍摄",
-                    actionBlock: ()=>{
-                        console.log("你点击了拍摄");
-                    },
-                },
-            ],
+
         }
     }
 
     /**
      * 显示多个选择项的Sheet
-     *
-     * @param itemModels    数据模型数组(包含'标题'mainTitle及'点击该标题的回调'actionBlock)
      */
-    showWithItems(itemModels) {
+    show() {
         this.setState({
             visible: true,
-            itemModels: itemModels,
         })
     }
 
@@ -128,18 +98,27 @@ export class CJActionSheet extends Component {
         return (
             <CJActionSheetFactory visible={this.state.visible}
                                   animationType={'none'}
+                                  showHeader={this.props.showHeader}
                                   headerTitle={this.props.headerTitle}
-                                  cancel={() => {
+                                  blankBGColor={this.props.blankBGColor}
+                                  actionSheetStyle={this.props.actionSheetStyle}
+                                  onCoverPress={() => {
                                       this.hide();
-                                      // this.dealAction(this.state.clickCancel);
+                                      this.dealAction(this.props.onCoverPress);
+                                  }}
+                                  cancelHandle={() => {
+                                      this.hide();
+                                      this.dealAction(this.props.cancelHandle);
                                   }}
             >
                 <CJActionSheetTableView actionCellHeight={50}
+                                        showSeparateLine={this.props.showSeparateLine}
+                                        bottomLineColor={this.props.bottomLineColor}
                                         listMaxHeight={listMaxHeight}
-                                        itemModels={this.state.itemModels}
-                                        itemOnPress={(item, index)=>{
+                                        itemModels={this.props.itemModels}
+                                        itemOnPress={(itemModel, index)=>{
                                             this.hide();
-                                            this.dealAction(item.actionBlock);
+                                            this.dealAction(this.props.clickItemHandle(itemModel, index));
                                         }}
                 />
             </CJActionSheetFactory>
@@ -153,8 +132,16 @@ export class CJActionSheetFactory extends Component {
     static propTypes = {
         visible: PropTypes.bool,
         animationType: PropTypes.string, //模态弹出效果
+
+        blankBGColor: PropTypes.string,
+        actionSheetStyle: viewPropTypes.style,
+
+        showHeader: PropTypes.bool,
         headerTitle: PropTypes.string, //头部
-        cancel: PropTypes.func, // 取消操作
+
+        onCoverPress: PropTypes.func,
+        cancelHandle: PropTypes.func, // 取消操作
+
         children: PropTypes.oneOfType([PropTypes.object, PropTypes.array]),
     };
 
@@ -162,6 +149,13 @@ export class CJActionSheetFactory extends Component {
         visible: false,
         animationType: 'slide',
 
+        blankBGColor: 'rgba(40,40,40,0.4)',
+        actionSheetStyle: {
+            // borderTopLeftRadius: 0,
+            // borderTopRightRadius: 0,
+        },
+
+        showHeader: false,
         headerTitle: '',
     };
 
@@ -178,8 +172,12 @@ export class CJActionSheetFactory extends Component {
                    onRequestClose={() => { }}
             >
                 <CJActionSheetComponent
+                    showHeader={this.props.showHeader}
                     headerTitle={this.props.headerTitle}
-                    cancel={this.props.cancel}
+                    blankBGColor={this.props.blankBGColor}
+                    actionSheetStyle={this.props.actionSheetStyle}
+                    onCoverPress={this.props.onCoverPress}
+                    cancelHandle={this.props.cancelHandle}
                     children={this.props.children}
                 />
             </Modal>

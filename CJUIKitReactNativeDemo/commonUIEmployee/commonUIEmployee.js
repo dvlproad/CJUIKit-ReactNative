@@ -13,14 +13,14 @@ import LKNavigationFactory from "./Navigation/LKNavigationFactory";
 import LuckinRoute from "./Navigation/LuckinRoute";
 
 // Toast
-import LKToast from "../CJBaseUIKit/toast/CJToast";
+import LKToast from "./Toast/LKToast";
 
 // ActionSheet
-import { CJActionSheet as LKActionSheet } from "../CJBaseUIKit/ActionSheet/CJActionSheet";
-import { CJMultipleChooseActionSheet as LKMultipleChooseActionSheet } from "../CJBaseUIKit/ActionSheet/CJMultipleChooseActionSheet";
+import LKActionSheet from "./ActionSheet/LKActionSheet";
+import LKMultipleChooseActionSheet from "./ActionSheet/LKMultipleChooseActionSheet";
 
 
-import LKImageButton from "../CJBaseUIKit/button/CJImageButton";
+import LKImageButton from "./Button/LKImageButton";
 import LKTextButton, { LKBlueBGButton, LKEditSubmitButton } from "./Button/LKTextButton";
 import { LKBlueBGBottomTextButton } from "./Button/LKBottomTextButton";
 
@@ -79,22 +79,6 @@ var LKCommonUI = {
     LKDatePickShowType,
     LKDatePickerCreateTimeType,
     LKDatePicker,
-    /**
-     * <LKDatePicker ref={ref => this.datePicker = ref} />
-     *
-     * onPress={()=>{
-                        this.datePicker.showAllEvent(
-                            this.state.dateString2,
-                            (dateString)=>{
-                                this.setState({
-                                    dateString2: dateString
-                                })
-                            },
-                            ()=>{},
-                            ()=>{},
-                        )
-                    }}
-     */
 
 
     // 地区选择

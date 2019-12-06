@@ -17,6 +17,10 @@ export default class CJActionSheetTableView extends Component {
     static propTypes = {
         itemModels: PropTypes.array,
         actionCellHeight: PropTypes.number,
+
+        showSeparateLine: PropTypes.bool,   // 是否显示分隔线
+        bottomLineColor: PropTypes.string,  // 分割线的颜色
+
         listMaxHeight: PropTypes.number,
         itemOnPress: PropTypes.func,
     };
@@ -26,6 +30,9 @@ export default class CJActionSheetTableView extends Component {
             // {'mainTitle': '拍摄'},
         ],
         actionCellHeight: 50,
+        showSeparateLine: true,
+        bottomLineColor: '#eee',
+
         listMaxHeight: 100,
         itemOnPress: (item, index) => {},
     };
@@ -40,6 +47,8 @@ export default class CJActionSheetTableView extends Component {
             listHeight = listMaxHeight;
         }
 
+        let bottomLineHeight = this.props.showSeparateLine ? 1 : 0;
+
         return (
             <FlatList style={{height: listHeight}}
                       scrollEnabled={scrollEnabled}
@@ -49,6 +58,8 @@ export default class CJActionSheetTableView extends Component {
                           return (
                               <CJActionSheetTableCell
                                   actionCellHeight={actionCellHeight}
+                                  bottomLineHeight={bottomLineHeight}
+                                  bottomLineColor={this.props.bottomLineColor}
                                   actionName={item.mainTitle}
                                   onPress={() => {
                                      this.props.itemOnPress(item, index)
@@ -65,20 +76,24 @@ export class CJActionSheetTableCell extends Component {
     static propTypes = {
         actionName: PropTypes.string.isRequired,
         actionCellHeight: PropTypes.number,     //cell高
-        showBottomLine: PropTypes.bool,         //是否显示底部的分割线
+
+        bottomLineHeight: PropTypes.number,     // 底部的分割线的高度(默认0)
+        bottomLineColor: PropTypes.string,      // 分割线的颜色
+
         onPress: PropTypes.func,
     };
 
     static defaultProps = {
         actionName: '按钮标题',
         actionCellHeight: 50,
-        showBottomLine: true,
+
+        bottomLineHeight: 0,
+        bottomLineColor: '#eee',
+
         onPress: ()=>{},
     };
 
     render() {
-        let actionCellHeight = this.props.actionCellHeight;
-        let borderBottomWidth = this.props.showBottomLine ? 1 : 0;
 
         return (
             <TouchableOpacity
@@ -86,9 +101,9 @@ export class CJActionSheetTableCell extends Component {
                     flexDirection: 'row',
                     justifyContent: 'center',
                     alignItems: 'center',
-                    height: actionCellHeight,
-                    borderBottomWidth: borderBottomWidth,
-                    borderBottomColor: '#eee'
+                    height: this.props.actionCellHeight,
+                    borderBottomWidth: this.props.bottomLineHeight,
+                    borderBottomColor: this.props.bottomLineColor,
                 }, this.props.style]}
                 onPress={this.props.onPress}
             >

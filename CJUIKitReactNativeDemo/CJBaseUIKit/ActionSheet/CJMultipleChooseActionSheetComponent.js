@@ -18,14 +18,18 @@ let screenBottomHeight = Platform.OS === 'ios' ? screenHeight >= 812 ? 34 : 0 : 
 
 export default class CJMultipleChooseActionSheetComponent extends Component {
     static propTypes = {
+        showHeader: PropTypes.bool,
         headerTitle: PropTypes.string,          // 顶部标题
-        cancelHandle: PropTypes.func,           // 取消操作
+
+        onCoverPress: PropTypes.func,           // 点击阴影区域的事件
         confirmHandle: PropTypes.func,          // 确认操作
         children: PropTypes.oneOfType([PropTypes.object, PropTypes.array]),
     };
     static defaultProps = {
+        showHeader: false,
         headerTitle: '',
-        cancelHandle: ()=>{},
+
+        onCoverPress: ()=>{},
         confirmHandle: ()=>{},
     };
 
@@ -33,10 +37,10 @@ export default class CJMultipleChooseActionSheetComponent extends Component {
         return (
             <TouchableOpacity
                 style={{flex: 1, justifyContent: 'center', alignItems: 'center', backgroundColor: 'rgba(40,40,40,0.4)'}}
-                onPress={this.props.cancelHandle}
+                onPress={this.props.onCoverPress}
                 activeOpacity={0.9}>
                 <View style={{position: 'absolute', bottom: 0, left: 0, right: 0, backgroundColor: '#fff'}}>
-                    {this.props.headerTitle ? <CJMultipleChooseActionSheetHeader actionTitle={this.props.headerTitle} /> : null}
+                    {this.props.showHeader ? <CJMultipleChooseActionSheetHeader headerTitle={this.props.headerTitle} /> : null}
                     {this.props.children}
                     <View style={{borderTopWidth: 10, borderTopColor: '#F1EFF0'}}></View>
                     <CJMultipleChooseActionSheetFooter title={'确定'}

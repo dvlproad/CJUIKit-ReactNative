@@ -4,9 +4,11 @@ import {
     Text,
     View,
     TouchableOpacity,
+    ViewPropTypes,
 } from 'react-native';
 
 import PropTypes from "prop-types";
+const viewPropTypes = ViewPropTypes || View.propTypes;
 
 let screenWidth = Dimensions.get('window').width;
 
@@ -20,10 +22,12 @@ export default class CJBottomToolbar extends Component {
         confirmText: PropTypes.string,
         confirmTextSize: PropTypes.number,
         // confirmTextColor: PropTypes.color,
+        confirmStyle: viewPropTypes.style,
 
         cancelText: PropTypes.string,
         cancelTextSize: PropTypes.number,
         // cancelTextColor: PropTypes.color,
+        cancelStyle: viewPropTypes.style,
 
         valueText: PropTypes.string,
         valueTextSize: PropTypes.number,

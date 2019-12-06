@@ -13,7 +13,7 @@ export default class CJTableViewCell extends Component {
 
     static defaultProps = {
         text: "",
-        detailText: PropTypes.string,
+        detailText: null,
         clickAction: (nextPageName)=>{},
         arrowImageSource: require("./resources/item_arrow_right.png"),
     };

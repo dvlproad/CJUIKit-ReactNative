@@ -10,6 +10,13 @@
 
 'use strict';
 
+// Toast
+import CJToast from "./toast/CJToast";
+
+// ActionSheet
+import { CJActionSheet } from "./ActionSheet/CJActionSheet";
+import { CJMultipleChooseActionSheet } from "./ActionSheet/CJMultipleChooseActionSheet";
+
 // text 文本
 import CJCenterText from "./text/CJText";
 
@@ -42,6 +49,13 @@ import CJAreaPicker from "./areaPicker/CJAreaPicker";
 
 
 var CJBaseUIKit = {
+  // Toast
+  CJToast,
+
+  // ActionSheet
+  CJActionSheet,
+  CJMultipleChooseActionSheet,
+
   // text 文本
   CJCenterText,
 

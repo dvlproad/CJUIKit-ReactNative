@@ -19,8 +19,12 @@ export default class UIHomePage extends LKDemoTableHomeComponent {
                 { key: "弹窗/蒙层",
                     data: [
                         { title: "ActionSheet", nextPageName: "TSActionSheetPage" },
-                        { title: "PopupManager(弹窗管理)", nextPageName: "TSPopupManagerPage" },
                         { title: "Picker(选择器)", nextPageName: "TSPickerAllHomePage" },
+                    ]
+                },
+                { key: "弹窗管理",
+                    data: [
+                        { title: "PopupManager(弹窗管理)", nextPageName: "TSPopupManagerPage" },
                     ]
                 },
             ],
@@ -40,14 +44,14 @@ import ToolBarHomePage from "./toolbar/ToolBarHomePage";
 
 // 弹窗
 import TSActionSheetPage from "./actionsheet/TSActionSheetPage";
-import TSPopupManagerPage from "./actionsheet/TSPopupManagerPage";
+import TSPopupManagerPage from "./PopupManager/TSPopupManagerPage";
 
 // 选择器 Picker
 import TSPickerAllHomePage, { PickerChildHomePages } from "./picker/TSPickerAllHomePage";
 
 
-// export const UIRoutePage = 'UIHomePage';
-export const UIRoutePage = 'PickerDateHomePage';
+export const UIRoutePage = 'UIHomePage';
+// export const UIRoutePage = 'TSPickerAreaHomePage';
 // export const UIRoutePage = 'TSDatePickerShowPage';
 export const UIPages = {
     UIHomePage: {

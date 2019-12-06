@@ -11,35 +11,50 @@
  */
 import React, { Component } from 'react';
 import PropTypes from "prop-types";
-import {Dimensions, Platform, StyleSheet, Text, TouchableOpacity, View} from "react-native";
+import {Dimensions, Platform, StyleSheet, Text, TouchableOpacity, View, ViewPropTypes} from "react-native";
 import {CJActionSheetTableCell} from './CJActionSheetTableView';
 
+const viewPropTypes = ViewPropTypes || View.propTypes;
 let screenHeight = Dimensions.get('window').height;
 let screenBottomHeight = Platform.OS === 'ios' ? screenHeight >= 812 ? 34 : 0 : 0;
 
 export default class CJActionSheetComponent extends Component {
-    static defaultProps = {
-        headerTitle: '',
-    };
     static propTypes = {
+        blankBGColor: PropTypes.string,
+        actionSheetStyle: viewPropTypes.style,
+
+        showHeader: PropTypes.bool,
         headerTitle: PropTypes.string,  // 顶部标题
-        cancel: PropTypes.func,         // 取消操作
+
+        onCoverPress: PropTypes.func,   // 点击阴影区域
+        cancelHandle: PropTypes.func,   // 取消操作
         children: PropTypes.oneOfType([PropTypes.object, PropTypes.array]),
+    };
+
+    static defaultProps = {
+        blankBGColor: 'rgba(40,40,40,0.4)',
+        actionSheetStyle: {
+            // borderTopLeftRadius: 0,
+            // borderTopRightRadius: 0,
+        },
+
+        showHeader: false,
+        headerTitle: '',
     };
 
     render() {
         return (
             <TouchableOpacity
-                style={{flex: 1, justifyContent: 'center', alignItems: 'center', backgroundColor: 'rgba(40,40,40,0.4)'}}
-                onPress={this.props.cancel}
+                style={{flex: 1, justifyContent: 'center', alignItems: 'center', backgroundColor: this.props.blankBGColor}}
+                onPress={this.props.onCoverPress}
                 activeOpacity={0.9}>
-                <View style={{position: 'absolute', bottom: 0, left: 0, right: 0, backgroundColor: '#fff'}}>
-                    {this.props.headerTitle ? <CJActionSheetHeader actionTitle={this.props.headerTitle} /> : null}
+                <View style={[{position: 'absolute', bottom: 0, left: 0, right: 0, backgroundColor: '#fff'}, this.props.actionSheetStyle]}>
+                    {this.props.showHeader ? <CJActionSheetHeader actionTitle={this.props.headerTitle} /> : null}
                     {this.props.children}
                     <View style={{borderTopWidth: 10, borderTopColor: '#F1EFF0'}}></View>
                     <CJActionSheetTableCell actionName={'取消'}
                                             showBottomLine={false}
-                                            onPress={this.props.cancel}
+                                            onPress={this.props.cancelHandle}
                     />
                     <Text style={{backgroundColor: '#fff', height: screenBottomHeight}}
                     />

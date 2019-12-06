@@ -11,7 +11,7 @@
  */
 
 import React, { Component } from 'react';
-import { Modal, FlatList, Dimensions, Platform } from 'react-native';
+import { Modal, Dimensions, Platform } from 'react-native';
 import PropTypes from 'prop-types';
 import CJMultipleChooseActionSheetComponent  from "./CJMultipleChooseActionSheetComponent";
 import CJMultipleChooseActionSheetTableView from './CJMultipleChooseActionSheetTableView';
@@ -23,39 +23,65 @@ let actionSheetMaxHeight = screenHeight - actionSheetTop;   //整个完整的act
 
 export class CJMultipleChooseActionSheet extends Component {
     static propTypes = {
-        headerTitle: PropTypes.string, //头部
+        showHeader: PropTypes.bool,
+        headerTitle: PropTypes.string,      //头部
+
+        itemModels: PropTypes.array,
+
+        onCoverPress: PropTypes.func,
         confirmHandle: PropTypes.func,
     };
 
     static defaultProps = {
+        showHeader: false,
         headerTitle: '',
+
+        itemModels: [
+            {
+                mainTitle: "电信",
+                selected: true,
+            },
+        ],
+
+        onCoverPress: () => {},
         confirmHandle: (selectedItemModels)=>{},
     };
 
     constructor(props) {
         super(props);
-        this.state = {
-            itemModels: [
-                {
-                    mainTitle: "拍摄",
-                    actionBlock: ()=>{
-                        console.log("你点击了拍摄");
-                    },
-                },
-            ],
-            selectedItemModels: [],
+
+        this.state = { };
+        this.updateItemModels(props.itemModels);
+    }
+
+    componentWillReceiveProps(nextProps: Readonly<P>, nextContext: any): void {
+        if (this.props.itemModels !== nextProps.itemModels) { // PopupManager的时候需要使用，因为该出的itemModels的会各不一样的可能。
+            this.updateItemModels(nextProps.itemModels);
         }
     }
 
     /**
-     * 显示多个选择项的Sheet
-     *
-     * @param itemModels    数据模型数组(包含'标题'mainTitle及'点击该标题的回调'actionBlock)
+     * 更新ActionSheet的数据源（不会去重绘视图）
+     * @param itemModels
      */
-    showWithItems(itemModels) {
+    updateItemModels(itemModels){
+        let selectedItemModels = [];
+        for (let i = 0; i < itemModels.length; i++) {
+            let itemModel = itemModels[i];
+            if (itemModel.selected) {
+                selectedItemModels.push(itemModel);
+            }
+        }
+
+        this.state.selectedItemModels =  selectedItemModels;
+    }
+
+    /**
+     * 显示多个选择项的Sheet
+     */
+    show() {
         this.setState({
             visible: true,
-            itemModels: itemModels,
         })
     }
 
@@ -75,13 +101,15 @@ export class CJMultipleChooseActionSheet extends Component {
     render() {
         let listMaxHeight = actionSheetMaxHeight-100;
 
+        let visible = this.state && this.state.visible;
         return (
-            <CJMultipleChooseActionSheetFactory visible={this.state.visible}
+            <CJMultipleChooseActionSheetFactory visible={visible}
                                                 animationType={'none'}
+                                                showHeader={this.props.showHeader}
                                                 headerTitle={this.props.headerTitle}
-                                                cancelHandel={() => {
+                                                onCoverPress={() => {
                                                     this.hide();
-                                                    // this.dealAction(this.state.clickCancel);
+                                                    this.dealAction(this.props.onCoverPress);
                                                 }}
                                                 confirmHandle={() => {
                                                     this.hide();
@@ -90,7 +118,7 @@ export class CJMultipleChooseActionSheet extends Component {
             >
                 <CJMultipleChooseActionSheetTableView actionCellHeight={50}
                                                       listMaxHeight={listMaxHeight}
-                                                      itemModels={this.state.itemModels}
+                                                      itemModels={this.props.itemModels}
                                                       clickItemCompleteBlock={(selectedItemModels)=>{
                                                          this.state.selectedItemModels = selectedItemModels;
                                                       }}
@@ -107,8 +135,9 @@ export class CJMultipleChooseActionSheetFactory extends Component {
         visible: PropTypes.bool,
         animationType: PropTypes.string,        // 模态弹出效果
 
+        showHeader: PropTypes.bool,
         headerTitle: PropTypes.string,          // 头部
-        cancelHandle: PropTypes.func,           // 取消操作
+        onCoverPress: PropTypes.func,           // 点击阴影区域
         confirmHandle: PropTypes.func,          // 确认操作
 
         children: PropTypes.oneOfType([PropTypes.object, PropTypes.array]),
@@ -118,8 +147,9 @@ export class CJMultipleChooseActionSheetFactory extends Component {
         visible: false,
         animationType: 'slide',
 
+        showHeader: false,
         headerTitle: '',
-        cancelHandle: ()=>{},
+        onCoverPress: ()=>{},
         confirmHandle: ()=>{},
     };
 
@@ -136,8 +166,9 @@ export class CJMultipleChooseActionSheetFactory extends Component {
                    onRequestClose={() => { }}
             >
                 <CJMultipleChooseActionSheetComponent
+                    showHeader={this.props.showHeader}
                     headerTitle={this.props.headerTitle}
-                    cancelHandle={this.props.cancelHandle}
+                    onCoverPress={this.props.onCoverPress}
                     confirmHandle={this.props.confirmHandle}
                     children={this.props.children}
                 />

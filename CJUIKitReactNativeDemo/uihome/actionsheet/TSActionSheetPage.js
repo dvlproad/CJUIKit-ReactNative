@@ -1,6 +1,5 @@
 //TSActionSheetPage.js
 import React, { Component } from 'react';
-import {View, Alert} from 'react-native';
 import {
     LKDemoChooseBasePage,
     LKActionSheet,
@@ -14,30 +13,28 @@ export default class TSActionSheetPage extends LKDemoChooseBasePage {
 
         this.state = {
             sectionDataModels: [
-                { key: "事项选择",
+                { key: "单选ActionSheet",
                     data: [
                         {
-                            title: "弹出toast",
+                            title: "数据少时候，会短",
                             clickButtonHandle: (moduleModel) => {
-                                LKToast.showMessage('我是测试');
+                                this.photoCameraActionSheet.show();
                             },
                         },
                         {
-                            title: "弹出拍摄图片选择actionSheet",
+                            title: "数据长时候，会长，其能滚动",
                             clickButtonHandle: (moduleModel) => {
-                                this.showPhotoCameraActionSheet();
+                                this.longListActionSheet.show();
                             },
                         },
-                        {
-                            title: "弹出长列表actionSheet",
-                            clickButtonHandle: (moduleModel) => {
-                                this.showListActionSheet();
-                            },
-                        },
+                    ]
+                },
+                { key: "多选的ActionSheet",
+                    data: [
                         {
                             title: "弹出多选的列表actionSheet",
                             clickButtonHandle: (moduleModel) => {
-                                this.showMultipleChooseActionSheet();
+                                this.multipleChooseActionSheet.show();
                             },
                         },
                     ]
@@ -46,74 +43,99 @@ export default class TSActionSheetPage extends LKDemoChooseBasePage {
         }
     }
 
-    showPhotoCameraActionSheet() {
-        this.photoCameraActionSheet.showWithItems([
-            {
-                mainTitle: "拍摄",
-                actionBlock: ()=>{
-                    console.log("你点击了'拍摄'");
-                },
-            },
-            {
-                mainTitle: "从手机相册选择",
-                actionBlock: ()=>{
-                    console.log("你点击了'从手机相册选择'");
-                },
-            },
-        ]);
-    }
-
-    showListActionSheet() {
-        let itemModels = [];
-        for (let i = 0; i < 100; i++) {
-            let itemModel = new Map();
-            itemModel.mainTitle = "标题" + i;
-            itemModel.actionBlock = () => {
-                console.log("你点击了标题" + i);
-                LKToast.showMessage("你点击了标题" + i);
-            }
-
-            itemModels.push(itemModel);
-        }
-
-        this.listActionSheet.showWithItems(itemModels);
-    }
-
-    showMultipleChooseActionSheet() {
-        let itemModels = [];
-        for (let i = 0; i < 100; i++) {
-            let itemModel = new Map();
-            itemModel.mainTitle = "标题" + i;
-            itemModel.actionBlock = () => {
-                console.log("你点击了标题" + i);
-            }
-
-            itemModels.push(itemModel);
-        }
-
-        this.multipleChooseActionSheet.showWithItems(itemModels);
-    }
 
 
     renderChooseComponents() {
-        return (
-            <View>
-                <LKActionSheet ref={ref => this.photoCameraActionSheet = ref} />
-                <LKActionSheet ref={ref => this.listActionSheet = ref} />
-                <LKMultipleChooseActionSheet ref={ref => this.multipleChooseActionSheet = ref}
-                                             headerTitle={'4G网络运营商'}
-                                             confirmHandle={(selectedItemModels)=>{
-                                                 let selectedItemTitles = [];
-                                                 for (let i = 0; i < selectedItemModels.length; i++) {
-                                                     let selectedItemModel = selectedItemModels[i];
-                                                     selectedItemTitles.push(selectedItemModel.mainTitle);
-                                                 }
-                                                 let selectedResultString = selectedItemTitles.join('/');
-                                                 LKToast.showMessage(selectedResultString);
-                                             }}
-                />
-            </View>
+        let chooseComponents = [];
+        chooseComponents.push(this.getActionSheet1());
+        chooseComponents.push(this.getActionSheet2());
+        chooseComponents.push(this.getActionSheet3());
+        return chooseComponents;
+    }
 
+
+    // 单选ActionSheet
+    getActionSheet1(){
+        return (
+            <LKActionSheet ref={ref => this.photoCameraActionSheet = ref}
+                           key={'photoCameraActionSheet'}
+                           itemModels={[
+                               {
+                                   mainTitle: "拍摄",
+                               },
+                               {
+                                   mainTitle: "从手机相册选择",
+                               },
+                           ]}
+                           onCoverPress={() => {
+                               LKToast.showMessage("你点击了背景");
+                           }}
+                           cancelHandle={() => {
+                               LKToast.showMessage("你点击了取消");
+                           }}
+                           clickItemHandle={(itemModel, index) => {
+                               if (index == 0) {
+                                   LKToast.showMessage("你点击了'拍摄'");
+                               } else {
+                                   LKToast.showMessage("你点击了'从手机相册选择'");
+                               }
+                           }}
+            />
+        )
+    }
+
+    getActionSheet2() {
+        let longListItemModels = [];
+        for (let i = 0; i < 100; i++) {
+            let itemModel = new Map();
+            itemModel.mainTitle = "标题" + i;
+            longListItemModels.push(itemModel);
+        }
+
+        return (
+            <LKActionSheet ref={ref => this.longListActionSheet = ref}
+                           key={'longListActionSheet'}
+                           itemModels={longListItemModels}
+                           cancelHandle={() => {
+                               LKToast.showMessage("你点击了取消");
+                           }}
+                           clickItemHandle={(itemModel, index) => {
+                               LKToast.showMessage(index + ':你点击了' + itemModel.mainTitle);
+                           }}
+            />
+        )
+    }
+
+    getActionSheet3() {
+        return (
+            <LKMultipleChooseActionSheet ref={ref => this.multipleChooseActionSheet = ref}
+                                         key={'multipleChooseActionSheet'}
+                                         showHeader={true}
+                                         headerTitle={'4G网络运营商'}
+                                         itemModels={[
+                                             {
+                                                 mainTitle: "电信",
+                                                 selected: false,
+                                             },
+                                             {
+                                                 mainTitle: "移动",
+                                                 selected: true,
+                                             },
+                                             {
+                                                 mainTitle: "联通",
+                                                 selected: true,
+                                             },
+                                         ]}
+                                         confirmHandle={(selectedItemModels)=>{
+                                             let selectedItemTitles = [];
+                                             for (let i = 0; i < selectedItemModels.length; i++) {
+                                                 let selectedItemModel = selectedItemModels[i];
+                                                 selectedItemTitles.push(selectedItemModel.mainTitle);
+                                             }
+                                             let selectedResultString = selectedItemTitles.join('/');
+                                             LKToast.showMessage(selectedResultString);
+                                         }}
+            />
         )
     }
 }
