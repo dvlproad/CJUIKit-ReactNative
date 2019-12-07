@@ -1,13 +1,15 @@
-//TSPickerAllHomePagege.js
+//TSPickerAllHomePage.js
 import React, { Component } from 'react';
+
 import {
-    LKNavigationFactory,
+    LKDemoNavigationFactory,
     LKDemoCollectionHomeComponent
-} from '../../lkcui/lkcui';
+} from '../../commonUIDemo/commonUIDemo';
+
 
 export default class TSPickerAllHomePage extends LKDemoCollectionHomeComponent {
     static navigationOptions = ({ navigation }) => {
-        return LKNavigationFactory.backPageNavigationOptions({ navigation }, `各种picker选择`)
+        return LKDemoNavigationFactory.backPageNavigationOptions({ navigation }, `各种picker选择`)
     };
 
     constructor(props) {

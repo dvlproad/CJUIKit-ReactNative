@@ -35,23 +35,27 @@ class CJDatePickerView extends CJBaseBottomPicker {
         selectedValues: [new Date().getFullYear(), new Date().getMonth() + 1, new Date().getDate()],
         startYear: 1990,
         endYear: new Date().getFullYear(),
-        minDate: '1900-01-01',
-        maxDate: '2300-12-31',
-        minValidValues: ['1900', '01', '01'],
-        maxValidValues: ['2300', '12', '31'],
+        // minValidValues: ['1900', '1', '1'],
+        // maxValidValues: ['2300', '12', '31'],
 
         confirmText: '完成',
-        confirmTextSize: 17,
-        confirmTextColor: '#172991',
+        confirmTextStyle: {
+            fontSize: 17,
+            color: '#172991',
+        },
 
         cancelText: '取消',
-        cancelTextSize: 17,
-        cancelTextColor: '#B2B2B2',
+        cancelTextStyle: {
+            fontSize: 17,
+            color: '#B2B2B2',
+        },
 
         promptValueText: '请选择日期',
         selectedValueText: '请选择日期',
-        valueTextSize: 17,
-        valueTextColor: '#000000',
+        valueTextStyle: {
+            fontSize: 17,
+            color: '#000000',
+        },
         showValueText: true,        // 是否显示文本
         shouldFixedValueText: false,      // 是否固定文本(默认false，即会根据选择的值显示)
 
@@ -284,7 +288,6 @@ class CJDatePickerView extends CJBaseBottomPicker {
 
                         // 原本方法
                         this.props.selectedValues[pickerId] = selectedValue;
-                        console.log('====')
                         this.setState({ ...this.getDateList() });
 
                         // // 有日期范围的判断

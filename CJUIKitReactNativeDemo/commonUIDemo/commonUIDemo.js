@@ -12,20 +12,30 @@
 
 'use strict';
 
+// default
+import { LKDemoImages } from "./Default/LKDemoDefault";
+
 // demo base Page的基类
 import LKDemoScrollHomeComponent from "./Demo/LKDemoScrollHomeComponent";
 import LKDemoTableHomeComponent from "./Demo/LKDemoTableHomeComponent";
 import LKDemoCollectionHomeComponent from "./Demo/LKDemoCollectionHomeComponent";
 import LKDemoChooseBasePage from "./Demo/LKDemoChooseBasePage";
 
-
+// Navigation
+import LKDemoNavigationFactory from "./Navigation/LKDemoNavigationFactory";
 
 var LKCommonUIDemo = {
+    // default
+    LKDemoImages,
+
     // demo base Page的基类
     LKDemoScrollHomeComponent,
     LKDemoTableHomeComponent,
     LKDemoCollectionHomeComponent,
     LKDemoChooseBasePage,
+
+    // Navigation
+    LKDemoNavigationFactory,
 };
 
 module.exports = LKCommonUIDemo;

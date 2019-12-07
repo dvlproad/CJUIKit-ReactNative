@@ -6,10 +6,12 @@ import {
     Text,
     View,
     TouchableOpacity,
+    ViewPropTypes,
 } from 'react-native';
 import CJBottomToolbar from './CJBottomToolbar';
 import CJBaseDialog from '../PickerView/CJBaseDialog';
 import PropTypes from "prop-types";
+const viewPropTypes = ViewPropTypes || View.propTypes;
 
 let screenWidth = Dimensions.get('window').width;
 let screenHeight = Dimensions.get('window').height;
@@ -30,17 +32,14 @@ export default class CJBaseBottomPicker extends CJBaseDialog {
         toolbarHeight: PropTypes.number,
 
         confirmText: PropTypes.string,
-        confirmTextSize: PropTypes.number,
-        // confirmTextColor: PropTypes.color,
+        confirmTextStyle: viewPropTypes.style,
 
         cancelText: PropTypes.string,
-        cancelTextSize: PropTypes.number,
-        // cancelTextColor: PropTypes.color,
+        cancelTextStyle: viewPropTypes.style,
 
         promptValueText: PropTypes.string,
         selectedValueText: PropTypes.string.isRequired,
-        valueTextSize: PropTypes.number,
-        // valueTextColor: PropTypes.color,
+        valueTextStyle: viewPropTypes.style,
         showValueText: PropTypes.bool,           // 是否显示文本
         shouldFixedValueText: PropTypes.bool,    // 是否固定文本(默认false，即会根据选择的值显示)
     };
@@ -56,17 +55,23 @@ export default class CJBaseBottomPicker extends CJBaseDialog {
         toolbarHeight: 44,
 
         confirmText: '完成',
-        confirmTextSize: 17,
-        confirmTextColor: '#172991',
+        confirmTextStyle: {
+            fontSize: 17,
+            color: '#172991',
+        },
 
         cancelText: '取消',
-        cancelTextSize: 17,
-        cancelTextColor: '#B2B2B2',
+        cancelTextStyle: {
+            fontSize: 17,
+            color: '#B2B2B2',
+        },
 
         promptValueText: '请选择日期/地区',
         selectedValueText: '请选择日期/地区',
-        valueTextSize: 17,
-        valueTextColor: '#000000',
+        valueTextStyle: {
+            fontSize: 17,
+            color: '#000000',
+        },
         showValueText: true,        // 是否显示文本
         shouldFixedValueText: false,      // 是否固定文本(默认false，即会根据选择的值显示)
 
@@ -147,16 +152,13 @@ export default class CJBaseBottomPicker extends CJBaseDialog {
                     toolbarHeight={toolbarHeight}
 
                     confirmText={this.props.confirmText}
-                    confirmTextSize={this.props.confirmTextSize}
-                    confirmTextColor={this.props.confirmTextColor}
+                    confirmTextStyle={this.props.confirmTextStyle}
 
                     cancelText={this.props.cancelText}
-                    cancelTextSize={this.props.cancelTextSize}
-                    cancelTextColor={this.props.cancelTextColor}
+                    cancelTextStyle={this.props.cancelTextStyle}
 
                     valueText={valueText}
-                    valueTextSize={this.props.valueTextSize}
-                    valueTextColor={this.props.valueTextColor}
+                    valueTextStyle={this.props.valueTextStyle}
                 />
             </View>
         )

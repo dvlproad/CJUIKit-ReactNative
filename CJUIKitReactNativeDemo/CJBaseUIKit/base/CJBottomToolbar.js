@@ -20,18 +20,13 @@ export default class CJBottomToolbar extends Component {
         toolbarHeight: PropTypes.number,
 
         confirmText: PropTypes.string,
-        confirmTextSize: PropTypes.number,
-        // confirmTextColor: PropTypes.color,
-        confirmStyle: viewPropTypes.style,
+        confirmTextStyle: viewPropTypes.style,
 
         cancelText: PropTypes.string,
-        cancelTextSize: PropTypes.number,
-        // cancelTextColor: PropTypes.color,
-        cancelStyle: viewPropTypes.style,
+        cancelTextStyle: viewPropTypes.style,
 
         valueText: PropTypes.string,
-        valueTextSize: PropTypes.number,
-        // valueTextColor: PropTypes.color,
+        valueTextStyle: viewPropTypes.style,
     };
 
     static defaultProps = {
@@ -41,16 +36,22 @@ export default class CJBottomToolbar extends Component {
         toolbarHeight: 40,
 
         confirmText: '完成',
-        confirmTextSize: 17,
-        confirmTextColor: '#172991',
+        confirmTextStyle: {
+            fontSize: 17,
+            color: '#172991',
+        },
 
         cancelText: '取消',
-        cancelTextSize: 17,
-        cancelTextColor: '#B2B2B2',
+        cancelTextStyle: {
+            fontSize: 17,
+            color: '#B2B2B2',
+        },
 
         valueText: '请选择日期/地区',
-        valueTextSize: 17,
-        valueTextColor: '#000000',
+        valueTextStyle: {
+            fontSize: 17,
+            color: '#000000',
+        },
     }
 
     constructor(props) {
@@ -80,7 +81,7 @@ export default class CJBottomToolbar extends Component {
                 <TouchableOpacity
                     onPress={this.props.onPickerCancel}
                     style={{ width: cancelTextWidth, height: toolbarHeight, justifyContent: 'center', alignItems: 'center' }}>
-                    <Text style={{ fontSize: this.props.cancelTextSize, fontWeight: '400', color: this.props.cancelTextColor }}>
+                    <Text style={[{ fontSize: 17, fontWeight: '400', color: '#B2B2B2' }, this.props.cancelTextStyle]}>
                         {this.props.cancelText}
                     </Text>
                 </TouchableOpacity>
@@ -90,7 +91,7 @@ export default class CJBottomToolbar extends Component {
                     }}
                     style={{ width: valueTextWidth, height: toolbarHeight, justifyContent: 'center', alignItems: 'center' }}>
                     <Text
-                        style={{ fontSize: this.props.valueTextSize, fontWeight: '400', color: this.props.valueTextColor }}
+                        style={[{ fontSize: 17, fontWeight: '400', color: '#000000' }, this.props.valueTextStyle]}
                         allowFontScaling={true}
                     >
                         {this.props.valueText}
@@ -99,7 +100,7 @@ export default class CJBottomToolbar extends Component {
                 <TouchableOpacity
                     onPress={this.props.onPickerConfirm}
                     style={{ width: confirmTextWidth, height: toolbarHeight, justifyContent: 'center', alignItems: 'center' }}>
-                    <Text style={{ fontSize: this.props.confirmTextSize, fontWeight: '400', color: this.props.confirmTextColor }}>
+                    <Text style={[{ fontSize: 17, fontWeight: '400', color: '#172991' }, this.props.confirmTextStyle]}>
                         {this.props.confirmText}
                     </Text>
                 </TouchableOpacity>

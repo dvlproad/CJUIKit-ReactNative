@@ -10,7 +10,9 @@
  * Copyright (c) dvlproad. All rights reserved.
  */
 import React, { Component } from 'react';
+import {View, ViewPropTypes} from "react-native";
 import PropTypes from "prop-types";
+const viewPropTypes = ViewPropTypes || View.propTypes;
 import CJAreaPickerView, { CJAreaPickShowType } from "./CJAreaPickerView";
 import AreaJson from "./area";
 

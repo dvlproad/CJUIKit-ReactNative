@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
 import {
-    Animated,
+    Animated, View, ViewPropTypes,
 } from 'react-native';
 import PropTypes from "prop-types";
+const viewPropTypes = ViewPropTypes || View.propTypes;
+
 import CJBaseBottomPicker from '../base/CJBaseBottomPicker';
 import CJPickerView from '../PickerView/CJPickerView';
 
@@ -30,17 +32,23 @@ export default class CJAreaPickerView extends CJBaseBottomPicker {
         toolbarHeight: 44,
 
         confirmText: '确定',
-        confirmTextSize: 17,
-        confirmTextColor: '#2F7DE1',
+        confirmTextStyle: {
+            fontSize: 17,
+            color: '#2F7DE1',
+        },
 
         cancelText: '取消',
-        cancelTextSize: 17,
-        cancelTextColor: '#2F7DE1',
+        cancelTextStyle: {
+            fontSize: 17,
+            color: '#2F7DE1',
+        },
 
         promptValueText: '请选择城市',
         selectedValueText: '请选择城市',
-        valueTextSize: 17,
-        valueTextColor: '#000000',
+        valueTextStyle: {
+            fontSize: 17,
+            color: '#000000',
+        },
         showValueText: true,            // 是否显示文本
         shouldFixedValueText: false,    // 是否固定文本(默认false，即会根据选择的值显示)
 

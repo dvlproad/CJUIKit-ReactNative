@@ -20,6 +20,9 @@ import { CJMultipleChooseActionSheet } from "./ActionSheet/CJMultipleChooseActio
 // text 文本
 import CJCenterText from "./text/CJText";
 
+// image 图片
+import { CJImageUploadType } from "./image/CJLoadingImage";
+
 // button 按钮
 import CJTextButton from "./button/CJTextButton";
 import CJImageButton from "./button/CJImageButton";
@@ -67,6 +70,9 @@ var CJBaseUIKit = {
   CJImageButton,
   CJTextImageButton,
   CJImageTextButton,
+
+  // image 图片
+  CJImageUploadType,
 
   // navigation 导航栏(含路由)
   // CJNavigationFactory, //(不要引用该类，即请将该类实现复制一遍在具体APP中再自己相应修改一下即可)

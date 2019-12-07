@@ -19,11 +19,13 @@ import LKToast from "./Toast/LKToast";
 import LKActionSheet from "./ActionSheet/LKActionSheet";
 import LKMultipleChooseActionSheet from "./ActionSheet/LKMultipleChooseActionSheet";
 
-
+// Button
 import LKImageButton from "./Button/LKImageButton";
 import LKTextButton, { LKBlueBGButton, LKEditSubmitButton } from "./Button/LKTextButton";
 import { LKBlueBGBottomTextButton } from "./Button/LKBottomTextButton";
 
+// Image
+import { CJImageUploadType as LKImageUploadType } from "../CJBaseUIKit/CJBaseUIKit";
 
 // CollectionView
 import LKImageActionCollectionView from "./CollectionView/LKImageActionCollectionView";
@@ -69,6 +71,8 @@ var LKCommonUI = {
     // bottomButton
     LKBlueBGBottomTextButton,
 
+    // image 图片
+    LKImageUploadType,
 
     // collection
     LKEntryHomeComponent,

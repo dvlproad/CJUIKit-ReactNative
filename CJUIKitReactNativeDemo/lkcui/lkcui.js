@@ -30,6 +30,9 @@ import {
     // bottomButton
     LKBlueBGBottomTextButton,
 
+    // image 图片
+    LKImageUploadType,
+
     // collection
     LKEntryHomeComponent,
     LKImageLookHomeComponent,
@@ -75,6 +78,9 @@ var LKCUI = {
     LKEditSubmitButton,
     // bottomButton
     LKBlueBGBottomTextButton,
+
+    // image 图片
+    LKImageUploadType,
 
     // collection
     LKEntryHomeComponent,

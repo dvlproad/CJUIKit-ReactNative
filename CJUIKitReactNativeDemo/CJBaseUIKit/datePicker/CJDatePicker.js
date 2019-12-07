@@ -104,22 +104,26 @@ export default class CJDatePicker extends Component {
         unit: ['年', '月', '日'],
         selectedValues: [new Date().getFullYear(), new Date().getMonth() + 1, new Date().getDate()],
         startYear: 1990,
-        endYear: new Date().getFullYear(),
-        minDate: '1900-01-01',
-        maxDate: '2300-12-31',
+        endYear: 2300,
 
         confirmText: '完成',
-        confirmTextSize: 17,
-        confirmTextColor: '#172991',
+        confirmTextStyle: {
+            fontSize: 17,
+            color: '#172991',
+        },
 
         cancelText: '取消',
-        cancelTextSize: 17,
-        cancelTextColor: '#B2B2B2',
+        cancelTextStyle: {
+            fontSize: 17,
+            color: '#B2B2B2',
+        },
 
         promptValueText: '请选择日期',
         selectedValueText: '请选择日期',
-        valueTextSize: 17,
-        valueTextColor: '#000000',
+        valueTextStyle: {
+            fontSize: 17,
+            color: '#000000',
+        },
         showValueText: true,                // 是否显示文本
         shouldFixedValueText: false,        // 是否固定文本(默认false，即会根据选择的值显示)
 
@@ -263,18 +267,13 @@ export default class CJDatePicker extends Component {
                 unit={this.props.unit}
                 startYear={this.props.startYear}
                 endYear={this.props.endYear}
-                minDate={this.props.minDate}
-                maxDate={this.props.maxDate}
                 confirmText={this.props.confirmText}
-                confirmTextSize={this.props.confirmTextSize}
-                confirmTextColor={this.props.confirmTextColor}
+                confirmTextStyle={this.props.confirmTextStyle}
                 cancelText={this.props.cancelText}
-                cancelTextSize={this.props.cancelTextSize}
-                cancelTextColor={this.props.cancelTextColor}
+                cancelTextStyle={this.props.cancelTextStyle}
                 promptValueText={this.props.promptValueText}
                 selectedValueText={this.props.selectedValueText}
-                valueTextSize={this.props.valueTextSize}
-                valueTextColor={this.props.valueTextColor}
+                valueTextStyle={this.props.valueTextStyle}
                 showValueText={this.props.showValueText}
                 shouldFixedValueText={this.props.shouldFixedValueText}
                 itemHeight={this.props.itemHeight}

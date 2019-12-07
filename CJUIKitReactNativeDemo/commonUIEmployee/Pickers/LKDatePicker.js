@@ -31,17 +31,23 @@ export default class LKDatePicker extends CJDatePicker {
         maxDate: '2300-12-31',
 
         confirmText: '完成',
-        confirmTextSize: 17,
-        confirmTextColor: '#172991',
+        confirmTextStyle: {
+            fontSize: 17,
+            color: '#172991',
+        },
 
         cancelText: '取消',
-        cancelTextSize: 17,
-        cancelTextColor: '#B2B2B2',
+        cancelTextStyle: {
+            fontSize: 17,
+            color: '#B2B2B2',
+        },
 
         promptValueText: '请选择日期',
         selectedValueText: '请选择日期',
-        valueTextSize: 17,
-        valueTextColor: '#000000',
+        valueTextStyle: {
+            fontSize: 17,
+            color: '#000000',
+        },
         showValueText: true,                // 是否显示文本
         shouldFixedValueText: false,        // 是否固定文本(默认false，即会根据选择的值显示)
 
