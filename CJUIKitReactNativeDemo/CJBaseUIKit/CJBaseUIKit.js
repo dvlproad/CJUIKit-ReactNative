@@ -39,6 +39,9 @@ import CJCollectionCell from "./collectionView/CJCollectionCell";
 import CJImageLookCollectionView from "./collectionView/CJImageLookCollectionView";
 import CJImageActionCollectionView from "./collectionView/CJImageActionCollectionView";
 
+// PickerView 一般的选择器
+import CJNormalPickerView from "./NormalPicker/CJNormalPickerView";
+
 // datePicker 日期选择器
 import {CJDatePickShowType} from "./datePicker/CJDatePickerUtil";
 import CJDatePicker, {CJDatePickerCreateTimeType} from "./datePicker/CJDatePicker";
@@ -77,6 +80,9 @@ var CJBaseUIKit = {
   CJCollectionCell,
   CJImageLookCollectionView,
   CJImageActionCollectionView,
+
+  // pickerView 正常选择器
+  CJNormalPickerView,
 
   // datePicker 日期选择器
   CJDatePickShowType,         // 日期器的选择样式

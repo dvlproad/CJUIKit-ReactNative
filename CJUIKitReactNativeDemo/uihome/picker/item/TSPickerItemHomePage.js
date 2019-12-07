@@ -1,9 +1,12 @@
-//TSPickerItemHomePagege.js
+//TSPickerItemHomePage.js
 import React, { Component } from 'react';
 
 import {
+    LKDemoTableHomeComponent,
+} from "../../../commonUIDemo/commonUIDemo";
+
+import {
     LKNavigationFactory,
-    LKDemoTableHomeComponent
 } from "../../../lkcui/lkcui";
 
 export default class TSPickerItemHomePage extends LKDemoTableHomeComponent {
@@ -20,6 +23,7 @@ export default class TSPickerItemHomePage extends LKDemoTableHomeComponent {
                     key: "Weight",
                     data: [
                         {title: "PickWeightPage", nextPageName: "PickWeightPage"},
+                        {title: "弹出时候的各种情况 TSPickerItemShowPage", nextPageName: "TSPickerItemShowPage"},
                     ]
                 },
             ]
@@ -30,10 +34,18 @@ export default class TSPickerItemHomePage extends LKDemoTableHomeComponent {
 
 // PickerItemChildPages
 import PickWeightPage from "./PickWeightPage";
+import TSPickerItemShowPage from "./TSPickerItemShowPage";
 
 export const PickerItemChildPages = {
     PickWeightPage: {
         screen: PickWeightPage,
+        navigationOptions: () => ({
+            title: `体重选择`,
+        }),
+    },
+
+    TSPickerItemShowPage: {
+        screen: TSPickerItemShowPage,
         navigationOptions: () => ({
             title: `体重选择`,
         }),

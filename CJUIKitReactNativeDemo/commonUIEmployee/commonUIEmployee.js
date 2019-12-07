@@ -29,6 +29,8 @@ import { LKBlueBGBottomTextButton } from "./Button/LKBottomTextButton";
 import LKImageActionCollectionView from "./CollectionView/LKImageActionCollectionView";
 
 
+// 正常选择
+import LKNormalPicker from "./Pickers/LKNormalPicker";
 
 // 日期选择
 // import {
@@ -74,6 +76,9 @@ var LKCommonUI = {
     LKImageActionCollectionView,
     LKImageActionHomeComponent,
     LKDescriptionBasePage,
+
+    // 正常选择
+    LKNormalPicker,
 
     // 日期选择
     LKDatePickShowType,

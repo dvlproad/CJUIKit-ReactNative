@@ -50,8 +50,8 @@ import TSPopupManagerPage from "./PopupManager/TSPopupManagerPage";
 import TSPickerAllHomePage, { PickerChildHomePages } from "./picker/TSPickerAllHomePage";
 
 
-export const UIRoutePage = 'UIHomePage';
-// export const UIRoutePage = 'TSPickerAreaHomePage';
+export const UIRoutePage = 'TSPickerItemShowPage';
+// export const UIRoutePage = 'TSPickerItemShowPage';
 // export const UIRoutePage = 'TSDatePickerShowPage';
 export const UIPages = {
     UIHomePage: {

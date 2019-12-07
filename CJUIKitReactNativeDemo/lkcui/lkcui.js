@@ -37,6 +37,9 @@ import {
     LKImageActionHomeComponent,
     LKDescriptionBasePage,
 
+    // 正常选择
+    LKNormalPicker,
+
     // 日期选择
     LKDatePickShowType,
     LKDatePickerCreateTimeType,
@@ -79,6 +82,9 @@ var LKCUI = {
     LKImageActionCollectionView,
     LKImageActionHomeComponent,
     LKDescriptionBasePage,
+
+    // 正常选择
+    LKNormalPicker,
 
     // 日期选择
     LKDatePickShowType,

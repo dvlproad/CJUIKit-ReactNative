@@ -1,6 +1,6 @@
 //PickWeightPage.js
 import React, { Component } from 'react';
-import {Text, ScrollView, Picker} from 'react-native';
+import { Text, ScrollView, Picker } from 'react-native';
 
 export default class PickWeightPage extends Component {
     constructor(props) {
@@ -25,7 +25,6 @@ export default class PickWeightPage extends Component {
                     <Picker.Item label="Java" value="java" />
                     <Picker.Item label="JavaScript" value="js" />
                 </Picker>
-
 
             </ScrollView>
         );
