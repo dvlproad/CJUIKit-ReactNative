@@ -57,7 +57,7 @@ import CJCollectionCell  from '../../CJBaseUIKit/CJBaseUIKit';
 
 import React, { Component } from 'react';
 import { View, ViewPropTypes } from 'react-native';
-import CJImageTextButton  from '../button/CJImageTextButton';
+import CJImageTextButton  from './CJImageTextButton';
 import PropTypes from "prop-types";
 
 const viewPropTypes = ViewPropTypes || View.propTypes;

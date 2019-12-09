@@ -31,6 +31,7 @@ export default class CJSectionTableView extends Component {
             <CJTableViewCell
                 text={moduleModel.title}
                 detailText={moduleModel.detailText}
+                arrowImageSource={this.props.arrowImageSource}
                 clickAction={() => (
                     this.props.clickModuleModel(moduleModel)
                 )}
