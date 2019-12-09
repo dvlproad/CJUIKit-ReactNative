@@ -12,18 +12,6 @@ import {UIPages, UIRoutePage} from "../uihome/UIHomePage";
 
 const UINavigator = createStackNavigator(
     {
-        // HealthCerHome: {
-        //     screen: UIRoutePage,
-        //     navigationOptions: () => ({
-        //         title: `个人健康证`,
-        //         headerStyle:{                                 //导航栏样式设置
-        //             backgroundColor:'#ffffff',
-        //         },
-        //         headerLeft: (
-        //             <LKBackAppButton />
-        //         ),
-        //     }),
-        // },
         ...UIPages,
     },
     {

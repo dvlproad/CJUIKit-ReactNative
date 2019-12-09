@@ -13,7 +13,7 @@ import React, {Component} from 'react';
 import { View, Alert, Dimensions } from 'react-native';
 import {
     CJSectionTableView
-} from '../../CJBaseUIKit/CJBaseUIKit';
+} from 'cjrn-base-uikit';
 
 
 export default class LKDemoChooseBasePage extends Component {

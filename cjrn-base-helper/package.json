@@ -1,0 +1,27 @@
+{
+  "name": "cjrn-base-helper",
+  "version": "0.1.0",
+  "description": "A Helper library for react native.",
+  "main": "cjrn-base-helper.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dvlproad/CJUIKit-ReactNative.git"
+  },
+  "keywords": [
+    "cjrn-base-helper",
+    "react",
+    "native",
+    "UI",
+    "library",
+    "framework"
+  ],
+  "author": "dvlproad",
+  "license": "MIT",
+  "homepage": "http://github.com/dvlproad/CJUIKit-ReactNative.git",
+  "dependencies": {
+
+  }
+}

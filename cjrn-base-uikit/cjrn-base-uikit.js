@@ -1,11 +1,11 @@
 /**
- * CJBaseUIKit.js
+ * cjrn-base-uikit.js
  *
  * @author ciyouzen
  * @email dvlproad@163.com
  * @create date 2019-05-09 10:30:47
  * @modify date 2019-05-09 10:30:47
- * @desc [CJBaseUIKit]
+ * @desc [cjrn-base-uikit]
  */
 
 'use strict';
@@ -21,7 +21,7 @@ import { CJMultipleChooseActionSheet } from "./ActionSheet/CJMultipleChooseActio
 import CJCenterText from "./text/CJText";
 
 // image 图片
-import { CJImageUploadType } from "./image/CJLoadingImage";
+import CJLoadingImage, { CJImageUploadType } from "./image/CJLoadingImage";
 
 // button 按钮
 import CJTextButton from "./button/CJTextButton";
@@ -42,6 +42,9 @@ import CJCollectionCell from "./collectionView/CJCollectionCell";
 import CJImageLookCollectionView from "./collectionView/CJImageLookCollectionView";
 import CJImageActionCollectionView from "./collectionView/CJImageActionCollectionView";
 
+// toolbar
+import CJBottomToolbar from './base/CJBottomToolbar';
+
 // PickerView 一般的选择器
 import CJNormalPickerView from "./NormalPicker/CJNormalPickerView";
 
@@ -54,7 +57,7 @@ import {CJAreaPickShowType} from "./areaPicker/CJAreaPickerView";
 import CJAreaPicker from "./areaPicker/CJAreaPicker";
 
 
-var CJBaseUIKit = {
+var cjrnbaseuikit = {
   // Toast
   CJToast,
 
@@ -73,6 +76,7 @@ var CJBaseUIKit = {
 
   // image 图片
   CJImageUploadType,
+  CJLoadingImage,
 
   // navigation 导航栏(含路由)
   // CJNavigationFactory, //(不要引用该类，即请将该类实现复制一遍在具体APP中再自己相应修改一下即可)
@@ -87,6 +91,9 @@ var CJBaseUIKit = {
   CJImageLookCollectionView,
   CJImageActionCollectionView,
 
+  // toolbar
+  CJBottomToolbar,
+
   // pickerView 正常选择器
   CJNormalPickerView,
 
@@ -100,4 +107,4 @@ var CJBaseUIKit = {
   CJAreaPicker,
 };
 
-module.exports = CJBaseUIKit;
+module.exports = cjrnbaseuikit;

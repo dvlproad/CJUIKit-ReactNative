@@ -68,7 +68,7 @@ import React, {Component} from 'react';
 import {  Alert, Dimensions } from 'react-native';
 import {
     CJImageActionCollectionView
-} from '../../CJBaseUIKit/CJBaseUIKit';
+} from 'cjrn-base-uikit';
 import PropTypes from "prop-types";
 
 

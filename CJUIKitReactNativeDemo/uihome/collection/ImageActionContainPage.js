@@ -1,6 +1,6 @@
 // ImageActionContainPage.js
 import React, {Component} from 'react';
-import { View, Text, Alert, Dimensions } from 'react-native';
+import { View, Alert } from 'react-native';
 import {
     LKDemoImages,
     LKDemoNavigationFactory,
@@ -9,11 +9,9 @@ import {
 import {
     LKImageActionCollectionView,
     LKImageUploadType,
+    LKCenterText,
 } from '../../lkcui/lkcui';
 
-import {
-    CJCenterText
-} from '../../CJBaseUIKit/CJBaseUIKit';
 
 export default class ImageActionContainPage extends Component {
     static navigationOptions = ({ navigation }) => {
@@ -132,7 +130,7 @@ export default class ImageActionContainPage extends Component {
                         })
                     }}
                 />
-                <CJCenterText
+                <LKCenterText
                     text={'我是用来测试的'}
                 />
             </View>

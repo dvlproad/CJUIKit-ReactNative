@@ -1,7 +1,7 @@
 /**
- * CJBaseHelper.js
+ * cjrn-base-helper.js
  *
- * @Description: CJBaseHelper
+ * @Description: cjrn-base-helper
  *
  * @author      ciyouzen
  * @email       dvlproad@163.com
@@ -18,8 +18,8 @@ import ObjectCJHelper from "./ObjectCJHelper";
 
 
 
-var CJBaseHelper = {
+var cjrnbasehelper = {
   ObjectCJHelper,
 };
 
-module.exports = CJBaseHelper;
+module.exports = cjrnbasehelper;

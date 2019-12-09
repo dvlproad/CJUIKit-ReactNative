@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import {
     CJDatePicker
-} from '../../CJBaseUIKit/CJBaseUIKit';
-import { CJDatePickShowType } from "../../CJBaseUIKit/datePicker/CJDatePickerUtil";
-import { CJDatePickerCreateTimeType } from "../../CJBaseUIKit/datePicker/CJDatePicker";
+} from 'cjrn-base-uikit';
+import { CJDatePickShowType } from "cjrn-base-uikit";
+import { CJDatePickerCreateTimeType } from "cjrn-base-uikit";
 
 
 export default class LKDatePicker extends CJDatePicker {

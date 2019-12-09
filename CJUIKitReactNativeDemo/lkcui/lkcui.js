@@ -33,12 +33,18 @@ import {
     // image 图片
     LKImageUploadType,
 
+    // text
+    LKCenterText,
+
     // collection
     LKEntryHomeComponent,
     LKImageLookHomeComponent,
     LKImageActionCollectionView,
     LKImageActionHomeComponent,
     LKDescriptionBasePage,
+
+    // toolbar
+    LKBottomToolbar,
 
     // 正常选择
     LKNormalPicker,
@@ -82,12 +88,18 @@ var LKCUI = {
     // image 图片
     LKImageUploadType,
 
+    // text
+    LKCenterText,
+
     // collection
     LKEntryHomeComponent,
     LKImageLookHomeComponent,
     LKImageActionCollectionView,
     LKImageActionHomeComponent,
     LKDescriptionBasePage,
+
+    // toolbar
+    LKBottomToolbar,
 
     // 正常选择
     LKNormalPicker,

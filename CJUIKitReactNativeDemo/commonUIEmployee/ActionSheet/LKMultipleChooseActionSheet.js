@@ -1,6 +1,6 @@
 // LKMultipleChooseActionSheet.js
 import React, { Component } from 'react';
-import { CJMultipleChooseActionSheet } from "../../CJBaseUIKit/CJBaseUIKit";
+import { CJMultipleChooseActionSheet } from 'cjrn-base-uikit';
 
 export default class LKMultipleChooseActionSheet extends CJMultipleChooseActionSheet {
     static defaultProps = {

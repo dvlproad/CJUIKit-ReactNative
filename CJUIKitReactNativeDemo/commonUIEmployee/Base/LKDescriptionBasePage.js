@@ -11,7 +11,7 @@ import {  Alert, Dimensions } from 'react-native';
 import PropTypes from "prop-types";
 import {
     CJImageLookCollectionView
-} from '../../CJBaseUIKit/CJBaseUIKit';
+} from 'cjrn-base-uikit';
 
 
 export default class LKDescriptionBasePage extends Component {

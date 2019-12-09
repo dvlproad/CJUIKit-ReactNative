@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import {
     CJAreaPicker,
     CJAreaPickShowType
-} from '../../CJBaseUIKit/CJBaseUIKit';
+} from 'cjrn-base-uikit';
 
 
 export default class LKAreaPicker extends CJAreaPicker {

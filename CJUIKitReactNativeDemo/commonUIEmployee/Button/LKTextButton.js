@@ -1,6 +1,6 @@
 // LKTextButton.js
 import React, { Component } from 'react';
-import { CJTextButton } from "../../CJBaseUIKit/CJBaseUIKit";
+import { CJTextButton } from 'cjrn-base-uikit';
 
 export default class LKTextButton extends CJTextButton {
 

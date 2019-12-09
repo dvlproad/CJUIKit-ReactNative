@@ -13,11 +13,8 @@ import {
 
 import {
     LKAreaPicker,
-    LKDatePicker,
     LKToast,
 } from "../../../lkcui/lkcui";
-import CJAreaPickerView from "../../../CJBaseUIKit/areaPicker/CJAreaPickerView";
-import AreaJson from "./area";
 
 export default class TSAreaPickerShowPage extends LKDemoChooseBasePage {
     constructor(props) {

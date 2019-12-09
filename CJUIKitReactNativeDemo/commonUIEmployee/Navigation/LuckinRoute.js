@@ -9,7 +9,7 @@
  */
 import {
     CJNavigationUtil
-} from "../../CJBaseUIKit/CJBaseUIKit";
+} from 'cjrn-base-uikit';
 
 export default class LuckinRoute {
     /**

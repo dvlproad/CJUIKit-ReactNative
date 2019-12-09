@@ -1,10 +1,10 @@
 //ToolBarHomePage.js
 import React, { Component } from 'react';
-import {ScrollView, Button, Text, View, TouchableWithoutFeedback} from 'react-native';
+import { ScrollView } from 'react-native';
 import {
     LKNavigationFactory,
+    LKBottomToolbar,
 } from "../../lkcui/lkcui";
-import CJBottomToolbar from "../../CJBaseUIKit/base/CJBottomToolbar";
 
 export default class ToolBarHomePage extends Component {
     static navigationOptions = ({ navigation }) => {
@@ -24,7 +24,7 @@ export default class ToolBarHomePage extends Component {
 
         return (
             <ScrollView style={{backgroundColor: "#f2f2f2", paddingHorizontal: 15}}>
-                <CJBottomToolbar
+                <LKBottomToolbar
                     style={{
                         height: toolbarHeight,
                     }}

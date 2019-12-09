@@ -13,7 +13,7 @@ import React, {Component} from 'react';
 import { Alert, Dimensions } from 'react-native';
 import {
     CJSectionTableView
-} from '../../CJBaseUIKit/CJBaseUIKit';
+} from 'cjrn-base-uikit';
 import LKDemoRoute from "../Navigation/LKDemoRoute";
 
 

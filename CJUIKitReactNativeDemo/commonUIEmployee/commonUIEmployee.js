@@ -25,11 +25,16 @@ import LKTextButton, { LKBlueBGButton, LKEditSubmitButton } from "./Button/LKTex
 import { LKBlueBGBottomTextButton } from "./Button/LKBottomTextButton";
 
 // Image
-import { CJImageUploadType as LKImageUploadType } from "../CJBaseUIKit/CJBaseUIKit";
+import { CJImageUploadType as LKImageUploadType } from "cjrn-base-uikit";
+
+// Text
+import { LKCenterText } from "./Text/LKText";
 
 // CollectionView
 import LKImageActionCollectionView from "./CollectionView/LKImageActionCollectionView";
 
+// toolbar
+import { LKBottomToolbar } from './Toolbar/LKToolbar';
 
 // 正常选择
 import LKNormalPicker from "./Pickers/LKNormalPicker";
@@ -38,14 +43,14 @@ import LKNormalPicker from "./Pickers/LKNormalPicker";
 // import {
 //   CJDatePickShowType as LKDatePickShowType,
 //   CJDatePickerCreateTimeType as LKDatePickerCreateTimeType
-// } from "../CJBaseUIKit/CJBaseUIKit";
+// } from "cjrn-base-uikit";
 
-// import { CJDatePickShowType as LKDatePickShowType } from "../CJBaseUIKit/CJBaseUIKit";
-// import { CJDatePickerCreateTimeType as LKDatePickerCreateTimeType } from "../CJBaseUIKit/CJBaseUIKit";
+// import { CJDatePickShowType as LKDatePickShowType } from "cjrn-base-uikit";
+// import { CJDatePickerCreateTimeType as LKDatePickerCreateTimeType } from "cjrn-base-uikit";
 
 import LKDatePicker from "./Pickers/LKDatePicker";
-import { CJDatePickShowType as LKDatePickShowType } from "../CJBaseUIKit/datePicker/CJDatePickerUtil";
-import { CJDatePickerCreateTimeType as LKDatePickerCreateTimeType } from "../CJBaseUIKit/datePicker/CJDatePicker";
+import { CJDatePickShowType as LKDatePickShowType } from "cjrn-base-uikit";
+import { CJDatePickerCreateTimeType as LKDatePickerCreateTimeType } from "cjrn-base-uikit";
 
 // 地区选择
 import LKAreaPicker from "./Pickers/LKAreaPicker";
@@ -74,12 +79,18 @@ var LKCommonUI = {
     // image 图片
     LKImageUploadType,
 
+    // text 文本
+    LKCenterText,
+
     // collection
     LKEntryHomeComponent,
     LKImageLookHomeComponent,
     LKImageActionCollectionView,
     LKImageActionHomeComponent,
     LKDescriptionBasePage,
+
+    // toolbar
+    LKBottomToolbar,
 
     // 正常选择
     LKNormalPicker,

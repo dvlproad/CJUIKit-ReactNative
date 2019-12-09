@@ -3,7 +3,7 @@ import React, {Component} from 'react';
 import {  Alert, Dimensions } from 'react-native';
 import {
     CJImageActionCollectionView
-} from '../../CJBaseUIKit/CJBaseUIKit';
+} from 'cjrn-base-uikit';
 
 
 export default class LKImageActionHomeComponent extends Component {

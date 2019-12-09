@@ -4,9 +4,9 @@ import React, { Component } from 'react';
 import {
     CJImageButton,
     CJNavigationUtil
-} from "../../CJBaseUIKit/CJBaseUIKit";
+} from 'cjrn-base-uikit';
 import { Button } from "react-native";
-import { CJBackButtonFactory } from "../../CJBaseUIKit/navigation/CJNavigationFactory";
+import { CJBackButtonFactory } from "cjrn-base-uikit";
 import MiniApp from "../../bridge_modules_js/MiniApp";
 
 export default class LKDemoNavigationFactory {

@@ -1,6 +1,6 @@
 // LKActionSheet.js
 import React, { Component } from 'react';
-import { CJActionSheet } from "../../CJBaseUIKit/CJBaseUIKit";
+import { CJActionSheet } from 'cjrn-base-uikit';
 
 export default class LKActionSheet extends CJActionSheet {
     static defaultProps = {

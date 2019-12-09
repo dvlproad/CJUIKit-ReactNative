@@ -17,7 +17,7 @@ import PropTypes from "prop-types";
 const viewPropTypes = ViewPropTypes || View.propTypes;
 const stylePropTypes = viewPropTypes.style;
 
-import { ObjectCJHelper } from '../../CJBaseHelper/CJBaseHelper';
+import { ObjectCJHelper } from '../Helper/ObjectCJHelper';
 
 /// 图片加载状态
 var CJImageLoadStatus = {

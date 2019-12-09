@@ -62,7 +62,7 @@ PODS:
     - React/Core
     - React/fishhook
     - React/RCTBlob
-  - RNGestureHandler (1.5.1):
+  - RNGestureHandler (1.5.2):
     - React
   - yoga (0.59.9.React)
 
@@ -111,7 +111,7 @@ SPEC CHECKSUMS:
   Folly: de497beb10f102453a1afa9edbf8cf8a251890de
   glog: aefd1eb5dda2ab95ba0938556f34b98e2da3a60d
   React: a86b92f00edbe1873a63e4a212c29b7a7ad5224f
-  RNGestureHandler: 7add966bb5d90ee8cf38d4341f87814474357972
+  RNGestureHandler: 946a7691e41df61e2c4b1884deab41a4cdc3afff
   yoga: 03ff42a6f223fb88deeaed60249020d80c3091ee
 
 PODFILE CHECKSUM: 7b495b37107af7d9590595c66d127c790ea99d98

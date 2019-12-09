@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import PropTypes from "prop-types";
 import {
     CJNormalPickerView,
-} from '../../CJBaseUIKit/CJBaseUIKit';
+} from 'cjrn-base-uikit';
 
 export default class LKNormalPicker extends CJNormalPickerView {
     static propTypes = {

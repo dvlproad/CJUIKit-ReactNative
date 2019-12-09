@@ -13,7 +13,7 @@
 import React, { Component } from 'react';
 import PropTypes from "prop-types";
 import { FlatList, View, ViewPropTypes } from "react-native";
-import { ObjectCJHelper } from '../../CJBaseHelper/CJBaseHelper';
+import { ObjectCJHelper } from '../Helper/ObjectCJHelper';
 
 const viewPropTypes = ViewPropTypes || View.propTypes;
 const stylePropTypes = viewPropTypes.style;

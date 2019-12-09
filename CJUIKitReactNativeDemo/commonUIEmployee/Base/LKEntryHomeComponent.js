@@ -11,7 +11,7 @@ import { Alert, Dimensions } from 'react-native';
 import PropTypes from "prop-types";
 import {
     CJCollectionView
-} from '../../CJBaseUIKit/CJBaseUIKit';
+} from 'cjrn-base-uikit';
 import LuckinRoute from "../Navigation/LuckinRoute";
 
 
