@@ -9,7 +9,7 @@
 import React, { Component } from 'react';
 import PropTypes from "prop-types";
 import {Image, StyleSheet, Text, TouchableOpacity, View} from "react-native";
-import CJLoadingImage from "../image/CJLoadingImage";
+import CJLoadingImage from "./CJLoadingImage";
 
 
 // 图片按钮
