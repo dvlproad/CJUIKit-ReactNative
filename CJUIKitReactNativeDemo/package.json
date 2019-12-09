@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "cjrn-base-uikit": "file:../cjrn-base-uikit",
+    "cjrn-demo-base": "file:../cjrn-demo-base",
     "react": "16.8.3",
     "react-native": "0.59.9",
     "react-native-gesture-handler": "^1.5.1",

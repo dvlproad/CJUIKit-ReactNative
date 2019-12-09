@@ -1,8 +1,8 @@
 {
-  "name": "cjrn-base-uikit",
-  "version": "0.1.1",
+  "name": "cjrn-demo-base",
+  "version": "0.1.0",
   "description": "A UI library for react native.",
-  "main": "cjrn-base-uikit.js",
+  "main": "cjrn-demo-base.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -11,7 +11,7 @@
     "url": "git+https://github.com/dvlproad/CJUIKit-ReactNative.git"
   },
   "keywords": [
-    "cjrn-base-uikit",
+    "cjrn-demo-base",
     "react",
     "native",
     "UI",
@@ -22,8 +22,6 @@
   "license": "MIT",
   "homepage": "http://github.com/dvlproad/CJUIKit-ReactNative.git",
   "dependencies": {
-    "prop-types": "^15.7.2",
-    "react-native-root-toast": "^3.2.0",
-    "react-native-svg": "^9.13.3"
+    
   }
 }

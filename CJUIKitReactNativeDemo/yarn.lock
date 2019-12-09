@@ -1542,11 +1542,14 @@ ci-info@^2.0.0:
   integrity sha512-5tK7EtrZ0N+OLFMthtqOj4fI2Jeb88C4CAZPu25LDVUgXJ0A3Js4PMGqrn0JU1W0Mh1/Z8wZzYPxqUrXeBboCQ==
 
 "cjrn-base-uikit@file:../cjrn-base-uikit":
-  version "0.1.0"
+  version "0.1.1"
   dependencies:
     prop-types "^15.7.2"
     react-native-root-toast "^3.2.0"
     react-native-svg "^9.13.3"
+
+"cjrn-demo-base@file:../cjrn-demo-base":
+  version "0.1.0"
 
 class-utils@^0.3.5:
   version "0.3.6"

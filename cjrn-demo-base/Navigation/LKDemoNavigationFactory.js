@@ -6,8 +6,13 @@ import {
     CJNavigationUtil
 } from 'cjrn-base-uikit';
 import { Button } from "react-native";
-import { CJBackButtonFactory } from "cjrn-base-uikit";
-import MiniApp from "../../bridge_modules_js/MiniApp";
+// import MiniApp from "../../bridge_modules_js/MiniApp";
+export class MiniApp {
+    exit(params = {}) {
+
+    }
+}
+
 
 export default class LKDemoNavigationFactory {
     /**
@@ -65,7 +70,7 @@ export default class LKDemoNavigationFactory {
                 backgroundColor: '#ffffff',
             },
             headerLeft: (
-                CJBackButtonFactory.backPageButton({ navigation })
+                LKBackButtonFactory.backPageButton({ navigation })
                 // <CJBackPageButton />
             ),
             headerRight: (

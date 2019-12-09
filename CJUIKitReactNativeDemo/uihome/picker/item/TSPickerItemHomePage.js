@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 
 import {
     LKDemoTableHomeComponent,
-} from "../../../commonUIDemo/commonUIDemo";
+} from "cjrn-demo-base";
 
 import {
     LKNavigationFactory,

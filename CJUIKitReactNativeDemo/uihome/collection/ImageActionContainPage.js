@@ -4,7 +4,7 @@ import { View, Alert } from 'react-native';
 import {
     LKDemoImages,
     LKDemoNavigationFactory,
-} from '../../commonUIDemo/commonUIDemo';
+} from 'cjrn-demo-base';
 
 import {
     LKImageActionCollectionView,

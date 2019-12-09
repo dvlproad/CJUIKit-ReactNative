@@ -4,7 +4,7 @@ import React, { Component } from 'react';
 import {
     LKDemoNavigationFactory,
     LKDemoCollectionHomeComponent
-} from '../../commonUIDemo/commonUIDemo';
+} from 'cjrn-demo-base';
 
 
 export default class TSPickerAllHomePage extends LKDemoCollectionHomeComponent {

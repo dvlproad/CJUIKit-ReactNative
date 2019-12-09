@@ -1,7 +1,7 @@
 /**
- * commonUIDemo.js
+ * cjrn-demo-base.js
  *
- * @Description: commonUIDemo
+ * @Description: cjrn-demo-base
  *
  * @author      ciyouzen
  * @email       dvlproad@163.com

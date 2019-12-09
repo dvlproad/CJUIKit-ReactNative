@@ -11,7 +11,7 @@ import {
     LKDemoImages,
     LKDemoNavigationFactory,
     LKDemoCollectionHomeComponent,
-} from '../../commonUIDemo/commonUIDemo';
+} from 'cjrn-demo-base';
 
 export default class CollectionHomePage extends LKDemoCollectionHomeComponent {
     static navigationOptions = ({ navigation }) => {

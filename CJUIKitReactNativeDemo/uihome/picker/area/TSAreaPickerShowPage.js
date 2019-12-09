@@ -9,7 +9,7 @@
 import React, { Component } from 'react';
 import {
     LKDemoChooseBasePage,
-} from "../../../commonUIDemo/commonUIDemo";
+} from "cjrn-demo-base";
 
 import {
     LKAreaPicker,

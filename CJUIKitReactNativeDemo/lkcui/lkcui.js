@@ -8,7 +8,7 @@ import {
     LKDemoTableHomeComponent,
     LKDemoCollectionHomeComponent,
     LKDemoChooseBasePage,
-} from "../commonUIDemo/commonUIDemo";
+} from "cjrn-demo-base";
 
 import {
     // navigation 导航栏(含路由)

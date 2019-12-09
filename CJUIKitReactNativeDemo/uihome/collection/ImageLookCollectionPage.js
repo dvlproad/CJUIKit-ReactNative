@@ -10,7 +10,7 @@ import React, { Component } from 'react';
 import {
     LKDemoImages,
     LKDemoNavigationFactory,
-} from '../../commonUIDemo/commonUIDemo';
+} from 'cjrn-demo-base';
 
 import {
     LKImageLookHomeComponent,
