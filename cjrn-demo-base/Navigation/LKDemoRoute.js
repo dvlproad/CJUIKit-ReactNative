@@ -7,9 +7,10 @@
  * @modify date 2019-11-09 10:30:47
  * @desc [路由]
  */
-import {
-    CJNavigationUtil
-} from 'cjrn-base-uikit';
+// import {
+//     CJNavigationUtil
+// } from 'cjrn-base-uikit';
+import CJNavigationUtil from './CJNavigationUtil';
 
 export default class LKDemoRoute {
     /**

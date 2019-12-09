@@ -11,9 +11,10 @@
  */
 import React, {Component} from 'react';
 import { Alert, Dimensions } from 'react-native';
-import {
-    CJSectionTableView
-} from 'cjrn-base-uikit';
+// import {
+//     CJSectionTableView
+// } from 'cjrn-base-uikit';
+import CJSectionTableView from './CJSectionTableView';
 import LKDemoRoute from "../Navigation/LKDemoRoute";
 
 

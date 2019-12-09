@@ -11,10 +11,10 @@
  */
 import React, {Component} from 'react';
 import { View, Alert, Dimensions } from 'react-native';
-import {
-    CJSectionTableView
-} from 'cjrn-base-uikit';
-
+// import {
+//     CJSectionTableView
+// } from 'cjrn-base-uikit';
+import CJSectionTableView from './CJSectionTableView';
 
 export default class LKDemoChooseBasePage extends Component {
     constructor(props) {

@@ -12,9 +12,10 @@
 import React, {Component} from 'react';
 import { Alert, Dimensions } from 'react-native';
 import PropTypes from "prop-types";
-import {
-    CJCollectionView
-} from 'cjrn-base-uikit';
+// import {
+//     CJCollectionView
+// } from 'cjrn-base-uikit';
+import CJCollectionView from './CJCollectionView';
 import LKDemoRoute from "../Navigation/LKDemoRoute";
 
 

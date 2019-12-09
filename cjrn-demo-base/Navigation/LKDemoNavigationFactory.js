@@ -1,10 +1,12 @@
 // LKDemoNavigationFactory.js
 
 import React, { Component } from 'react';
-import {
-    CJImageButton,
-    CJNavigationUtil
-} from 'cjrn-base-uikit';
+// import {
+//     CJImageButton,
+//     CJNavigationUtil
+// } from 'cjrn-base-uikit';
+import CJImageButton from './CJImageButton';
+import CJNavigationUtil from './CJNavigationUtil';
 import { Button } from "react-native";
 // import MiniApp from "../../bridge_modules_js/MiniApp";
 export class MiniApp {
