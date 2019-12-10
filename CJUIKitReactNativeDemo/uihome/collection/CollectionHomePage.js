@@ -6,7 +6,6 @@
  * @desc [集合视图主页]
  */
 import React, { Component } from 'react';
-
 import {
     LKDemoImages,
     LKDemoNavigationFactory,

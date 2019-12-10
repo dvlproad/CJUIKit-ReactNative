@@ -1,7 +1,7 @@
 //TSActionSheetPage.js
 import React, { Component } from 'react';
+import { LKDemoChooseBasePage } from "cjrn-demo-base";
 import {
-    LKDemoChooseBasePage,
     LKActionSheet,
     LKMultipleChooseActionSheet,
     LKToast,

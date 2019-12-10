@@ -1,8 +1,6 @@
 //UIHomePage.js
 import React, { Component } from 'react';
-import {
-    LKDemoTableHomeComponent
-} from "../lkcui/lkcui";
+import { LKDemoTableHomeComponent  } from "cjrn-demo-base";
 
 export default class UIHomePage extends LKDemoTableHomeComponent {
     constructor(props) {

@@ -3,14 +3,6 @@
 'use strict';
 
 import {
-    // demo base Page的基类
-    LKDemoScrollHomeComponent,
-    LKDemoTableHomeComponent,
-    LKDemoCollectionHomeComponent,
-    LKDemoChooseBasePage,
-} from "cjrn-demo-base";
-
-import {
     // navigation 导航栏(含路由)
     LKNavigationFactory,
     LuckinRoute,
@@ -60,12 +52,6 @@ import {
 
 
 var LKCUI = {
-    // demo base Page的基类
-    LKDemoScrollHomeComponent,
-    LKDemoTableHomeComponent,
-    LKDemoCollectionHomeComponent,
-    LKDemoChooseBasePage,
-
     // navigation 导航栏(含路由)
     LKNavigationFactory,
     LuckinRoute,
@@ -108,22 +94,6 @@ var LKCUI = {
     LKDatePickShowType,
     LKDatePickerCreateTimeType,
     LKDatePicker,
-    /**
-     * <LKDatePicker ref={ref => this.datePicker = ref} />
-     *
-     * onPress={()=>{
-                            this.datePicker.showAllEvent(
-                                this.state.dateString2,
-                                (dateString)=>{
-                                    this.setState({
-                                        dateString2: dateString
-                                    })
-                                },
-                                ()=>{},
-                                ()=>{},
-                            )
-                        }}
-     */
 
     // 地区选择
     LKAreaPicker,

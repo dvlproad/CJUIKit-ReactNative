@@ -1,14 +1,11 @@
 //PickerDateHomePage.js
 import React, { Component } from 'react';
+import { LKDemoTableHomeComponent, LKDemoNavigationFactory  } from "cjrn-demo-base";
 
-import {
-    LKNavigationFactory,
-    LKDemoTableHomeComponent
-} from "../../../lkcui/lkcui";
 
 export default class PickerDateHomePage extends LKDemoTableHomeComponent {
     static navigationOptions = ({ navigation }) => {
-        return LKNavigationFactory.backPageNavigationOptions({ navigation }, `选择日期`)
+        return LKDemoNavigationFactory.backPageNavigationOptions({ navigation }, `选择日期`)
     };
 
     constructor(props) {
