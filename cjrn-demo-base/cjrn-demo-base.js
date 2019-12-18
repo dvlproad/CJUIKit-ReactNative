@@ -20,9 +20,12 @@ import LKDemoScrollHomeComponent from "./Demo/LKDemoScrollHomeComponent";
 import LKDemoTableHomeComponent from "./Demo/LKDemoTableHomeComponent";
 import LKDemoCollectionHomeComponent from "./Demo/LKDemoCollectionHomeComponent";
 import LKDemoChooseBasePage from "./Demo/LKDemoChooseBasePage";
+import LKDemoChooseWithRightBasePage from './Demo/LKDemoChooseWithRightBasePage';
+import LKDemoRightActionBasePage from "./Demo/LKDemoRightActionBasePage";
 
 // Navigation
 import LKDemoNavigationFactory from "./Navigation/LKDemoNavigationFactory";
+import LKDemoRoute from "./Navigation/LKDemoRoute";
 
 var LKCommonUIDemo = {
     // default
@@ -33,9 +36,12 @@ var LKCommonUIDemo = {
     LKDemoTableHomeComponent,
     LKDemoCollectionHomeComponent,
     LKDemoChooseBasePage,
+    LKDemoChooseWithRightBasePage,
+    LKDemoRightActionBasePage,
 
     // Navigation
     LKDemoNavigationFactory,
+    LKDemoRoute,
 };
 
 module.exports = LKCommonUIDemo;

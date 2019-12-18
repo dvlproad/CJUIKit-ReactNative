@@ -1,6 +1,6 @@
 {
   "name": "cjrn-demo-base",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "A UI library for react native.",
   "main": "cjrn-demo-base.js",
   "scripts": {
