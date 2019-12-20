@@ -13,35 +13,39 @@
 'use strict';
 
 // default
-import { LKDemoImages } from "./Default/LKDemoDefault";
+import { CJTSDefaultImages } from "./Default/CJTSDefault";
 
 // demo base Page的基类
-import LKDemoScrollHomeComponent from "./Demo/LKDemoScrollHomeComponent";
-import LKDemoTableHomeComponent from "./Demo/LKDemoTableHomeComponent";
-import LKDemoCollectionHomeComponent from "./Demo/LKDemoCollectionHomeComponent";
-import LKDemoChooseBasePage from "./Demo/LKDemoChooseBasePage";
-import LKDemoChooseWithRightBasePage from './Demo/LKDemoChooseWithRightBasePage';
-import LKDemoRightActionBasePage from "./Demo/LKDemoRightActionBasePage";
+import CJTSScrollHomeBasePage from "./Demo/CJTSScrollHomeBasePage";
+import CJTSTableHomeBasePage from "./Demo/CJTSTableHomeBasePage";
+import CJTSCollectionHomeBasePage from "./Demo/CJTSCollectionHomeBasePage";
+
+// 带右键的 demo base Page的基类
+import CJTSRightActionBasePage from "./Demo/CJTSRightActionBasePage";
+import CJTSTableHomeWithRightBasePage from "./Demo/CJTSTableHomeWithRightBasePage";
+import CJTSCollectionHomeWithRightBasePage from './Demo/CJTSCollectionHomeWithRightBasePage';
+
 
 // Navigation
-import LKDemoNavigationFactory from "./Navigation/LKDemoNavigationFactory";
-import LKDemoRoute from "./Navigation/LKDemoRoute";
+import CJTSNavigationFactory from "./Navigation/CJTSNavigationFactory";
+import CJTSRoute from "./Navigation/CJTSRoute";
 
-var LKCommonUIDemo = {
+var CJTSBase = {
     // default
-    LKDemoImages,
+    CJTSDefaultImages,
 
     // demo base Page的基类
-    LKDemoScrollHomeComponent,
-    LKDemoTableHomeComponent,
-    LKDemoCollectionHomeComponent,
-    LKDemoChooseBasePage,
-    LKDemoChooseWithRightBasePage,
-    LKDemoRightActionBasePage,
+    CJTSScrollHomeBasePage,
+    CJTSTableHomeBasePage,
+    CJTSCollectionHomeBasePage,
+    // 带右键的 demo base Page的基类
+    CJTSRightActionBasePage,
+    CJTSTableHomeWithRightBasePage,
+    CJTSCollectionHomeWithRightBasePage,
 
     // Navigation
-    LKDemoNavigationFactory,
-    LKDemoRoute,
+    CJTSNavigationFactory,
+    CJTSRoute,
 };
 
-module.exports = LKCommonUIDemo;
+module.exports = CJTSBase;

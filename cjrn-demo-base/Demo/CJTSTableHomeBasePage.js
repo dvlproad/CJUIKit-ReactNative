@@ -1,7 +1,7 @@
 /**
- * LKDemoChooseBasePage.js
+ * CJTSTableChooseBasePage.js
  *
- * @Description: 用于测试各种选择的列表视图
+ * @Description: 用于测试各种选择的列表选择视图
  *
  * @author      ciyouzen
  * @email       dvlproad@163.com
@@ -15,8 +15,9 @@ import { View, Alert, Dimensions } from 'react-native';
 //     CJSectionTableView
 // } from 'cjrn-base-uikit';
 import CJSectionTableView from './CJSectionTableView';
+import CJTSRoute from "../Navigation/CJTSRoute";
 
-export default class LKDemoChooseBasePage extends Component {
+export default class CJTSTableChooseBasePage extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -27,11 +28,14 @@ export default class LKDemoChooseBasePage extends Component {
     _execModuleModel= (moduleModel)=>{
         if (moduleModel.clickButtonHandle) {
             moduleModel.clickButtonHandle(moduleModel);
+        } else if (moduleModel.nextPageName && moduleModel.nextPageName.length > 0) {
+            // this.props.navigation.navigate(moduleModel.nextPageName);
+            CJTSRoute.push(this.props.navigation, moduleModel.nextPageName, {});
         } else {
             Alert.alert("提示：请至少设置 moduleModel.clickButtonHandle 或 moduleModel.nextPageName");
         }
     }
-
+    
     /**
      * 子类请重写此类
      * @returns {null}
@@ -61,7 +65,7 @@ export default class LKDemoChooseBasePage extends Component {
 
         })
     }
-
+    
 
     render() {
         const screenWidth = Dimensions.get('window').width;

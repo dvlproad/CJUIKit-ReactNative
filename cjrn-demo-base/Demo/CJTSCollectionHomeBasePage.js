@@ -1,5 +1,5 @@
 /**
- * LKDemoCollectionHomeComponent.js
+ * CJTSCollectionHomeBasePage.js
  *
  * @Description: 用于测试各种功能的集合视图
  *
@@ -16,10 +16,10 @@ import PropTypes from "prop-types";
 //     CJCollectionView
 // } from 'cjrn-base-uikit';
 import CJCollectionView from './CJCollectionView';
-import LKDemoRoute from "../Navigation/LKDemoRoute";
+import CJTSRoute from "../Navigation/CJTSRoute";
 
 
-export default class LKDemoCollectionHomeComponent extends Component {
+export default class CJTSCollectionHomeBasePage extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -34,7 +34,7 @@ export default class LKDemoCollectionHomeComponent extends Component {
             moduleModel.clickButtonHandle(index, moduleModel);
         } else if (moduleModel.nextPageName && moduleModel.nextPageName.length > 0) {
             // this.props.navigation.navigate(moduleModel.nextPageName);
-            LKDemoRoute.push(this.props.navigation, moduleModel.nextPageName, {});
+            CJTSRoute.push(this.props.navigation, moduleModel.nextPageName, {});
         } else {
             Alert.alert("提示：请至少设置 moduleModel.clickButtonHandle 或 moduleModel.nextPageName");
         }

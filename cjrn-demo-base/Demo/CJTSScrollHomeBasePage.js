@@ -1,5 +1,5 @@
 /**
- * LKDemoScrollHomeComponent.js
+ * CJTSScrollHomeBasePage.js
  *
  * @Description: 用于测试各种功能的滚动视图
  *
@@ -12,7 +12,7 @@
 import React, {Component} from 'react';
 import {ScrollView} from 'react-native';
 
-export default class LKDemoScrollHomeComponent extends Component {
+export default class CJTSScrollHomeBasePage extends Component {
     renderContentView() {
 
     }

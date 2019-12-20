@@ -1,5 +1,5 @@
 /**
- * LKDemoRoute.js
+ * CJTSRoute.js
  *
  * @author ciyouzen
  * @email dvlproad@163.com
@@ -12,7 +12,7 @@
 // } from 'cjrn-base-uikit';
 import CJNavigationUtil from './CJNavigationUtil';
 
-export default class LKDemoRoute {
+export default class CJTSRoute {
     /**
      * 进入到指定的界面
      *
