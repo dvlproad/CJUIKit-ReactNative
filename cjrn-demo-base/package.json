@@ -1,6 +1,6 @@
 {
-  "name": "cjrn-demo-base",
-  "version": "0.1.6",
+  "name": "@dvlproad/rn-demo-base",
+  "version": "0.2.1",
   "description": "A UI library for react native.",
   "main": "cjrn-demo-base.js",
   "scripts": {
@@ -11,7 +11,8 @@
     "url": "git+https://github.com/dvlproad/CJUIKit-ReactNative.git"
   },
   "keywords": [
-    "cjrn-demo-base",
+  	"dvlproad",
+    "rn-demo-base",
     "react",
     "native",
     "UI",
