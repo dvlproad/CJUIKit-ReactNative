@@ -1,5 +1,5 @@
 /**
- * CJImageButton.js
+ * CJImageButtontton.js
  * @Description: 只有图片的按钮
  * @author      ciyouzen
  * @email       dvlproad@163.com

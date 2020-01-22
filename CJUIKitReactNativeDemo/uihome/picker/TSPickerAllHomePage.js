@@ -1,16 +1,12 @@
 //TSPickerAllHomePage.js
 import React, { Component } from 'react';
+// import TSCollectionHomeBasePage from '../base/TSCollectionHomeBasePage';
+import { CJTSCollectionHomeBasePage, CJTSCollectionHomeWithRightBasePage } from "cjrn-demo-base";
 
-import {
-    LKDemoNavigationFactory,
-    LKDemoCollectionHomeComponent
-} from 'cjrn-demo-base';
-
-
-export default class TSPickerAllHomePage extends LKDemoCollectionHomeComponent {
-    static navigationOptions = ({ navigation }) => {
-        return LKDemoNavigationFactory.backPageNavigationOptions({ navigation }, `各种picker选择`)
-    };
+export default class TSPickerAllHomePage extends CJTSCollectionHomeBasePage {
+    // static navigationOptions = ({ navigation }) => {
+    //     return CJTSNavigationFactory.backPageNavigationOptions({ navigation }, `各种picker选择`)
+    // };
 
     constructor(props) {
         super(props);

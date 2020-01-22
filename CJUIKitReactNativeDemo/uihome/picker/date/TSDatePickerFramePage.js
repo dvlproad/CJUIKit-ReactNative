@@ -8,14 +8,15 @@
  */
 
 import React, { Component } from 'react';
-import {View} from 'react-native';
+import {View, Text} from 'react-native';
 
 import {
-    LKToast,
-    LKTextButton,
-    LKBlueBGButton,
-    LKDatePicker,
-} from '../../../lkcui/lkcui';
+    CQToastUtil,
+    CQTextButton,
+    CQThemeBGButton,
+    CQDatePicker,
+    // CQDatePickerView,
+} from 'cjrn-theme-uikit';
 
 
 export default class TSDatePickerFramePage extends Component {
@@ -33,24 +34,22 @@ export default class TSDatePickerFramePage extends Component {
         return (
             <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
                 {/*注意点：①DatePicker必须写在Button后，否则会出现Button重复点击问题；*/}
-                <LKBlueBGButton
-                    style={{
-                        width: 180,
-                        backgroundColor:'red'
-                    }}
-                    normalTitle={this.state.dateString1}
-                    onPress={()=>{
+                {/*<CQThemeBGButton*/}
+                {/*    style={{*/}
+                {/*        width: 180,*/}
+                {/*        backgroundColor:'red'*/}
+                {/*    }}*/}
+                {/*    normalTitle={this.state.dateString1}*/}
+                {/*    onPress={()=>{*/}
 
-                    }}
-                />
+                {/*    }}*/}
+                {/*/>*/}
+                <Text style={{flex:1}}>暂不支持</Text>
 
-
-                <LKDatePicker style={{width:300, height:300, backgroundColor: 'green'}}
-                              shouldCreateItRightNow={true}
-                />
-
-
-
+                {/*<CQDatePickerView*/}
+                {/*    style={{width:300, height:300, backgroundColor: 'green'}}*/}
+                {/*    shouldCreateItRightNow={true}*/}
+                {/*/>*/}
 
             </View>
         )

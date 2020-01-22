@@ -4,7 +4,7 @@ import {
 } from 'react-native';
 import PropTypes from "prop-types";
 import CJBaseBottomPicker from '../base/CJBaseBottomPicker';
-import CJPickerView from '../PickerView/CJPickerView';
+import CJPickerWheelView from '../PickerView/CJPickerWheelView';
 
 
 export default class CJNormalPickerView extends CJBaseBottomPicker {
@@ -119,7 +119,7 @@ export default class CJNormalPickerView extends CJBaseBottomPicker {
                 }
             }
             if (item && length > 0) {
-                return <CJPickerView
+                return <CJPickerWheelView
                     itemTextColor={this.props.itemTextColor}
                     itemSelectedColor={this.props.itemSelectedColor}
                     key={'picker' + pickerId}

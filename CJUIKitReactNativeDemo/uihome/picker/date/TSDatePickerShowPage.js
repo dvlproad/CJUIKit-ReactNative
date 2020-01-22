@@ -7,16 +7,14 @@
  * @date        2019-12-04 01:08:16
  */
 import React, { Component } from 'react';
-import {
-    LKDemoChooseBasePage,
-} from "cjrn-demo-base";
+import TSTableHomeBasePage from '../../base/TSTableHomeBasePage';
 
 import {
-    LKDatePicker,
-    LKToast,
-} from "../../../lkcui/lkcui";
+    CQDatePicker,
+    CQToastUtil,
+} from "cjrn-theme-uikit";
 
-export default class TSDatePickerShowPage extends LKDemoChooseBasePage {
+export default class TSDatePickerShowPage extends TSTableHomeBasePage {
     constructor(props) {
         super(props);
 
@@ -59,7 +57,7 @@ export default class TSDatePickerShowPage extends LKDemoChooseBasePage {
                             title: "不带蒙层",
                             detailText: null,
                             clickButtonHandle: (moduleModel) => {
-                                this.datePicker3.showWithNoCover();
+                                this.datePicker3.showNoCover();
                             },
                         },
                     ]
@@ -92,7 +90,7 @@ export default class TSDatePickerShowPage extends LKDemoChooseBasePage {
 
     getDatePicker1(){
         return (
-            <LKDatePicker ref={ref => this.datePicker1 = ref}
+            <CQDatePicker ref={ref => this.datePicker1 = ref}
                           key={'datePicker1'}
                           selectedValues={['2019', '6', '6']}   // 不能有多余的0，如6月不能写06，而是写6
                           onPickerConfirm={(dateString)=>{
@@ -104,7 +102,7 @@ export default class TSDatePickerShowPage extends LKDemoChooseBasePage {
 
     getDatePicker2(){
         return (
-            <LKDatePicker ref={ref => this.datePicker2 = ref}
+            <CQDatePicker ref={ref => this.datePicker2 = ref}
                           key={'datePicker2'}
                           selectedValues={['2000', '2', '29']}
                           onPickerConfirm={(dateString)=>{
@@ -116,11 +114,11 @@ export default class TSDatePickerShowPage extends LKDemoChooseBasePage {
 
     getDatePicker3(){
         return (
-            <LKDatePicker ref={ref => this.datePicker3 = ref}
+            <CQDatePicker ref={ref => this.datePicker3 = ref}
                           key={'datePicker3'}
                           selectedValues={['2000', '2', '29']}
                           onPickerConfirm={(dateString)=>{
-                              LKToast.showMessage('我只是测试蒙层使用的datePicker')
+                              CQToastUtil.showMessage('我只是测试蒙层使用的datePicker')
                           }}
             />
         )
@@ -128,7 +126,7 @@ export default class TSDatePickerShowPage extends LKDemoChooseBasePage {
 
     getDatePicker4(){
         return (
-            <LKDatePicker ref={ref => this.customToolbarDatePicker = ref}
+            <CQDatePicker ref={ref => this.customToolbarDatePicker = ref}
                           key={'customToolbarDatePicker'}
                           selectedValues={['2000', '2', '29']}
                           cancelText={'重置'}
@@ -136,10 +134,10 @@ export default class TSDatePickerShowPage extends LKDemoChooseBasePage {
                           cancelTextColor={'#172991'}
 
                           onCoverPress={()=>{
-                              LKToast.showMessage('点击空白区域');
+                              CQToastUtil.showMessage('点击空白区域');
                           }}
                           onPickerConfirm={(dateString)=>{
-                              LKToast.showMessage('我只是测试蒙层使用的datePicker')
+                              CQToastUtil.showMessage('我只是测试蒙层使用的datePicker')
                           }}
             />
         )

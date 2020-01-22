@@ -7,14 +7,14 @@
  */
 import React, { Component } from 'react';
 import {
-    LKDemoImages,
-    LKDemoNavigationFactory,
-    LKDemoCollectionHomeComponent,
+    CJTSDefaultImages,
+    CJTSNavigationFactory,
 } from 'cjrn-demo-base';
+import { CJTSCollectionHomeBasePage, CJTSCollectionHomeWithRightBasePage } from "cjrn-demo-base";
 
-export default class CollectionHomePage extends LKDemoCollectionHomeComponent {
+export default class CollectionHomePage extends CJTSCollectionHomeBasePage {
     static navigationOptions = ({ navigation }) => {
-        return LKDemoNavigationFactory.backPageNavigationOptions({ navigation }, `集合视图`)
+        return CJTSNavigationFactory.backPageNavigationOptions({ navigation }, `集合视图`)
     };
 
     constructor(props) {
@@ -24,23 +24,23 @@ export default class CollectionHomePage extends LKDemoCollectionHomeComponent {
             moduleModels: [
                 {
                     title: "图片组合(显示)",
-                    imageSource: LKDemoImages.localImageSource2,
-                    nextPageName: "ImageLookCollectionPage",
+                    imageSource: CJTSDefaultImages.localImageSource2,
+                    nextPageName: "TSImagesLookListPage",
                 },
                 {
-                    title: "图片组合(操作1)",
-                    imageSource: LKDemoImages.localImageSource2,
-                    nextPageName: "ImageActionCollectionPage",
+                    title: "图片组合(操作)",
+                    imageSource: CJTSDefaultImages.localImageSource2,
+                    nextPageName: "TSImagesChooseListPage",
                 },
                 {
-                    title: "图片组合(操作2)",
-                    imageSource: LKDemoImages.localImageSource2,
-                    nextPageName: "ImageActionContainPage",
+                    title: "介绍视图列表",
+                    imageSource: CJTSDefaultImages.localImageSource2,
+                    nextPageName: "TSDescriptionListPage",
                 },
                 {
-                    title: "介绍视图",
-                    imageSource: LKDemoImages.localImageSource2,
-                    nextPageName: "DescriptionsPage",
+                    title: "模块功能入口列表",
+                    imageSource: CJTSDefaultImages.localImageSource2,
+                    nextPageName: "TSModulesEntryListPage",
                 },
             ],
         }
@@ -48,36 +48,28 @@ export default class CollectionHomePage extends LKDemoCollectionHomeComponent {
 }
 
 // collection
-import ImageLookCollectionPage from './ImageLookCollectionPage';
-import ImageActionCollectionPage from './ImageActionCollectionPage';
-import ImageActionContainPage from './ImageActionContainPage';
-import DescriptionsPage from './DescriptionsPage';
+import TSImagesLookListPage from './TSImagesLookListPage';
+import TSImagesChooseListPage from './TSImagesChooseListPage';
+import TSDescriptionListPage from './TSDescriptionListPage';
+import TSModulesEntryListPage from './TSModulesEntryListPage';
+import TSCycleCollectionPage from '../helloworld/TSCycleCollectionPage';
 
 // CollectionPages
 export const CollectionRoutePage = 'CollectionHomePage';
 export const CollectionChildPages = {
-    ImageLookCollectionPage: {
-        screen: ImageLookCollectionPage,
-        navigationOptions: () => ({
-            title: `图片显示的组合视图`,
-        }),
+    TSImagesLookListPage: {
+        screen: TSImagesLookListPage,
     },
-    ImageActionCollectionPage: {
-        screen: ImageActionCollectionPage,
-        navigationOptions: () => ({
-            title: `图片操作的组合视图1`,
-        }),
+    TSImagesChooseListPage: {
+        screen: TSImagesChooseListPage,
     },
-    ImageActionContainPage: {
-        screen: ImageActionContainPage,
-        navigationOptions: () => ({
-            title: `图片操作的组合视图2`,
-        }),
+    TSDescriptionListPage: {
+        screen: TSDescriptionListPage,
     },
-    DescriptionsPage: {
-        screen: DescriptionsPage,
-        navigationOptions: () => ({
-            title: `介绍的描述视图列表`,
-        }),
+    TSModulesEntryListPage: {
+        screen: TSModulesEntryListPage,
+    },
+    TSCycleCollectionPage: {
+        screen: TSCycleCollectionPage,
     },
 };

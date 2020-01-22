@@ -2,192 +2,151 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0b94d7d5-9ff5-4650-980b-38da98173580" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/CJUIKitReactNativeDemo/commonUIEmployee/Image/LKLoadingImage.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CJUIKitReactNativeDemo/commonUIEmployee/Text/LKText.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CJUIKitReactNativeDemo/commonUIEmployee/Toolbar/LKToolbar.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CJUIKitReactNativeDemo/package-lock.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cjrn-base-uikit/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CJUIKitReactNativeDemo/CJBaseHelper/ObjectCJHelper.js" beforeDir="false" afterPath="$PROJECT_DIR$/cjrn-base-helper/ObjectCJHelper.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CJUIKitReactNativeDemo/CJBaseUIKit/ActionSheet/CJActionSheet.js" beforeDir="false" afterPath="$PROJECT_DIR$/cjrn-base-uikit/ActionSheet/CJActionSheet.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CJUIKitReactNativeDemo/CJBaseUIKit/ActionSheet/CJActionSheetComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/cjrn-base-uikit/ActionSheet/CJActionSheetComponent.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CJUIKitReactNativeDemo/CJBaseUIKit/ActionSheet/CJActionSheetTableView.js" beforeDir="false" afterPath="$PROJECT_DIR$/cjrn-base-uikit/ActionSheet/CJActionSheetTableView.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CJUIKitReactNativeDemo/CJBaseUIKit/ActionSheet/CJMultipleChooseActionSheet.js" beforeDir="false" afterPath="$PROJECT_DIR$/cjrn-base-uikit/ActionSheet/CJMultipleChooseActionSheet.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CJUIKitReactNativeDemo/CJBaseUIKit/ActionSheet/CJMultipleChooseActionSheetComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/cjrn-base-uikit/ActionSheet/CJMultipleChooseActionSheetComponent.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CJUIKitReactNativeDemo/CJBaseUIKit/ActionSheet/CJMultipleChooseActionSheetTableView.js" beforeDir="false" afterPath="$PROJECT_DIR$/cjrn-base-uikit/ActionSheet/CJMultipleChooseActionSheetTableView.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CJUIKitReactNativeDemo/CJBaseUIKit/ActionSheet/resources/check_normal@2x.png" beforeDir="false" afterPath="$PROJECT_DIR$/cjrn-base-uikit/ActionSheet/resources/check_normal@2x.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CJUIKitReactNativeDemo/CJBaseUIKit/ActionSheet/resources/check_normal@3x.png" beforeDir="false" afterPath="$PROJECT_DIR$/cjrn-base-uikit/ActionSheet/resources/check_normal@3x.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CJUIKitReactNativeDemo/CJBaseUIKit/ActionSheet/resources/check_selected@2x.png" beforeDir="false" afterPath="$PROJECT_DIR$/cjrn-base-uikit/ActionSheet/resources/check_selected@2x.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CJUIKitReactNativeDemo/CJBaseUIKit/ActionSheet/resources/check_selected@3x.png" beforeDir="false" afterPath="$PROJECT_DIR$/cjrn-base-uikit/ActionSheet/resources/check_selected@3x.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CJUIKitReactNativeDemo/CJBaseUIKit/ActionSheet/resources/close@2x.png" beforeDir="false" afterPath="$PROJECT_DIR$/cjrn-base-uikit/ActionSheet/resources/close@2x.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CJUIKitReactNativeDemo/CJBaseUIKit/ActionSheet/resources/close@3x.png" beforeDir="false" afterPath="$PROJECT_DIR$/cjrn-base-uikit/ActionSheet/resources/close@3x.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CJUIKitReactNativeDemo/CJBaseUIKit/CJBaseUIKit.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CJUIKitReactNativeDemo/CJBaseUIKit/NormalPicker/CJNormalPickerView.js" beforeDir="false" afterPath="$PROJECT_DIR$/cjrn-base-uikit/NormalPicker/CJNormalPickerView.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CJUIKitReactNativeDemo/CJBaseUIKit/PickerView/CJBaseComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/cjrn-base-uikit/PickerView/CJBaseComponent.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CJUIKitReactNativeDemo/CJBaseUIKit/PickerView/CJBaseDialog.js" beforeDir="false" afterPath="$PROJECT_DIR$/cjrn-base-uikit/PickerView/CJBaseDialog.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CJUIKitReactNativeDemo/CJBaseUIKit/PickerView/CJPickerView.js" beforeDir="false" afterPath="$PROJECT_DIR$/cjrn-base-uikit/PickerView/CJPickerView.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CJUIKitReactNativeDemo/CJBaseUIKit/TableView/CJSectionTableView.js" beforeDir="false" afterPath="$PROJECT_DIR$/cjrn-base-uikit/TableView/CJSectionTableView.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CJUIKitReactNativeDemo/CJBaseUIKit/TableView/CJTableViewCell.js" beforeDir="false" afterPath="$PROJECT_DIR$/cjrn-base-uikit/TableView/CJTableViewCell.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CJUIKitReactNativeDemo/CJBaseUIKit/TableView/resources/item_arrow_right.png" beforeDir="false" afterPath="$PROJECT_DIR$/cjrn-base-uikit/TableView/resources/item_arrow_right.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CJUIKitReactNativeDemo/CJBaseUIKit/TableView/resources/item_arrow_right@2x.png" beforeDir="false" afterPath="$PROJECT_DIR$/cjrn-base-uikit/TableView/resources/item_arrow_right@2x.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CJUIKitReactNativeDemo/CJBaseUIKit/TableView/resources/item_arrow_right@3x.png" beforeDir="false" afterPath="$PROJECT_DIR$/cjrn-base-uikit/TableView/resources/item_arrow_right@3x.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CJUIKitReactNativeDemo/CJBaseUIKit/areaPicker/CJAreaPicker.js" beforeDir="false" afterPath="$PROJECT_DIR$/cjrn-base-uikit/areaPicker/CJAreaPicker.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CJUIKitReactNativeDemo/CJBaseUIKit/areaPicker/CJAreaPickerView.js" beforeDir="false" afterPath="$PROJECT_DIR$/cjrn-base-uikit/areaPicker/CJAreaPickerView.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CJUIKitReactNativeDemo/CJBaseUIKit/areaPicker/area.json" beforeDir="false" afterPath="$PROJECT_DIR$/cjrn-base-uikit/areaPicker/area.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CJUIKitReactNativeDemo/CJBaseUIKit/base/CJBaseBottomPicker.js" beforeDir="false" afterPath="$PROJECT_DIR$/cjrn-base-uikit/base/CJBaseBottomPicker.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CJUIKitReactNativeDemo/CJBaseUIKit/base/CJBottomToolbar.js" beforeDir="false" afterPath="$PROJECT_DIR$/cjrn-base-uikit/base/CJBottomToolbar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CJUIKitReactNativeDemo/CJBaseUIKit/button/CJImageButton.js" beforeDir="false" afterPath="$PROJECT_DIR$/cjrn-base-uikit/button/CJImageButton.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CJUIKitReactNativeDemo/CJBaseUIKit/button/CJImageTextButton.js" beforeDir="false" afterPath="$PROJECT_DIR$/cjrn-base-uikit/button/CJImageTextButton.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CJUIKitReactNativeDemo/CJBaseUIKit/button/CJTextButton.js" beforeDir="false" afterPath="$PROJECT_DIR$/cjrn-base-uikit/button/CJTextButton.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CJUIKitReactNativeDemo/CJBaseUIKit/button/CJTextImageButton.js" beforeDir="false" afterPath="$PROJECT_DIR$/cjrn-base-uikit/button/CJTextImageButton.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CJUIKitReactNativeDemo/CJBaseUIKit/button/resources/imageDefault.png" beforeDir="false" afterPath="$PROJECT_DIR$/cjrn-base-uikit/button/resources/imageDefault.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CJUIKitReactNativeDemo/CJBaseUIKit/button/resources/imageDefault@3x.png" beforeDir="false" afterPath="$PROJECT_DIR$/cjrn-base-uikit/button/resources/imageDefault@3x.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CJUIKitReactNativeDemo/CJBaseUIKit/button/resources/imageError.png" beforeDir="false" afterPath="$PROJECT_DIR$/cjrn-base-uikit/button/resources/imageError.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CJUIKitReactNativeDemo/CJBaseUIKit/button/resources/imageError@2x.png" beforeDir="false" afterPath="$PROJECT_DIR$/cjrn-base-uikit/button/resources/imageError@2x.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CJUIKitReactNativeDemo/CJBaseUIKit/button/resources/imageError@3x.png" beforeDir="false" afterPath="$PROJECT_DIR$/cjrn-base-uikit/button/resources/imageError@3x.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CJUIKitReactNativeDemo/CJBaseUIKit/collectionView/CJBaseCollectionView.js" beforeDir="false" afterPath="$PROJECT_DIR$/cjrn-base-uikit/collectionView/CJBaseCollectionView.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CJUIKitReactNativeDemo/CJBaseUIKit/collectionView/CJCollectionCell.js" beforeDir="false" afterPath="$PROJECT_DIR$/cjrn-base-uikit/collectionView/CJCollectionCell.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CJUIKitReactNativeDemo/CJBaseUIKit/collectionView/CJCollectionView.js" beforeDir="false" afterPath="$PROJECT_DIR$/cjrn-base-uikit/collectionView/CJCollectionView.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CJUIKitReactNativeDemo/CJBaseUIKit/collectionView/CJImageActionCollectionView.js" beforeDir="false" afterPath="$PROJECT_DIR$/cjrn-base-uikit/collectionView/CJImageActionCollectionView.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CJUIKitReactNativeDemo/CJBaseUIKit/collectionView/CJImageLookCollectionView.js" beforeDir="false" afterPath="$PROJECT_DIR$/cjrn-base-uikit/collectionView/CJImageLookCollectionView.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CJUIKitReactNativeDemo/CJBaseUIKit/collectionView/resources/addImage_cer.png" beforeDir="false" afterPath="$PROJECT_DIR$/cjrn-base-uikit/collectionView/resources/addImage_cer.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CJUIKitReactNativeDemo/CJBaseUIKit/collectionView/resources/addImage_cer@2x.png" beforeDir="false" afterPath="$PROJECT_DIR$/cjrn-base-uikit/collectionView/resources/addImage_cer@2x.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CJUIKitReactNativeDemo/CJBaseUIKit/collectionView/resources/addImage_cer@3x.png" beforeDir="false" afterPath="$PROJECT_DIR$/cjrn-base-uikit/collectionView/resources/addImage_cer@3x.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CJUIKitReactNativeDemo/CJBaseUIKit/collectionView/resources/addImage_common@2x.png" beforeDir="false" afterPath="$PROJECT_DIR$/cjrn-base-uikit/collectionView/resources/addImage_common@2x.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CJUIKitReactNativeDemo/CJBaseUIKit/collectionView/resources/addImage_common@3x.png" beforeDir="false" afterPath="$PROJECT_DIR$/cjrn-base-uikit/collectionView/resources/addImage_common@3x.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CJUIKitReactNativeDemo/CJBaseUIKit/collectionView/resources/icon_search@2x.png" beforeDir="false" afterPath="$PROJECT_DIR$/cjrn-base-uikit/collectionView/resources/icon_search@2x.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CJUIKitReactNativeDemo/CJBaseUIKit/collectionView/resources/icon_search@3x.png" beforeDir="false" afterPath="$PROJECT_DIR$/cjrn-base-uikit/collectionView/resources/icon_search@3x.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CJUIKitReactNativeDemo/CJBaseUIKit/collectionView/resources/imageDefault.png" beforeDir="false" afterPath="$PROJECT_DIR$/cjrn-base-uikit/collectionView/resources/imageDefault.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CJUIKitReactNativeDemo/CJBaseUIKit/collectionView/resources/imageDefault@3x.png" beforeDir="false" afterPath="$PROJECT_DIR$/cjrn-base-uikit/collectionView/resources/imageDefault@3x.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CJUIKitReactNativeDemo/CJBaseUIKit/datePicker/CJDatePicker.js" beforeDir="false" afterPath="$PROJECT_DIR$/cjrn-base-uikit/datePicker/CJDatePicker.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CJUIKitReactNativeDemo/CJBaseUIKit/datePicker/CJDatePickerUtil.js" beforeDir="false" afterPath="$PROJECT_DIR$/cjrn-base-uikit/datePicker/CJDatePickerUtil.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CJUIKitReactNativeDemo/CJBaseUIKit/datePicker/CJDatePickerView.js" beforeDir="false" afterPath="$PROJECT_DIR$/cjrn-base-uikit/datePicker/CJDatePickerView.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CJUIKitReactNativeDemo/CJBaseUIKit/image/CJActionLoadingImage.js" beforeDir="false" afterPath="$PROJECT_DIR$/cjrn-base-uikit/image/CJActionLoadingImage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CJUIKitReactNativeDemo/CJBaseUIKit/image/CJLoadingImage.js" beforeDir="false" afterPath="$PROJECT_DIR$/cjrn-base-uikit/image/CJLoadingImage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CJUIKitReactNativeDemo/CJBaseUIKit/image/resources/imageDefault.png" beforeDir="false" afterPath="$PROJECT_DIR$/cjrn-base-uikit/image/resources/imageDefault.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CJUIKitReactNativeDemo/CJBaseUIKit/image/resources/imageDefault@3x.png" beforeDir="false" afterPath="$PROJECT_DIR$/cjrn-base-uikit/image/resources/imageDefault@3x.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CJUIKitReactNativeDemo/CJBaseUIKit/image/resources/imageDelete_blue.png" beforeDir="false" afterPath="$PROJECT_DIR$/cjrn-base-uikit/image/resources/imageDelete_blue.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CJUIKitReactNativeDemo/CJBaseUIKit/image/resources/imageDelete_blue@2x.png" beforeDir="false" afterPath="$PROJECT_DIR$/cjrn-base-uikit/image/resources/imageDelete_blue@2x.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CJUIKitReactNativeDemo/CJBaseUIKit/image/resources/imageDelete_blue@3x.png" beforeDir="false" afterPath="$PROJECT_DIR$/cjrn-base-uikit/image/resources/imageDelete_blue@3x.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CJUIKitReactNativeDemo/CJBaseUIKit/image/resources/imageError.png" beforeDir="false" afterPath="$PROJECT_DIR$/cjrn-base-uikit/image/resources/imageError.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CJUIKitReactNativeDemo/CJBaseUIKit/image/resources/imageError@2x.png" beforeDir="false" afterPath="$PROJECT_DIR$/cjrn-base-uikit/image/resources/imageError@2x.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CJUIKitReactNativeDemo/CJBaseUIKit/image/resources/imageError@3x.png" beforeDir="false" afterPath="$PROJECT_DIR$/cjrn-base-uikit/image/resources/imageError@3x.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CJUIKitReactNativeDemo/CJBaseUIKit/navigation/CJNavigationFactory.js" beforeDir="false" afterPath="$PROJECT_DIR$/cjrn-base-uikit/navigation/CJNavigationFactory.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CJUIKitReactNativeDemo/CJBaseUIKit/navigation/CJNavigationUtil.js" beforeDir="false" afterPath="$PROJECT_DIR$/cjrn-base-uikit/navigation/CJNavigationUtil.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CJUIKitReactNativeDemo/CJBaseUIKit/navigation/resources/nav_back@2x.png" beforeDir="false" afterPath="$PROJECT_DIR$/cjrn-base-uikit/navigation/resources/nav_back@2x.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CJUIKitReactNativeDemo/CJBaseUIKit/navigation/resources/nav_back@3x.png" beforeDir="false" afterPath="$PROJECT_DIR$/cjrn-base-uikit/navigation/resources/nav_back@3x.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CJUIKitReactNativeDemo/CJBaseUIKit/text/CJText.js" beforeDir="false" afterPath="$PROJECT_DIR$/cjrn-base-uikit/text/CJText.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CJUIKitReactNativeDemo/CJBaseUIKit/toast/CJToast.js" beforeDir="false" afterPath="$PROJECT_DIR$/cjrn-base-uikit/toast/CJToast.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CJUIKitReactNativeDemo/commonUIDemo/Demo/LKDemoChooseBasePage.js" beforeDir="false" afterPath="$PROJECT_DIR$/CJUIKitReactNativeDemo/commonUIDemo/Demo/LKDemoChooseBasePage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CJUIKitReactNativeDemo/commonUIDemo/Demo/LKDemoCollectionHomeComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/CJUIKitReactNativeDemo/commonUIDemo/Demo/LKDemoCollectionHomeComponent.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CJUIKitReactNativeDemo/commonUIDemo/Demo/LKDemoTableHomeComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/CJUIKitReactNativeDemo/commonUIDemo/Demo/LKDemoTableHomeComponent.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CJUIKitReactNativeDemo/commonUIDemo/Navigation/LKDemoNavigationFactory.js" beforeDir="false" afterPath="$PROJECT_DIR$/CJUIKitReactNativeDemo/commonUIDemo/Navigation/LKDemoNavigationFactory.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CJUIKitReactNativeDemo/commonUIDemo/Navigation/LKDemoRoute.js" beforeDir="false" afterPath="$PROJECT_DIR$/CJUIKitReactNativeDemo/commonUIDemo/Navigation/LKDemoRoute.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CJUIKitReactNativeDemo/commonUIEmployee/ActionSheet/LKActionSheet.js" beforeDir="false" afterPath="$PROJECT_DIR$/CJUIKitReactNativeDemo/commonUIEmployee/ActionSheet/LKActionSheet.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CJUIKitReactNativeDemo/commonUIEmployee/ActionSheet/LKMultipleChooseActionSheet.js" beforeDir="false" afterPath="$PROJECT_DIR$/CJUIKitReactNativeDemo/commonUIEmployee/ActionSheet/LKMultipleChooseActionSheet.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CJUIKitReactNativeDemo/commonUIEmployee/Base/LKDescriptionBasePage.js" beforeDir="false" afterPath="$PROJECT_DIR$/CJUIKitReactNativeDemo/commonUIEmployee/Base/LKDescriptionBasePage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CJUIKitReactNativeDemo/commonUIEmployee/Base/LKEntryHomeComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/CJUIKitReactNativeDemo/commonUIEmployee/Base/LKEntryHomeComponent.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CJUIKitReactNativeDemo/commonUIEmployee/Base/LKImageActionHomeComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/CJUIKitReactNativeDemo/commonUIEmployee/Base/LKImageActionHomeComponent.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CJUIKitReactNativeDemo/commonUIEmployee/Base/LKImageLookHomeComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/CJUIKitReactNativeDemo/commonUIEmployee/Base/LKImageLookHomeComponent.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CJUIKitReactNativeDemo/commonUIEmployee/Button/LKImageButton.js" beforeDir="false" afterPath="$PROJECT_DIR$/CJUIKitReactNativeDemo/commonUIEmployee/Button/LKImageButton.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CJUIKitReactNativeDemo/commonUIEmployee/Button/LKTextButton.js" beforeDir="false" afterPath="$PROJECT_DIR$/CJUIKitReactNativeDemo/commonUIEmployee/Button/LKTextButton.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/react-native-base-uikit/ActionSheet/CJActionSheet.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/react-native-base-uikit/ActionSheet/CJMultipleChooseActionSheet.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/react-native-base-uikit/Alert/CJAlertAnimation.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/react-native-base-uikit/Alert/CJListMessageAlertView.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/react-native-base-uikit/Alert/CJListTextInputAlertView.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/react-native-base-uikit/Alert/CJMessageAlertView.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/react-native-base-uikit/Alert/CJTextInputAlertView.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/react-native-base-uikit/Alert/components/CJAlertButtons.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/react-native-base-uikit/Alert/components/CJAlertTextInput.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/react-native-base-uikit/Alert/components/CJBaseFlatListAlertView.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/react-native-base-uikit/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/react-native-base-uikit/SegmentedPageView/CJSegmentedPageView.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/react-native-base-uikit/Theme/CJTheme.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/react-native-base-uikit/areaPicker/CJAreaPickerView.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/react-native-base-uikit/button/CJTextButton.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/react-native-base-uikit/cjrn-base-uikit.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/react-native-base-uikit/collectionView/CJCycleScrollView.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/react-native-base-uikit/datePicker/CJDatePickerView.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/react-native-base-uikit/datePicker/CJDateUtil.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/react-native-base-uikit/datePicker/CJPickerAnimate.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/react-native-base-uikit/datePicker/CJPickerContiner.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/react-native-base-uikit/textInput/CJTemperatureTextInput.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/react-native-base-uikit/toolbar/CJOverlayView.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/react-native-base-uikit/toolbar/CJToolbarView.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/react-native-base-uikit/toolbar/image/icon_toolbar_title_normal@2x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/react-native-base-uikit/toolbar/image/icon_toolbar_title_normal@3x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/react-native-base-uikit/toolbar/image/icon_toolbar_title_selected@2x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/react-native-base-uikit/toolbar/image/icon_toolbar_title_selected@3x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/react-native-theme-uikit/ActionSheet/CQActionSheet.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/react-native-theme-uikit/ActionSheet/CQActionSheetUtil.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/react-native-theme-uikit/Alert/CQAlertUtil.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/react-native-theme-uikit/Alert/CQAlertView.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/react-native-theme-uikit/Alert/components/CJPAlertButtons.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/react-native-theme-uikit/Button/CQBottomTextButton.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/react-native-theme-uikit/Button/CQImageButton.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/react-native-theme-uikit/Button/CQTextButton.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/react-native-theme-uikit/Image/CQImage.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/react-native-theme-uikit/List/CQCycleScrollView.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/react-native-theme-uikit/List/CQDescriptionList.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/react-native-theme-uikit/List/CQImagesChooseList.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/react-native-theme-uikit/List/CQImagesLookList.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/react-native-theme-uikit/List/CQModulesEntryList.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/react-native-theme-uikit/List/resources/addImage_common@2x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/react-native-theme-uikit/List/resources/addImage_common@3x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/react-native-theme-uikit/Navigation/CQRouteUtil.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/react-native-theme-uikit/Navigation/resources/nav_back@2x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/react-native-theme-uikit/Navigation/resources/nav_back@3x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/react-native-theme-uikit/Pickers/CQAreaPicker.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/react-native-theme-uikit/Pickers/CQDatePicker.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/react-native-theme-uikit/Pickers/CQDatePickerUtil.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/react-native-theme-uikit/Pickers/CQItemsPicker.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/react-native-theme-uikit/Pickers/utils/CQDateUtil.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/react-native-theme-uikit/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/react-native-theme-uikit/SegmentedPageView/CQSegmentedPageView.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/react-native-theme-uikit/Text/CQText.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/react-native-theme-uikit/TextInput/CQTextInput.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/react-native-theme-uikit/Theme/CQTheme.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/react-native-theme-uikit/Toast/CQToastUtil.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/react-native-theme-uikit/Toolbar/CQToolbar.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/react-native-theme-uikit/cjrn-theme-uikit.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/react-native-theme-uikit/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CJUIKitReactNativeDemo/commonUIEmployee/CollectionView/LKImageActionCollectionView.js" beforeDir="false" afterPath="$PROJECT_DIR$/CJUIKitReactNativeDemo/commonUIEmployee/CollectionView/LKImageActionCollectionView.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CJUIKitReactNativeDemo/commonUIEmployee/Navigation/LKNavigationFactory.js" beforeDir="false" afterPath="$PROJECT_DIR$/CJUIKitReactNativeDemo/commonUIEmployee/Navigation/LKNavigationFactory.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CJUIKitReactNativeDemo/commonUIEmployee/Navigation/LuckinRoute.js" beforeDir="false" afterPath="$PROJECT_DIR$/CJUIKitReactNativeDemo/commonUIEmployee/Navigation/LuckinRoute.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CJUIKitReactNativeDemo/commonUIEmployee/Pickers/LKAreaPicker.js" beforeDir="false" afterPath="$PROJECT_DIR$/CJUIKitReactNativeDemo/commonUIEmployee/Pickers/LKAreaPicker.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CJUIKitReactNativeDemo/commonUIEmployee/Pickers/LKDatePicker.js" beforeDir="false" afterPath="$PROJECT_DIR$/CJUIKitReactNativeDemo/commonUIEmployee/Pickers/LKDatePicker.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CJUIKitReactNativeDemo/commonUIEmployee/Pickers/LKNormalPicker.js" beforeDir="false" afterPath="$PROJECT_DIR$/CJUIKitReactNativeDemo/commonUIEmployee/Pickers/LKNormalPicker.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CJUIKitReactNativeDemo/commonUIEmployee/Toast/LKToast.js" beforeDir="false" afterPath="$PROJECT_DIR$/CJUIKitReactNativeDemo/commonUIEmployee/Toast/LKToast.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CJUIKitReactNativeDemo/commonUIEmployee/commonUIEmployee.js" beforeDir="false" afterPath="$PROJECT_DIR$/CJUIKitReactNativeDemo/commonUIEmployee/commonUIEmployee.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CJUIKitReactNativeDemo/lkcui/lkcui.js" beforeDir="false" afterPath="$PROJECT_DIR$/CJUIKitReactNativeDemo/lkcui/lkcui.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CJUIKitReactNativeDemo/main/MainRooter2.js" beforeDir="false" afterPath="$PROJECT_DIR$/CJUIKitReactNativeDemo/main/MainRooter2.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CJUIKitReactNativeDemo/commonUtil/luckincommonutil.js" beforeDir="false" afterPath="$PROJECT_DIR$/CJUIKitReactNativeDemo/commonUtil/luckincommonutil.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CJUIKitReactNativeDemo/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/CJUIKitReactNativeDemo/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CJUIKitReactNativeDemo/uihome/collection/ImageActionContainPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/CJUIKitReactNativeDemo/uihome/collection/ImageActionContainPage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CJUIKitReactNativeDemo/uihome/toolbar/ToolBarHomePage.js" beforeDir="false" afterPath="$PROJECT_DIR$/CJUIKitReactNativeDemo/uihome/toolbar/ToolBarHomePage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cjrn-base-helper/CJBaseHelper.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CJUIKitReactNativeDemo/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/CJUIKitReactNativeDemo/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cjrn-base-uikit/ActionSheet/CJActionSheet.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cjrn-base-uikit/ActionSheet/CJActionSheetComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/react-native-base-uikit/ActionSheet/CJActionSheetComponent.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cjrn-base-uikit/ActionSheet/CJActionSheetTableView.js" beforeDir="false" afterPath="$PROJECT_DIR$/react-native-base-uikit/ActionSheet/CJActionSheetTableView.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cjrn-base-uikit/ActionSheet/CJMultipleChooseActionSheet.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cjrn-base-uikit/ActionSheet/CJMultipleChooseActionSheetComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/react-native-base-uikit/ActionSheet/CJMultipleChooseActionSheetComponent.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cjrn-base-uikit/ActionSheet/CJMultipleChooseActionSheetTableView.js" beforeDir="false" afterPath="$PROJECT_DIR$/react-native-base-uikit/ActionSheet/CJMultipleChooseActionSheetTableView.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cjrn-base-uikit/ActionSheet/resources/check_normal@2x.png" beforeDir="false" afterPath="$PROJECT_DIR$/react-native-base-uikit/ActionSheet/resources/check_normal@2x.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cjrn-base-uikit/ActionSheet/resources/check_normal@3x.png" beforeDir="false" afterPath="$PROJECT_DIR$/react-native-base-uikit/ActionSheet/resources/check_normal@3x.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cjrn-base-uikit/ActionSheet/resources/check_selected@2x.png" beforeDir="false" afterPath="$PROJECT_DIR$/react-native-base-uikit/ActionSheet/resources/check_selected@2x.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cjrn-base-uikit/ActionSheet/resources/check_selected@3x.png" beforeDir="false" afterPath="$PROJECT_DIR$/react-native-base-uikit/ActionSheet/resources/check_selected@3x.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cjrn-base-uikit/ActionSheet/resources/close@2x.png" beforeDir="false" afterPath="$PROJECT_DIR$/react-native-base-uikit/ActionSheet/resources/close@2x.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cjrn-base-uikit/ActionSheet/resources/close@3x.png" beforeDir="false" afterPath="$PROJECT_DIR$/react-native-base-uikit/ActionSheet/resources/close@3x.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cjrn-base-uikit/Helper/ObjectCJHelper.js" beforeDir="false" afterPath="$PROJECT_DIR$/react-native-base-uikit/Helper/ObjectCJHelper.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cjrn-base-uikit/NormalPicker/CJNormalPickerView.js" beforeDir="false" afterPath="$PROJECT_DIR$/react-native-base-uikit/NormalPicker/CJNormalPickerView.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cjrn-base-uikit/PickerView/CJBaseComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/react-native-base-uikit/PickerView/CJBaseComponent.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cjrn-base-uikit/PickerView/CJBaseDialog.js" beforeDir="false" afterPath="$PROJECT_DIR$/react-native-base-uikit/PickerView/CJBaseDialog.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cjrn-base-uikit/PickerView/CJPickerView.js" beforeDir="false" afterPath="$PROJECT_DIR$/react-native-base-uikit/PickerView/CJPickerWheelView.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cjrn-base-uikit/TableView/CJSectionTableView.js" beforeDir="false" afterPath="$PROJECT_DIR$/react-native-base-uikit/TableView/CJSectionTableView.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cjrn-base-uikit/TableView/CJTableViewCell.js" beforeDir="false" afterPath="$PROJECT_DIR$/react-native-base-uikit/TableView/CJTableViewCell.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cjrn-base-uikit/TableView/resources/item_arrow_right.png" beforeDir="false" afterPath="$PROJECT_DIR$/react-native-base-uikit/TableView/resources/item_arrow_right.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cjrn-base-uikit/TableView/resources/item_arrow_right@2x.png" beforeDir="false" afterPath="$PROJECT_DIR$/react-native-base-uikit/TableView/resources/item_arrow_right@2x.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cjrn-base-uikit/TableView/resources/item_arrow_right@3x.png" beforeDir="false" afterPath="$PROJECT_DIR$/react-native-base-uikit/TableView/resources/item_arrow_right@3x.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cjrn-base-uikit/areaPicker/CJAreaPicker.js" beforeDir="false" afterPath="$PROJECT_DIR$/react-native-base-uikit/areaPicker/CJAreaPicker.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cjrn-base-uikit/areaPicker/CJAreaPickerView.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cjrn-base-uikit/areaPicker/area.json" beforeDir="false" afterPath="$PROJECT_DIR$/react-native-base-uikit/areaPicker/area.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cjrn-base-uikit/base/CJBaseBottomPicker.js" beforeDir="false" afterPath="$PROJECT_DIR$/react-native-base-uikit/base/CJBaseBottomPicker.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cjrn-base-uikit/base/CJBottomToolbar.js" beforeDir="false" afterPath="$PROJECT_DIR$/react-native-base-uikit/base/CJBottomToolbar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cjrn-base-uikit/button/CJImageButton.js" beforeDir="false" afterPath="$PROJECT_DIR$/react-native-base-uikit/button/CJImageButton.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cjrn-base-uikit/button/CJImageTextButton.js" beforeDir="false" afterPath="$PROJECT_DIR$/react-native-base-uikit/button/CJImageTextButton.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cjrn-base-uikit/button/CJTextButton.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cjrn-base-uikit/button/CJTextImageButton.js" beforeDir="false" afterPath="$PROJECT_DIR$/react-native-base-uikit/button/CJTextImageButton.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cjrn-base-uikit/button/resources/imageDefault.png" beforeDir="false" afterPath="$PROJECT_DIR$/react-native-base-uikit/button/resources/imageDefault.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cjrn-base-uikit/button/resources/imageDefault@3x.png" beforeDir="false" afterPath="$PROJECT_DIR$/react-native-base-uikit/button/resources/imageDefault@3x.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cjrn-base-uikit/button/resources/imageError.png" beforeDir="false" afterPath="$PROJECT_DIR$/react-native-base-uikit/button/resources/imageError.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cjrn-base-uikit/button/resources/imageError@2x.png" beforeDir="false" afterPath="$PROJECT_DIR$/react-native-base-uikit/button/resources/imageError@2x.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cjrn-base-uikit/button/resources/imageError@3x.png" beforeDir="false" afterPath="$PROJECT_DIR$/react-native-base-uikit/button/resources/imageError@3x.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cjrn-base-uikit/cjrn-base-uikit.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cjrn-base-uikit/collectionView/CJBaseCollectionView.js" beforeDir="false" afterPath="$PROJECT_DIR$/react-native-base-uikit/collectionView/CJBaseCollectionView.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cjrn-base-uikit/collectionView/CJCollectionCell.js" beforeDir="false" afterPath="$PROJECT_DIR$/react-native-base-uikit/collectionView/CJCollectionCell.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cjrn-base-uikit/collectionView/CJCollectionView.js" beforeDir="false" afterPath="$PROJECT_DIR$/react-native-base-uikit/collectionView/CJCollectionView.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cjrn-base-uikit/collectionView/CJImageActionCollectionView.js" beforeDir="false" afterPath="$PROJECT_DIR$/react-native-base-uikit/collectionView/CJImageActionCollectionView.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cjrn-base-uikit/collectionView/CJImageLookCollectionView.js" beforeDir="false" afterPath="$PROJECT_DIR$/react-native-base-uikit/collectionView/CJImageLookCollectionView.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cjrn-base-uikit/collectionView/resources/addImage_cer.png" beforeDir="false" afterPath="$PROJECT_DIR$/react-native-base-uikit/collectionView/resources/addImage_cer.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cjrn-base-uikit/collectionView/resources/addImage_cer@2x.png" beforeDir="false" afterPath="$PROJECT_DIR$/react-native-base-uikit/collectionView/resources/addImage_cer@2x.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cjrn-base-uikit/collectionView/resources/addImage_cer@3x.png" beforeDir="false" afterPath="$PROJECT_DIR$/react-native-base-uikit/collectionView/resources/addImage_cer@3x.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cjrn-base-uikit/collectionView/resources/addImage_common@2x.png" beforeDir="false" afterPath="$PROJECT_DIR$/react-native-base-uikit/collectionView/resources/addImage_common@2x.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cjrn-base-uikit/collectionView/resources/addImage_common@3x.png" beforeDir="false" afterPath="$PROJECT_DIR$/react-native-base-uikit/collectionView/resources/addImage_common@3x.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cjrn-base-uikit/collectionView/resources/icon_search@2x.png" beforeDir="false" afterPath="$PROJECT_DIR$/react-native-base-uikit/collectionView/resources/icon_search@2x.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cjrn-base-uikit/collectionView/resources/icon_search@3x.png" beforeDir="false" afterPath="$PROJECT_DIR$/react-native-base-uikit/collectionView/resources/icon_search@3x.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cjrn-base-uikit/collectionView/resources/imageDefault.png" beforeDir="false" afterPath="$PROJECT_DIR$/react-native-base-uikit/collectionView/resources/imageDefault.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cjrn-base-uikit/collectionView/resources/imageDefault@3x.png" beforeDir="false" afterPath="$PROJECT_DIR$/react-native-base-uikit/collectionView/resources/imageDefault@3x.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cjrn-base-uikit/datePicker/CJDatePicker.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cjrn-base-uikit/datePicker/CJDatePickerUtil.js" beforeDir="false" afterPath="$PROJECT_DIR$/react-native-base-uikit/datePicker/CJDatePickerUtil.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cjrn-base-uikit/datePicker/CJDatePickerView.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cjrn-base-uikit/image/CJActionLoadingImage.js" beforeDir="false" afterPath="$PROJECT_DIR$/react-native-base-uikit/image/CJActionLoadingImage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cjrn-base-uikit/image/CJLoadingImage.js" beforeDir="false" afterPath="$PROJECT_DIR$/react-native-base-uikit/image/CJLoadingImage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cjrn-base-uikit/image/resources/imageDefault.png" beforeDir="false" afterPath="$PROJECT_DIR$/react-native-base-uikit/image/resources/imageDefault.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cjrn-base-uikit/image/resources/imageDefault@3x.png" beforeDir="false" afterPath="$PROJECT_DIR$/react-native-base-uikit/image/resources/imageDefault@3x.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cjrn-base-uikit/image/resources/imageDelete_blue.png" beforeDir="false" afterPath="$PROJECT_DIR$/react-native-base-uikit/image/resources/imageDelete_blue.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cjrn-base-uikit/image/resources/imageDelete_blue@2x.png" beforeDir="false" afterPath="$PROJECT_DIR$/react-native-base-uikit/image/resources/imageDelete_blue@2x.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cjrn-base-uikit/image/resources/imageDelete_blue@3x.png" beforeDir="false" afterPath="$PROJECT_DIR$/react-native-base-uikit/image/resources/imageDelete_blue@3x.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cjrn-base-uikit/image/resources/imageError.png" beforeDir="false" afterPath="$PROJECT_DIR$/react-native-base-uikit/image/resources/imageError.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cjrn-base-uikit/image/resources/imageError@2x.png" beforeDir="false" afterPath="$PROJECT_DIR$/react-native-base-uikit/image/resources/imageError@2x.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cjrn-base-uikit/image/resources/imageError@3x.png" beforeDir="false" afterPath="$PROJECT_DIR$/react-native-base-uikit/image/resources/imageError@3x.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cjrn-base-uikit/navigation/CJNavigationFactory.js" beforeDir="false" afterPath="$PROJECT_DIR$/react-native-theme-uikit/Navigation/CQNavigationBarUtil.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cjrn-base-uikit/navigation/CJNavigationUtil.js" beforeDir="false" afterPath="$PROJECT_DIR$/react-native-base-uikit/navigation/CJNavigationUtil.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cjrn-base-uikit/navigation/resources/nav_back@2x.png" beforeDir="false" afterPath="$PROJECT_DIR$/react-native-base-uikit/navigation/resources/nav_back@2x.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cjrn-base-uikit/navigation/resources/nav_back@3x.png" beforeDir="false" afterPath="$PROJECT_DIR$/react-native-base-uikit/navigation/resources/nav_back@3x.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cjrn-base-uikit/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/react-native-base-uikit/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cjrn-base-uikit/text/CJText.js" beforeDir="false" afterPath="$PROJECT_DIR$/react-native-base-uikit/text/CJText.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cjrn-base-uikit/toast/CJToast.js" beforeDir="false" afterPath="$PROJECT_DIR$/react-native-base-uikit/toast/CJToast.js" afterDir="false" />
     </list>
-    <ignored path="$PROJECT_DIR$/.tmp/" />
-    <ignored path="$PROJECT_DIR$/temp/" />
-    <ignored path="$PROJECT_DIR$/tmp/" />
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="FileEditorManager">
-    <leaf>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/cjrn-base-uikit/image/CJLoadingImage.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
-              <folding>
-                <element signature="e#395#436#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/cjrn-base-helper/package.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="7" column="4" lean-forward="true" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="4" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/cjrn-base-uikit/collectionView/CJBaseCollectionView.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="358">
-              <caret line="170" column="39" lean-forward="true" selection-start-line="170" selection-start-column="39" selection-end-line="170" selection-end-column="39" />
-              <folding>
-                <element signature="e#267#308#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/cjrn-base-uikit/collectionView/CJCollectionCell.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="177">
-              <caret line="59" column="61" lean-forward="true" selection-start-line="59" selection-start-column="61" selection-end-line="59" selection-end-column="61" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/cjrn-base-uikit/Helper/ObjectCJHelper.js">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-    </leaf>
-  </component>
-  <component name="FindInProjectRecents">
-    <findStrings>
-      <find>ObjectCJH</find>
-      <find>../../CJBaseHelper/CJBaseHelper</find>
-      <find>ObjectCJHelper</find>
-      <find>CJImageTextButton</find>
-    </findStrings>
-    <replaceStrings>
-      <replace>../Helper/ObjectCJHelper</replace>
-    </replaceStrings>
-  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
-  <component name="IdeDocumentHistory">
-    <option name="CHANGED_PATHS">
-      <list>
-        <option value="$PROJECT_DIR$/cjrn-base-uikit/image/CJLoadingImage.js" />
-        <option value="$PROJECT_DIR$/cjrn-base-uikit/Helper/ObjectCJHelper.js" />
-        <option value="$PROJECT_DIR$/cjrn-base-uikit/collectionView/CJBaseCollectionView.js" />
-        <option value="$PROJECT_DIR$/cjrn-base-helper/package.json" />
-      </list>
-    </option>
   </component>
   <component name="ProjectConfigurationFiles">
     <option name="files">
@@ -206,58 +165,11 @@
     <option name="width" value="1280" />
     <option name="height" value="726" />
   </component>
-  <component name="ProjectView">
-    <navigator proportions="" version="1">
-      <foldersAlwaysOnTop value="true" />
-    </navigator>
-    <panes>
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="CJUIKit-ReactNative" type="b2602c69:ProjectViewProjectNode" />
-              <item name="CJUIKit-ReactNative" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="CJUIKit-ReactNative" type="b2602c69:ProjectViewProjectNode" />
-              <item name="CJUIKit-ReactNative" type="462c0819:PsiDirectoryNode" />
-              <item name="cjrn-base-helper" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="CJUIKit-ReactNative" type="b2602c69:ProjectViewProjectNode" />
-              <item name="CJUIKit-ReactNative" type="462c0819:PsiDirectoryNode" />
-              <item name="cjrn-base-uikit" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="CJUIKit-ReactNative" type="b2602c69:ProjectViewProjectNode" />
-              <item name="CJUIKit-ReactNative" type="462c0819:PsiDirectoryNode" />
-              <item name="cjrn-base-uikit" type="462c0819:PsiDirectoryNode" />
-              <item name="button" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="CJUIKit-ReactNative" type="b2602c69:ProjectViewProjectNode" />
-              <item name="CJUIKit-ReactNative" type="462c0819:PsiDirectoryNode" />
-              <item name="cjrn-base-uikit" type="462c0819:PsiDirectoryNode" />
-              <item name="collectionView" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="CJUIKit-ReactNative" type="b2602c69:ProjectViewProjectNode" />
-              <item name="CJUIKit-ReactNative" type="462c0819:PsiDirectoryNode" />
-              <item name="cjrn-base-uikit" type="462c0819:PsiDirectoryNode" />
-              <item name="image" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="CJUIKit-ReactNative" type="b2602c69:ProjectViewProjectNode" />
-              <item name="CJUIKit-ReactNative" type="462c0819:PsiDirectoryNode" />
-              <item name="cjrn-base-uikit" type="462c0819:PsiDirectoryNode" />
-              <item name="NormalPicker" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-      <pane id="Scope" />
-    </panes>
+  <component name="ProjectId" id="1Wk5eMv7wJkAAuilR3ELTsot8YS" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -268,15 +180,15 @@
     <property name="settings.editor.selected.configurable" value="settings.javascript.linters.eslint" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
   </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
+  <component name="ServiceViewManager">
+    <option name="viewStates">
       <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
       </list>
     </option>
   </component>
@@ -291,77 +203,18 @@
       <option name="presentableId" value="Default" />
       <updated>1575882226698</updated>
       <workItem from="1575882228430" duration="400000" />
+      <workItem from="1579680847396" duration="1148000" />
     </task>
     <servers />
-  </component>
-  <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="400000" />
-  </component>
-  <component name="ToolWindowManager">
-    <frame x="19" y="23" width="1280" height="726" extended-state="0" />
-    <editor active="true" />
-    <layout>
-      <window_info id="Favorites" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" />
-      <window_info anchor="bottom" id="Terminal" />
-      <window_info anchor="bottom" id="Event Log" side_tool="true" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="right" id="Key Promoter X" />
-      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-    </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
-  <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/cjrn-base-uikit/Helper/ObjectCJHelper.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cjrn-base-uikit/collectionView/CJBaseCollectionView.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="358">
-          <caret line="170" column="39" lean-forward="true" selection-start-line="170" selection-start-column="39" selection-end-line="170" selection-end-column="39" />
-          <folding>
-            <element signature="e#267#308#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cjrn-base-uikit/image/CJLoadingImage.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
-          <folding>
-            <element signature="e#395#436#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cjrn-base-helper/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="4" lean-forward="true" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cjrn-base-uikit/collectionView/CJCollectionCell.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="177">
-          <caret line="59" column="61" lean-forward="true" selection-start-line="59" selection-start-column="61" selection-end-line="59" selection-end-column="61" />
-        </state>
-      </provider>
-    </entry>
+  <component name="WindowStateProjectService">
+    <state x="378" y="188" width="837" height="550" key="find.popup" timestamp="1579680993645">
+      <screen x="0" y="23" width="1440" height="814" />
+    </state>
+    <state x="378" y="188" width="837" height="550" key="find.popup/0.23.1440.814@0.23.1440.814" timestamp="1579680993645" />
   </component>
   <component name="masterDetails">
     <states>

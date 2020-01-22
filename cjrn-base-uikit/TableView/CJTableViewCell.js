@@ -1,4 +1,4 @@
-// CJTableViewCell.js
+// CJTableViewCellCell.js
 import React, {Component} from 'react';
 import { StyleSheet, View, Text, TouchableOpacity, Image } from 'react-native';
 import PropTypes from "prop-types";

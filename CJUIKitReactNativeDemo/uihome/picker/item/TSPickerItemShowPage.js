@@ -7,16 +7,14 @@
  * @date        2019-12-04 03:05:08
  */
 import React, { Component } from 'react';
-import {
-    LKDemoChooseBasePage,
-} from "cjrn-demo-base";
+import TSTableHomeBasePage from '../../base/TSTableHomeBasePage';
 
 import {
-    LKNormalPicker,
-    LKToast,
-} from "../../../lkcui/lkcui";
+    CQItemsPicker,
+    CQToastUtil,
+} from "cjrn-theme-uikit";
 
-export default class TSPickerItemShowPage extends LKDemoChooseBasePage {
+export default class TSPickerItemShowPage extends TSTableHomeBasePage {
     constructor(props) {
         super(props);
 
@@ -28,7 +26,7 @@ export default class TSPickerItemShowPage extends LKDemoChooseBasePage {
                     key: "弹出时选中的值",
                     data: [
                         {
-                            title: "每次均为上次选中时间",
+                            title: "每次均为上次选中的事项",
                             detailText: null,
                             clickButtonHandle: (moduleModel) => {
                                 this.state.dealIndex = 0;
@@ -57,14 +55,22 @@ export default class TSPickerItemShowPage extends LKDemoChooseBasePage {
     }
 
     getPickerView1() {
-        let component1 = ['item0', 'item1', 'item2', 'item3', 'item4', 'item5', 'item6', 'item7', 'item8', 'item9'];
-        let component2 = ['item10', 'item11', 'item12', 'item13', 'item14', 'item15', 'item16', 'item17', 'item18', 'item19'];
+        let component1 = [];
+        for (let i = 0; i < 100; i++) {
+            component1.push(i);
+        }
+
+        let component2 = [];
+        for (let i = 0; i < 9; i++) {
+            component2.push(i);
+        }
         return (
-            <LKNormalPicker
+            <CQItemsPicker
                 ref={ref => this.normalPicker = ref}
                 key={'normalPicker'}
+                toolbarValueText={'体重选择'}
                 pickerData={[component1, component2]}
-                selectedValues={['item6', 'item12']}
+                selectedValues={['60', '2']}
 
                 onPickerSelected={(toValue) => {
                     // console.warn(toValue)

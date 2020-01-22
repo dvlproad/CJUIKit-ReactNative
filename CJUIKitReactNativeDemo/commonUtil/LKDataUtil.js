@@ -1,6 +1,6 @@
-// LKDataUtil.js
+// CQDataUtil.js
 
-export default class LKDataUtil {
+export default class CQDataUtil {
     /**
      * 获取唯一值
      * @returns {string}

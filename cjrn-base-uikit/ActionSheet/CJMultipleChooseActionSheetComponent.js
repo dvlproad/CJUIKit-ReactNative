@@ -1,5 +1,5 @@
 /**
- * CJMultipleChooseActionSheetComponent.js
+ * CJMultipleChooseActionSheetComponent.jst.js
  *
  * @Description: 【多选】ActionSheet中含①顶部标题、②内容区域列表、③底部确认部分的整体视图
  *
@@ -11,13 +11,17 @@
  */
 import React, { Component } from 'react';
 import PropTypes from "prop-types";
-import {Dimensions, Platform, StyleSheet, Text, TouchableOpacity, View} from "react-native";
+import {Dimensions, Platform, StyleSheet, Text, TouchableOpacity, View, ViewPropTypes} from "react-native";
 
+const viewPropTypes = ViewPropTypes || View.propTypes;
 let screenHeight = Dimensions.get('window').height;
 let screenBottomHeight = Platform.OS === 'ios' ? screenHeight >= 812 ? 34 : 0 : 0;
 
 export default class CJMultipleChooseActionSheetComponent extends Component {
     static propTypes = {
+        blankBGColor: PropTypes.string,
+        actionSheetStyle: viewPropTypes.style,
+
         showHeader: PropTypes.bool,
         headerTitle: PropTypes.string,          // 顶部标题
 
@@ -26,6 +30,12 @@ export default class CJMultipleChooseActionSheetComponent extends Component {
         children: PropTypes.oneOfType([PropTypes.object, PropTypes.array]),
     };
     static defaultProps = {
+        blankBGColor: 'rgba(40,40,40,0.4)',
+        actionSheetStyle: {
+            // borderTopLeftRadius: 10,
+            // borderTopRightRadius: 10,
+        },
+
         showHeader: false,
         headerTitle: '',
 
@@ -36,10 +46,10 @@ export default class CJMultipleChooseActionSheetComponent extends Component {
     render() {
         return (
             <TouchableOpacity
-                style={{flex: 1, justifyContent: 'center', alignItems: 'center', backgroundColor: 'rgba(40,40,40,0.4)'}}
+                style={{flex: 1, justifyContent: 'center', alignItems: 'center', backgroundColor: this.props.blankBGColor}}
                 onPress={this.props.onCoverPress}
                 activeOpacity={0.9}>
-                <View style={{position: 'absolute', bottom: 0, left: 0, right: 0, backgroundColor: '#fff'}}>
+                <View style={[{position: 'absolute', bottom: 0, left: 0, right: 0, backgroundColor: '#fff'}, this.props.actionSheetStyle]}>
                     {this.props.showHeader ? <CJMultipleChooseActionSheetHeader headerTitle={this.props.headerTitle} /> : null}
                     {this.props.children}
                     <View style={{borderTopWidth: 10, borderTopColor: '#F1EFF0'}}></View>

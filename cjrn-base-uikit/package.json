@@ -1,6 +1,6 @@
 {
   "name": "cjrn-base-uikit",
-  "version": "0.1.1",
+  "version": "0.6.3",
   "description": "A UI library for react native.",
   "main": "cjrn-base-uikit.js",
   "scripts": {
@@ -21,9 +21,9 @@
   "author": "dvlproad",
   "license": "MIT",
   "homepage": "http://github.com/dvlproad/CJUIKit-ReactNative.git",
+  "readmeFilename": "README.md",
   "dependencies": {
     "prop-types": "^15.7.2",
-    "react-native-root-toast": "^3.2.0",
-    "react-native-svg": "^9.13.3"
+    "react-native-root-toast": "^3.2.0"
   }
 }

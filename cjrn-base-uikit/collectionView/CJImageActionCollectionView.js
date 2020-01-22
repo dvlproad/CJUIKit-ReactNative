@@ -24,7 +24,7 @@ import { CJImageLookCollectionView } from '../../CJBaseUIKit/CJBaseUIKit';
                     minimumLineSpacing={10}
                     dataModels={this.state.moduleModels}
                     clickButtonHandle={(index)=>{
-                        LKToast.showMessage("点击浏览图片" + index);
+                        CQToast.showMessage("点击浏览图片" + index);
                     }}
                     imageLoadedCountChange={(imageLoadedCount, isImageAllLoaded)=>{
                         let message = '';
@@ -41,7 +41,7 @@ import React, { Component } from 'react';
 import PropTypes from "prop-types";
 import {View, ViewPropTypes} from "react-native";
 import CJActionLoadingImage  from '../image/CJActionLoadingImage';
-import {CJImageUploadType} from "../image/CJLoadingImage";
+import {CJImageUploadType} from "../image/utils/CJImageUtil";
 import CJBaseCollectionView from './CJBaseCollectionView';
 
 const viewPropTypes = ViewPropTypes || View.propTypes;
@@ -49,6 +49,8 @@ const stylePropTypes = viewPropTypes.style;
 
 export default class CJImageActionCollectionView extends CJBaseCollectionView {
     static propTypes = {
+        ...CJBaseCollectionView.propTypes,
+
         dataModels: PropTypes.array,
         imageDefaultSource: PropTypes.oneOfType([PropTypes.object, PropTypes.number]),
         imageBorderStyle: stylePropTypes,       // 非添加按钮的图片的边框样式(添加按钮的边框默认无)
@@ -71,11 +73,14 @@ export default class CJImageActionCollectionView extends CJBaseCollectionView {
     };
 
     static defaultProps = {
+        ...CJBaseCollectionView.defaultProps,
+
         dataModels: [],
         listWidth: 0,
         sectionInset: { top: 0, left: 0, bottom: 0, right: 0 },
         minimumInteritemSpacing: 10,
         minimumLineSpacing: 10,
+        scrollEnabled: true,
 
         cellWidthFromPerRowMaxShowCount: 4,
         widthHeightRatio: 1.0,  //宽高的比例

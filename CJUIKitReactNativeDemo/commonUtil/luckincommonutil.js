@@ -3,28 +3,28 @@
 'use strict';
 
 
-import LKDataUtil from  "./LKDataUtil";
-import LKDateUtil from "./LKDateUtil";
-// import LKCalendarUtil from "./LKCalendarUtil";
-// import LKScreenUnit from "./LKScreenUnit";
-// import LKNetworkTool from "./networkTool/LKNetworkTool";
-// import LKImagePickerUtil from "./LKImagePickerUtil";
+import CQDataUtil from  "./CQDataUtil";
+import CQDateUtil from "./CQDateUtil";
+// import CQCalendarUtil from "./CQCalendarUtil";
+// import CQScreenUnit from "./CQScreenUnit";
+// import CQNetworkTool from "./networkTool/CQNetworkTool";
+// import CQImagePickerUtil from "./CQImagePickerUtil";
 
 
 // import React, { Component } from 'react';
 // export class Class extends Component  {
 //   render() {
-//     LKNetworkTool,
+//     CQNetworkTool,
 //   }
 // }
 
-var LKCommonUtil = {
-    LKDataUtil,
-    // LKImagePickerUtil,
-    LKDateUtil,
-    // LKCalendarUtil,
-    // LKScreenUnit,
-    // LKNetworkTool
+var CQCommonUtil = {
+    CQDataUtil,
+    // CQImagePickerUtil,
+    CQDateUtil,
+    // CQCalendarUtil,
+    // CQScreenUnit,
+    // CQNetworkTool
 };
 
-module.exports = LKCommonUtil;
+module.exports = CQCommonUtil;

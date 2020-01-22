@@ -1,6 +1,6 @@
-// LKUDIDUtil.js
+// CQUDIDUtil.js
 
-export default class LKUDIDUtil {
+export default class CQUDIDUtil {
     /**
      * 获取唯一值
      * @returns {string}

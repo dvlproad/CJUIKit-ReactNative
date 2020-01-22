@@ -6,14 +6,14 @@ import {
     PixelRatio
 } from 'react-native';
 
-class CJBaseComponent extends Component {
+export default class CJBaseComponent extends Component {
 
     mScreenWidth = Dimensions.get('window').width;
 
     mScreenHeight = Dimensions.get('window').height;
 
     //最小显示单位
-    mOnePixel = (PixelRatio.get() == 3 ? 2 : 1) / PixelRatio.get();
+    mOnePixel = (PixelRatio.get() === 3 ? 2 : 1) / PixelRatio.get();
 
     constructor(props) {
         super(props);
@@ -26,7 +26,4 @@ class CJBaseComponent extends Component {
     getSize(size) {
         return parseInt(this.mScreenWidth * size / 375);
     }
-
 }
-
-export default CJBaseComponent;

@@ -8,7 +8,7 @@ import {
 } from 'react-native';
 
 import PropTypes from "prop-types";
-const viewPropTypes = ViewPropTypes || View.propTypes;
+// const viewPropTypes = ViewPropTypes || View.propTypes;
 
 let screenWidth = Dimensions.get('window').width;
 
@@ -20,13 +20,13 @@ export default class CJBottomToolbar extends Component {
         toolbarHeight: PropTypes.number,
 
         confirmText: PropTypes.string,
-        confirmTextStyle: viewPropTypes.style,
+        confirmTextStyle: PropTypes.object,
 
         cancelText: PropTypes.string,
-        cancelTextStyle: viewPropTypes.style,
+        cancelTextStyle: PropTypes.object,
 
         valueText: PropTypes.string,
-        valueTextStyle: viewPropTypes.style,
+        valueTextStyle: PropTypes.object,
     };
 
     static defaultProps = {
@@ -52,7 +52,7 @@ export default class CJBottomToolbar extends Component {
             fontSize: 17,
             color: '#000000',
         },
-    }
+    };
 
     constructor(props) {
         super(props);
@@ -71,7 +71,7 @@ export default class CJBottomToolbar extends Component {
                     {
                         width: screenWidth,
                         height: toolbarHeight,
-                        backgroundColor: '#ffffff',
+                        backgroundColor: 'white',
                         flexDirection: 'row',
                         justifyContent: 'space-between'
                     },

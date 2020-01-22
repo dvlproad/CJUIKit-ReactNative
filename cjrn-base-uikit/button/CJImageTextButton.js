@@ -1,5 +1,5 @@
 /**
- * CJImageTextButton.js
+ * CJImageTextButtontton.js
  * @Description: CJImageTextButton
  * @author      ciyouzen
  * @email       dvlproad@163.com

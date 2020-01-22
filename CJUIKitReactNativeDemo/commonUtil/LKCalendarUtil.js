@@ -1,6 +1,6 @@
-//LKCalendarUtil.js
+//CQCalendarUtil.js
 
-export default class LKCalendarUtil {
+export default class CQCalendarUtil {
     /**
      * 统计从指定年份到指定年份的所有日期
      * @param beginYear     开始年(默认1900)

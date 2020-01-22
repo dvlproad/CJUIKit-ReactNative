@@ -1,5 +1,5 @@
 /**
- * CJBaseCollectionView.js（本类只能用于继承，且子类只需实现 renderCollectionCell 方法）
+ * CJBaseCollectionView.jsw.js（本类只能用于继承，且子类只需实现 renderCollectionCell 方法）
  *
  * @Description: CJBaseCollectionView
  *
@@ -24,6 +24,7 @@ export default class CJBaseCollectionView extends Component {
         sectionInset: PropTypes.object,
         minimumInteritemSpacing: PropTypes.number,  // 水平方向上box之间的最少间隔
         minimumLineSpacing: PropTypes.number,       // 竖直方向上box之间的间隔
+        scrollEnabled: PropTypes.bool,              // 是否可以滚动
 
         // 以下值必须二选一设置（默认cellWidthFromFixedWidth设置后，另外一个自动失效）
         cellWidthFromFixedWidth: PropTypes.number,          // 通过cell的固定宽度来设置每个cell的宽度
@@ -39,6 +40,7 @@ export default class CJBaseCollectionView extends Component {
         sectionInset: { top: 0, left: 0, bottom: 0, right: 0 },
         minimumInteritemSpacing: 10,
         minimumLineSpacing: 10,
+        scrollEnabled: true,
 
         // 以下值必须二选一设置（默认cellWidthFromFixedWidth设置后，另外一个自动失效）
         cellWidthFromPerRowMaxShowCount: 3,
@@ -168,6 +170,7 @@ export default class CJBaseCollectionView extends Component {
         return (
             <FlatList
                 style={[{ backgroundColor: '#F4F4F4' }, this.props.style, sectionInsetStyle]}
+                scrollEnabled={this.props.scrollEnabled}
                 data={renderDataModels}
                 keyExtractor={(item, index) => index.toString()}
                 renderItem={({ item, index }) => {

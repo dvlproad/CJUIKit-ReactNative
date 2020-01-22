@@ -7,16 +7,19 @@
  * @date        2019-12-04 03:05:08
  */
 import React, { Component } from 'react';
-import {
-    LKDemoChooseBasePage,
-} from "cjrn-demo-base";
+import TSTableHomeBasePage from '../../base/TSTableHomeBasePage';
+
 
 import {
-    LKAreaPicker,
-    LKToast,
-} from "../../../lkcui/lkcui";
+    CQAreaPicker,
+    CQToastUtil,
+} from "cjrn-theme-uikit";
 
-export default class TSAreaPickerShowPage extends LKDemoChooseBasePage {
+import { 
+    CJPickerAnimate 
+} from "cjrn-base-uikit";
+
+export default class TSAreaPickerShowPage extends TSTableHomeBasePage {
     constructor(props) {
         super(props);
 
@@ -28,10 +31,11 @@ export default class TSAreaPickerShowPage extends LKDemoChooseBasePage {
                     key: "弹出时选中的值",
                     data: [
                         {
-                            title: "每次均为上次选中时间",
+                            title: "每次均为上次选中地区",
                             detailText: null,
                             clickButtonHandle: (moduleModel) => {
                                 this.state.dealIndex = 0;
+                                this.animatePicker1.show();
                                 this.lastValueAreaPicker.show();
                             },
                         },
@@ -40,6 +44,7 @@ export default class TSAreaPickerShowPage extends LKDemoChooseBasePage {
                             detailText: '香港-香港-九龙城区',
                             clickButtonHandle: (moduleModel) => {
                                 this.state.dealIndex = 1;
+                                this.animatePicker2.show();
                                 this.designativeValueAreaPicker.showWithAreaSelectedValues(['香港', '香港', '九龙城区']);
                             },
                         },
@@ -59,28 +64,45 @@ export default class TSAreaPickerShowPage extends LKDemoChooseBasePage {
 
     getDatePicker1(){
         return (
-            <LKAreaPicker
-                toolbarValueText={'意向城市'}
-                onPickerCancel={() => { }}
-                onPickerConfirm={(selectedValues) => {
-                    let areaString = selectedValues.join('-');
-                    this.updateIndexPathWithDetailText(0, this.state.dealIndex, areaString);
-                }}
-                ref={ref => this.lastValueAreaPicker = ref}
+            <CJPickerAnimate key = {'animatePicker1'} ref={ref => this.animatePicker1 = ref}
+                 component={(
+                     <CQAreaPicker
+                         toolbarValueText={'意向城市'}
+                         onPickerCancel={() => { this.animatePicker1.dismiss(); }}
+                         onPickerConfirm={(selectedValues) => {
+                             this.animatePicker1.dismiss();
+                             let areaString = selectedValues.join('-');
+                             this.updateIndexPathWithDetailText(0, this.state.dealIndex, areaString);
+                         }}
+                         ref={ref => this.lastValueAreaPicker = ref}
+                     />
+                 )}
+                 dismissAction={()=>{
+
+                 }}
             />
+
         )
     }
 
     getDatePicker2(){
         return (
-            <LKAreaPicker
-                toolbarValueText={'请选择地区'}
-                onPickerCancel={() => { }}
-                onPickerConfirm={(selectedValues) => {
-                    let areaString = selectedValues.join('-');
-                    this.updateIndexPathWithDetailText(0, this.state.dealIndex, areaString);
-                }}
-                ref={ref => this.designativeValueAreaPicker = ref}
+            <CJPickerAnimate key = {'animatePicker2'} ref={ref => this.animatePicker2 = ref}
+                 component={(
+                     <CQAreaPicker
+                         toolbarValueText={'请选择地区'}
+                         onPickerCancel={() => {  this.animatePicker2.dismiss();}}
+                         onPickerConfirm={(selectedValues) => {
+                             this.animatePicker2.dismiss();
+                             let areaString = selectedValues.join('-');
+                             this.updateIndexPathWithDetailText(0, this.state.dealIndex, areaString);
+                         }}
+                         ref={ref => this.designativeValueAreaPicker = ref}
+                     />
+                 )}
+                 dismissAction={()=>{
+
+                 }}
             />
         )
     }

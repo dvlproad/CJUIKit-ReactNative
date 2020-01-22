@@ -1,5 +1,5 @@
 /**
- * CJCollectionCell.js
+ * CJCollectionCellCell.js
  *
  * @Description: 含图片和文字竖直居中的Cell
  *
@@ -33,7 +33,7 @@ import CJCollectionCell  from '../../CJBaseUIKit/CJBaseUIKit';
 
                     buttonIndex={index}
                     clickButtonHandle={()=>{
-                            LKToast.showMessage('点击图片');
+                            CQToast.showMessage('点击图片');
                         }}
 
                     onLoadComplete={(buttonIndex)=>{
@@ -87,10 +87,10 @@ export default class CJCollectionCell extends Component {
     render() {
         return (
             <CJImageTextButton style={this.props.style}
-                               imageStyle={{width: 42, height: 42}}
-                               imageSource={this.props.moduleModel.imageSource}
-                               title={this.props.moduleModel.title}
-                               onPress={()=> {
+                                   imageStyle={{width: 42, height: 42}}
+                                   imageSource={this.props.moduleModel.imageSource}
+                                   title={this.props.moduleModel.title}
+                                   onPress={()=> {
                                    this.props.clickButtonHandle(this.props.buttonIndex);
                                }}
             />

@@ -1,6 +1,6 @@
 /* 
 //使用示例： 
-import LKNetWorkTool from '/networkTool/LKNetWorkTool'
+import CQNetWorkTool from '/networkTool/CQNetWorkTool'
 
 networkInfo = {type,isConnected,details}
 type:[
@@ -31,7 +31,7 @@ handleMethod(networkInfo){
 //、、、
 constructor(props) {
     super(props);
-    LKNetWorkTool.checkNetworkState((networkInfo)=>{
+    CQNetWorkTool.checkNetworkState((networkInfo)=>{
           if(!networkInfo.isConnected){
               console.log('网络无连接');
           }
@@ -39,11 +39,11 @@ constructor(props) {
   }
 
 componentWillMount() {
-       LKNetWorkTool.addEventListener('监听标识：一般为当前类名',this.handleMethod.bind(this));
+       CQNetWorkTool.addEventListener('监听标识：一般为当前类名',this.handleMethod.bind(this));
    }
 
 componentWillUnmount() {
-      LKNetWorkTool.removeEventListener('监听标识：一般为当前类名');
+      CQNetWorkTool.removeEventListener('监听标识：一般为当前类名');
       }
 */
 

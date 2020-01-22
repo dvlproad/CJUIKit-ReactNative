@@ -1,0 +1,29 @@
+{
+  "name": "cjrn-theme-uikit",
+  "version": "0.6.3",
+  "description": "A Employee UI library for react native.",
+  "main": "cjrn-theme-uikit.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://git.luckincoffee.com/common-frontend/CJUIKit_RN.git"
+  },
+  "keywords": [
+    "luckin",
+    "rn-theme-uikit",
+    "react",
+    "native",
+    "UI",
+    "library",
+    "framework"
+  ],
+  "author": "dvlproad",
+  "license": "MIT",
+  "homepage": "http://git.luckincoffee.com/common-frontend/CJUIKit_RN.git",
+  "readmeFilename": "README.md",
+  "dependencies": {
+    "cjrn-base-uikit": "^0.6.3"
+  }
+}

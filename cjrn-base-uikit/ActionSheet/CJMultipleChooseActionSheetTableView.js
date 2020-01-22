@@ -1,5 +1,5 @@
 /**
- * CJMultipleChooseActionSheetTableView.js
+ * CJMultipleChooseActionSheetTableView.jsw.js
  *
  * @Description: 【多选】ActionSheet中不含①顶部标题与③底部取消部分的内容区域【多选】列表视图
  *

@@ -1,10 +1,10 @@
 //TSButtonHomePage.js
 import React, { Component } from 'react';
-import { LKDemoTableHomeComponent, LKDemoNavigationFactory } from "cjrn-demo-base";
+import { CJTSTableHomeBasePage, CJTSNavigationFactory } from "cjrn-demo-base";
 
-export default class TSButtonHomePage extends LKDemoTableHomeComponent {
+export default class TSButtonHomePage extends CJTSTableHomeBasePage {
     static navigationOptions = ({ navigation }) => {
-        return LKDemoNavigationFactory.backPageNavigationOptions({ navigation }, `按钮`)
+        return CJTSNavigationFactory.backPageNavigationOptions({ navigation }, `按钮`)
     };
 
     constructor(props) {
@@ -20,8 +20,12 @@ export default class TSButtonHomePage extends LKDemoTableHomeComponent {
                             nextPageName: "TSButtonBGPage"
                         },
                         {
-                            title: "TSEditSubmitButtonPage",
+                            title: "修改/提交按钮",
                             nextPageName: "TSEditSubmitButtonPage"
+                        },
+                        {
+                            title: "底部按钮",
+                            nextPageName: "TSBottomButtonsPage"
                         },
                     ]
                 },
@@ -35,6 +39,7 @@ export default class TSButtonHomePage extends LKDemoTableHomeComponent {
  */
 import TSButtonBGPage from "./TSButtonBGPage";
 import TSEditSubmitButtonPage from "./TSEditSubmitButtonPage";
+import TSBottomButtonsPage from "./TSBottomButtonsPage";
 
 export const ButtonChildPages = {
     TSButtonBGPage: {
@@ -46,7 +51,13 @@ export const ButtonChildPages = {
     TSEditSubmitButtonPage: {
         screen: TSEditSubmitButtonPage,
         navigationOptions: () => ({
-            title: `TSEditSubmitButtonPage`,
+            title: `修改/提交按钮`,
+        }),
+    },
+    TSBottomButtonsPage: {
+        screen: TSBottomButtonsPage,
+        navigationOptions: () => ({
+            title: `底部按钮`,
         }),
     },
 }

@@ -2,7 +2,7 @@ import { Dimensions, PixelRatio, Platform, } from 'react-native';
 
 const window = Dimensions.get('window');
 
-export default class LKScreenUnit {
+export default class CQScreenUnit {
     /*窗口尺寸，包含宽高*/
     static getWindowSize() {
         return window;

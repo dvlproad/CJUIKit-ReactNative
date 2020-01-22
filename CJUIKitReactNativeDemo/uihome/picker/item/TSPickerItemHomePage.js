@@ -2,16 +2,16 @@
 import React, { Component } from 'react';
 
 import {
-    LKDemoTableHomeComponent,
+    CJTSTableHomeBasePage,
 } from "cjrn-demo-base";
 
 import {
-    LKNavigationFactory,
-} from "../../../lkcui/lkcui";
+    CQNavigationBarUtil,
+} from "cjrn-theme-uikit";
 
-export default class TSPickerItemHomePage extends LKDemoTableHomeComponent {
+export default class TSPickerItemHomePage extends CJTSTableHomeBasePage {
     static navigationOptions = ({ navigation }) => {
-        return LKNavigationFactory.backPageNavigationOptions({ navigation }, `选择事项(单选：如体重、多选：如支持的运营商)`)
+        return CQNavigationBarUtil.backPageNavigationOptions({ navigation }, `选择事项(单选：如体重、多选：如支持的运营商)`)
     };
 
     constructor(props) {
@@ -47,7 +47,7 @@ export const PickerItemChildPages = {
     TSPickerItemShowPage: {
         screen: TSPickerItemShowPage,
         navigationOptions: () => ({
-            title: `体重选择`,
+            title: `事项选择`,
         }),
     },
 };

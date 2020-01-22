@@ -9,40 +9,46 @@
 import React, {Component} from 'react';
 import {ScrollView, View} from 'react-native';
 import {
-    LKBlueBGButton,
-    LKBlueBGBottomTextButton,
-    LKToast,
-} from '../../commonUIEmployee/commonUIEmployee';
+    CQThemeBGButton,
+    CQThemeBorderButton,
+    CQToastUtil,
+} from 'cjrn-theme-uikit';
 
 export default class TSButtonBGPage extends Component {
     render() {
         return (
-            <ScrollView style={{backgroundColor: "#f2f2f2", paddingHorizontal: 15}}>
-                <View style={{backgroundColor: "#01ADFE", marginTop: 20}}>
-                    <LKBlueBGButton normalTitle={'enable 的蓝色背景按钮'}
-                                    disabled={false}
-                                    onPress={()=>{
-                                        LKToast.showMessage('点击按钮');
-                                    }}
-                    />
-                    <LKBlueBGButton normalTitle={'disabled 的蓝色背景按钮'}
-                                    disabled={true}
-                    />
-                </View>
+            <View style={{flex:1, backgroundColor: "#f2f2f2"}}>
+                <ScrollView style={{backgroundColor: "transparent"}}>
+                    <View style={{backgroundColor: "#FFFFFF", paddingHorizontal: 15, paddingVertical: 15, marginTop: 60, height: 400}}>
+                        <CQThemeBGButton
+                            title={'enable 的蓝色背景按钮'}
+                            disabled={false}
+                            onPress={()=>{
+                                CQToastUtil.showMessage('点击按钮');
+                            }}
+                        />
+                        <CQThemeBGButton
+                            style={{marginTop: 50}}
+                            title={'disabled 的蓝色背景按钮'}
+                            disabled={true}
+                        />
+                        <CQThemeBorderButton
+                            style={{marginTop: 50}}
+                            title={'enable 的蓝色背景按钮'}
+                            disabled={false}
+                            onPress={()=>{
+                                CQToastUtil.showMessage('点击按钮');
+                            }}
+                        />
+                        <CQThemeBorderButton
+                            style={{marginTop: 50}}
+                            title={'disabled 的蓝色背景按钮'}
+                            disabled={true}
+                        />
+                    </View>
+                </ScrollView>
 
-
-
-                <View style={{backgroundColor: "#01ADFE4C", marginTop: 40}}>
-                    <LKBlueBGBottomTextButton normalTitle={'底部 的蓝色背景按钮'}
-                                              disabled={false}
-                                              onPress={()=>{
-                                                  LKToast.showMessage('点击按钮');
-                                              }}
-                    />
-                </View>
-
-
-            </ScrollView>
+            </View>
         );
     }
 }

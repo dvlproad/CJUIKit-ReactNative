@@ -2,13 +2,13 @@
 import React, { Component } from 'react';
 import { ScrollView } from 'react-native';
 import {
-    LKNavigationFactory,
-    LKBottomToolbar,
-} from "../../lkcui/lkcui";
+    CQNavigationBarUtil,
+    CQBottomToolbar,
+} from "cjrn-theme-uikit";
 
 export default class ToolBarHomePage extends Component {
     static navigationOptions = ({ navigation }) => {
-        return LKNavigationFactory.backPageNavigationOptions({ navigation }, `按钮`)
+        return CQNavigationBarUtil.backPageNavigationOptions({ navigation }, `详情`)
     };
 
     constructor(props) {
@@ -24,7 +24,7 @@ export default class ToolBarHomePage extends Component {
 
         return (
             <ScrollView style={{backgroundColor: "#f2f2f2", paddingHorizontal: 15}}>
-                <LKBottomToolbar
+                <CQBottomToolbar
                     style={{
                         height: toolbarHeight,
                     }}

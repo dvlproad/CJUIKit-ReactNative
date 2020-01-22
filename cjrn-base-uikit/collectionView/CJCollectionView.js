@@ -1,5 +1,5 @@
 /**
- * CJCollectionView.js
+ * CJCollectionView.jsw.js
  *
  * @Description: 默认的集合视图（使用 CJCollectionCell,即含图片和文字竖直居中的Cell）
  *
@@ -24,7 +24,7 @@ import { CJCollectionView } from '../../CJBaseUIKit/CJBaseUIKit';
                     minimumLineSpacing={10}
                     dataModels={this.state.moduleModels}
                     clickButtonHandle={(index)=>{
-                        LKToast.showMessage("点击浏览图片" + index);
+                        CQToast.showMessage("点击浏览图片" + index);
                     }}
                     imageLoadedCountChange={(imageLoadedCount, isImageAllLoaded)=>{
                         let message = '';

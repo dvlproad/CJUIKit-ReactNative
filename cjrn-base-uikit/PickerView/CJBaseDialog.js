@@ -131,10 +131,10 @@ export default class CJBaseDialog extends CJBaseComponent {
                             ...this._getContentPosition(),
                             transform: [
                                 {
-                                    translateX: this._path.interpolate(
+                                    translateY: this._path.interpolate(
                                         {
                                             inputRange: [0, 0.01, 1],
-                                            outputRange: [-this.mScreenWidth, 0, 0]
+                                            outputRange: [this.mScreenHeight, 0, 0]
                                         }
                                     )
                                 }

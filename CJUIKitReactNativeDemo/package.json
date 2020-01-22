@@ -9,7 +9,7 @@
     "jetify": "npx jetify"
   },
   "dependencies": {
-    "cjrn-base-uikit": "file:../cjrn-base-uikit",
+    "cjrn-theme-uikit": "file:../react-native-theme-uikit",
     "cjrn-demo-base": "file:../cjrn-demo-base",
     "react": "16.8.3",
     "react-native": "0.59.9",

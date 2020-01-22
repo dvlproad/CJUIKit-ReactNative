@@ -8,7 +8,9 @@ export var CJDatePickShowType = {
     yyyyMMddHHmm: 1,    /** 只显示年月日时分 */
     yyyyMMddHHmmss: 2,  /** 只显示年月日时分秒 */
     yyyyMM: 3,          /** 只显示年月(目前2019.07.06不支持) */
-}
+    HHmm:4,             /** 只显示时分(目前2019.07.06不支持) */
+    HHmmss:5           /** 只显示时分秒(目前2019.07.06不支持) */
+};
 
 export class CJDatePickerUtil {
     /**
@@ -18,17 +20,16 @@ export class CJDatePickerUtil {
      * @returns {string}
      */
     static removeUnit(fullString, unitString){
-        let lastString = fullString.split(unitString)[0];
-
         // lastString = fullString.substr(0, fullString.length - unitString.length);
-        return lastString;
+        return fullString.split(unitString)[0];
     }
      /**
      * 根据picker选中的数组值，得到日期字符串(形如'2000-02-29')
      * @param pickedValue
      * @returns {string}
      */
-     static getFormatDateString=(pickedValue, datePickShowType)=>{
+     static getFormatDateString = (pickedValue, datePickShowType) => {
+
         let year = pickedValue[0];
 
         let month = pickedValue[1];
@@ -56,8 +57,19 @@ export class CJDatePickerUtil {
             second = second < 10 ? ('0' + second) : second;
         }
 
+         if (datePickShowType === CJDatePickShowType.HHmm ||
+             datePickShowType === CJDatePickShowType.HHmmss){
+             hour = pickedValue[0];
+             hour = hour < 10 ? ('0' + hour) : hour;
+             minute = pickedValue[1];
+             minute = minute < 10 ? ('0' + minute) : minute;
+             if (datePickShowType === CJDatePickShowType.HHmmss) {
+                 second = pickedValue[2];
+                 second = second < 10 ? ('0' + second) : second;
+             }
+         }
 
-        let dateString = '';
+        let dateString;
         switch (datePickShowType) {
             case CJDatePickShowType.yyyyMMdd: {
                 dateString = year + '-' + month + '-' + day;
@@ -73,6 +85,14 @@ export class CJDatePickerUtil {
             }
             case CJDatePickShowType.yyyyMM: {
                 dateString = year + '-' + month;
+                break;
+            }
+            case CJDatePickShowType.HHmm: {
+                dateString = hour + ':' + minute;
+                break;
+            }
+            case CJDatePickShowType.HHmmss: {
+                dateString = hour + ':' + minute + ':' + second;
                 break;
             }
             default: {
@@ -94,10 +114,7 @@ export class CJDatePickerUtil {
         if (defaultSelectedDate == null) {
             defaultSelectedDate = new Date();
         }
-
-        let selectedValue = this._getSelectedValue(defaultSelectedDate, datePickShowType);
-
-        return selectedValue;
+        return this._getSelectedValue(defaultSelectedDate, datePickShowType);
     }
 
 
@@ -117,29 +134,29 @@ export class CJDatePickerUtil {
         selectedValue.push(month);
 
 
-        if (datePickShowType == CJDatePickShowType.yyyyMMdd ||
-            datePickShowType == CJDatePickShowType.yyyyMMddHHmm ||
-            datePickShowType == CJDatePickShowType.yyyyMMddHHmmss) {
+        if (datePickShowType === CJDatePickShowType.yyyyMMdd ||
+            datePickShowType === CJDatePickShowType.yyyyMMddHHmm ||
+            datePickShowType === CJDatePickShowType.yyyyMMddHHmmss) {
             let day = date.getDate();
             //day = day < 10 ? ('0' + day) : day;
             selectedValue.push(day);
         }
 
-        if (datePickShowType == CJDatePickShowType.yyyyMMddHHmm ||
-            datePickShowType == CJDatePickShowType.yyyyMMddHHmmss) {
+        if (datePickShowType === CJDatePickShowType.yyyyMMddHHmm ||
+            datePickShowType === CJDatePickShowType.yyyyMMddHHmmss) {
             let hours = date.getHours();
             hours = hours < 10 ? ('0' + hours) : hours;
             selectedValue.push(hours);
         }
 
-        if (datePickShowType == CJDatePickShowType.yyyyMMddHHmm ||
-            datePickShowType == CJDatePickShowType.yyyyMMddHHmmss) {
+        if (datePickShowType === CJDatePickShowType.yyyyMMddHHmm ||
+            datePickShowType === CJDatePickShowType.yyyyMMddHHmmss) {
             let minutes = date.getMinutes();
             minutes = minutes < 10 ? ('0' + minutes) : minutes;
             selectedValue.push(minutes);
         }
 
-        if (datePickShowType == CJDatePickShowType.yyyyMMddHHmmss) {
+        if (datePickShowType === CJDatePickShowType.yyyyMMddHHmmss) {
             let seconds = date.getSeconds();
             seconds = seconds < 10 ? ('0' + seconds) : seconds;
             selectedValue.push(seconds);
@@ -170,7 +187,7 @@ export class CJDatePickerUtil {
             selectedYear = yMdSelectedValues[0];
         }
 
-        let yearSelectedIndex = years.indexOf(selectedYear + yMdUnits[0]) == -1 ? years.length - 1 : years.indexOf(selectedYear + yMdUnits[0]);
+        let yearSelectedIndex = years.indexOf(selectedYear + yMdUnits[0]) === -1 ? years.length - 1 : years.indexOf(selectedYear + yMdUnits[0]);
 
         let yearDict = {
             'years': years,

@@ -1,6 +1,6 @@
-// LKDateUtil.js
+// CQDateUtil.js
 
-export default class LKDateUtil {
+export default class CQDateUtil {
     /**
      * 创建日期
      * @param shortDateString   将形如'2017-06-28'转成date类
@@ -128,9 +128,9 @@ export default class LKDateUtil {
     static compareSecondyyyyMMddDateStringLater(yyyyMMddDateString1, yyyyMMddDateString2) {
         if (yyyyMMddDateString1 && yyyyMMddDateString1.length > 8) {
             if (yyyyMMddDateString2 && yyyyMMddDateString2.length > 8) {
-                let yyyyMMddDate1 = LKDateUtil.yyyyMMddDate(yyyyMMddDateString1);
-                let yyyyMMddDate2 = LKDateUtil.yyyyMMddDate(yyyyMMddDateString2);
-                let isSecondDateLater = LKDateUtil.compareSecondDateLater(yyyyMMddDate1, yyyyMMddDate2);
+                let yyyyMMddDate1 = CQDateUtil.yyyyMMddDate(yyyyMMddDateString1);
+                let yyyyMMddDate2 = CQDateUtil.yyyyMMddDate(yyyyMMddDateString2);
+                let isSecondDateLater = CQDateUtil.compareSecondDateLater(yyyyMMddDate1, yyyyMMddDate2);
                 return isSecondDateLater;
             } else {
                 return false;
@@ -187,11 +187,11 @@ export default class LKDateUtil {
      * @static
      * @param {时间戳*} dateTimeStamp
      * @returns yyyy年MM月dd日 周几
-     * @memberof LKDateUtil
+     * @memberof CQDateUtil
      */
     static getDateStrAndWeek(dateTimeStamp) {
-        let dateStr = LKDateUtil.formatDate(dateTimeStamp, 'yyyy年MM月dd日');
-        let week = LKDateUtil.getWeekWithDate(dateTimeStamp);
+        let dateStr = CQDateUtil.formatDate(dateTimeStamp, 'yyyy年MM月dd日');
+        let week = CQDateUtil.getWeekWithDate(dateTimeStamp);
         return dateStr + ' ' + week;
     }
 

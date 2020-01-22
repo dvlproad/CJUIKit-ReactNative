@@ -1,14 +1,12 @@
 //TSPopupManagerPage.js
 import React, { Component } from 'react';
+import TSTableHomeBasePage from '../base/TSTableHomeBasePage';
 import {
-    LKDemoChooseBasePage,
-} from "cjrn-demo-base";
-import {
-    LKToast,
-} from "../../lkcui/lkcui";
+    CQToastUtil,
+} from "cjrn-theme-uikit";
 import { TSPopupManager } from "./TSPopupManager";
 
-export default class TSPopupManagerPage extends LKDemoChooseBasePage {
+export default class TSPopupManagerPage extends TSTableHomeBasePage {
     constructor(props) {
         super(props);
 
@@ -45,7 +43,7 @@ export default class TSPopupManagerPage extends LKDemoChooseBasePage {
                             clickButtonHandle: (moduleModel) => {
                                 this.popupManager.showSingleActionSheetWithItemsModels(singleChooseItemModels, (itemModel, index) => {
                                     let selectedResultString = "你点击了标题" + itemModel.mainTitle;
-                                    LKToast.showMessage(selectedResultString);
+                                    CQToastUtil.showMessage(selectedResultString);
                                 });
                             },
                         },
@@ -59,7 +57,7 @@ export default class TSPopupManagerPage extends LKDemoChooseBasePage {
                                         selectedItemTitles.push(selectedItemModel.mainTitle);
                                     }
                                     let selectedResultString = selectedItemTitles.join('/');
-                                    LKToast.showMessage(selectedResultString);
+                                    CQToastUtil.showMessage(selectedResultString);
                                 });
                             },
                         },

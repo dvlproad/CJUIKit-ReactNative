@@ -1,6 +1,16 @@
-// CJLoadingImage.js
+/**
+ * CJLoadingImage.js
+ *
+ * @Description: 图片控件(只含加载动画,但不含其他可操作事件)
+ *
+ * @author      ciyouzen
+ * @email       dvlproad@163.com
+ * @date        2019-06-07 19:54:15
+ *
+ * Copyright (c) dvlproad. All rights reserved.
+ */
 /*
-CJLoadingImage:图片控件(只含加载动画,但不含其他可操作事件) 的使用示例
+使用示例
 
 import CJLoadingImage from '../../commonUI/image/CJLoadingImage';
 
@@ -11,7 +21,7 @@ import CJLoadingImage from '../../commonUI/image/CJLoadingImage';
  */
 
 import React, { Component } from 'react';
-import {StyleSheet, View, Image, Text, ActivityIndicator, ViewPropTypes} from "react-native";
+import { View, Image, Text, ActivityIndicator, ViewPropTypes } from "react-native";
 import PropTypes from "prop-types";
 
 const viewPropTypes = ViewPropTypes || View.propTypes;
@@ -30,15 +40,6 @@ var CJImageLoadStatus = {
     ErrorImageFailure: 6,     /**< 加载"加载失败时候的照片"也失败 */
 };
 
-/// 图片来源
-export var CJImageUploadType = {
-    NotNeed: 0,     /**< 不需要上传 */
-    Waiting: 1,     /**< 等待上传 */
-    Uploading: 2,   /**< 正在上传 */
-    Success: 3,     /**< 上传成功 */
-    Failure: 4,     /**< 上传失败 */
-};
-
 
 
 export default class CJLoadingImage extends Component {
@@ -48,18 +49,15 @@ export default class CJLoadingImage extends Component {
         errorSource: PropTypes.oneOfType([PropTypes.object, PropTypes.number]),      //图片加载失败的显示图
         imageBorderStyle: stylePropTypes,   //图片边框样式
 
-        buttonIndex: PropTypes.number.isRequired,
-
         onLoadComplete: PropTypes.func, //图片加载结束的回调
 
-        uploadType: PropTypes.number,       //图片上传类型
-        uploadProgress: PropTypes.number,   //图片上传进度(值范围为0到100)
         // 是否需要加载动画(默认需要)
         // 有以下体验不友好的情况需要特殊处理：即从本地上传的图片会得到网络图片地址，
         // 如果此时把网络图片的地址更新上去，会导致再显示菊花loading，不大友好，需要设置本属性为false
         needLoadingAnimation: PropTypes.bool,
 
-        changeShowDebugMessage: PropTypes.bool,    //将提示信息改为显示调试的信息，此选项默认false
+        stateTextHeight: PropTypes.number,  // 图片上的状态文本视图所占的高度
+        stateTextString: PropTypes.string,   // 图片上的状态文本
     };
 
     static defaultProps = {
@@ -72,15 +70,12 @@ export default class CJLoadingImage extends Component {
             borderColor: "#E5E5E5",
         },
 
-        buttonIndex: 0,
+        onLoadComplete: ()=>{},
 
-        onLoadComplete: (buttonIndex)=>{},
-
-        uploadType: CJImageUploadType.NotNeed,
-        uploadProgress: 0,
         needLoadingAnimation: false,
 
-        changeShowDebugMessage: false,
+        stateTextHeight: 0,
+        stateTextString: null,
     };
 
     constructor(props) {
@@ -142,7 +137,7 @@ export default class CJLoadingImage extends Component {
         if (this.state.isShowingErrorSource) { //防止重复setState，死循环
 
         } else {
-            this.props.onLoadComplete(this.props.buttonIndex);
+            this.props.onLoadComplete();
         }
 
         this.setState({
@@ -189,110 +184,6 @@ export default class CJLoadingImage extends Component {
     }
 
 
-    /**
-     * 获取正式的信息
-     */
-    getFormalImageStateText=()=> {
-        let formalImageStateText = '';
-        switch (this.props.uploadType) {
-            case CJImageUploadType.Waiting: {
-                formalImageStateText = '准备上传';
-                break;
-            }
-            case CJImageUploadType.Uploading: {
-                formalImageStateText = this.changeTwoDecimal_f(this.props.uploadProgress) + '%';
-                break;
-            }
-            case CJImageUploadType.Success: {
-                formalImageStateText = '上传成功';
-                break;
-            }
-            case CJImageUploadType.Failure: {
-                formalImageStateText = '重新上传';
-                break;
-            }
-            default: {
-                formalImageStateText = '';
-                break;
-            }
-        }
-        return formalImageStateText;
-    }
-
-    /**
-     * 始终保留两位小数的方法
-     * @param x 要处理的数字
-     * @returns {string|*}
-     */
-    changeTwoDecimal_f(x) {
-        try {
-            let f_x1 = parseFloat(x);
-            if (isNaN(f_x1)) {
-                return x;
-            }
-            let f_x = Math.round(x * 100) / 100;
-            let s_x = f_x.toString();
-            let pos_decimal = s_x.indexOf('.');
-            if (pos_decimal < 0) {
-                pos_decimal = s_x.length;
-                s_x += '.';
-            }
-            while (s_x.length <= pos_decimal + 2) {
-                s_x += '0';
-            }
-            return s_x;
-        } catch (e) {
-            return '0.00';
-        }
-    }
-
-    /**
-     * 获取调试的信息
-     */
-    getDebugImageStateText=()=> {
-        let debugImageStateText = 'ButtonIndex:' + this.props.buttonIndex;
-        let isNetworkImage = this.state.isNetworkImage;
-        debugImageStateText += '\nisNetworkImage:' + (isNetworkImage?'true':'false');
-        debugImageStateText += this.getDebugImageUploadStateText();
-
-        // let imageSource = this.props.imageSource;
-        // if (imageSource.hasOwnProperty('uri') && typeof imageSource['uri'] === 'string') {
-        //     debugImageStateText += '\n' + imageSource['uri'];
-        // }
-        return debugImageStateText;
-    }
-
-    getDebugImageUploadStateText=()=> {
-        let debugImageUploadStateText = '';
-        switch (this.props.uploadType) {
-            case CJImageUploadType.NotNeed: {
-                debugImageUploadStateText += '\n' + '不需要上传';
-                break;
-            }
-            case CJImageUploadType.Waiting: {
-                debugImageUploadStateText += '\n' + '等待上传';
-                break;
-            }
-            case CJImageUploadType.Uploading: {
-                debugImageUploadStateText += '\n' + 'uploadProgress:' + this.props.uploadProgress;
-                break;
-            }
-            case CJImageUploadType.Success: {
-                debugImageUploadStateText += '\n' + '上传成功';
-                break;
-            }
-            case CJImageUploadType.Failure: {
-                debugImageUploadStateText += '\n' + '上传失败';
-                break;
-            }
-            default: {
-                debugImageUploadStateText += '\n' + '什么情况';
-                break;
-            }
-        }
-        return debugImageUploadStateText;
-    }
-
     render() {
         let selfStyle = ObjectCJHelper.dealPropStyle(this.props.style);
 
@@ -306,29 +197,14 @@ export default class CJLoadingImage extends Component {
         }
 
 
-        let imageStateText = this.getFormalImageStateText();
-        if (this.props.changeShowDebugMessage) {
-            imageStateText = this.getDebugImageStateText()
-        }
+        let stateTextString = this.props.stateTextString;
 
-        let stateBGColor = imageStateText.length > 0 ? 'rgba(0,0,0,0.6)' : null;
-        if (this.props.changeShowDebugMessage) {
-            stateBGColor = 'rgba(0,0,255,0.3)';
-        }
+        let stateBGColor = stateTextString && stateTextString.length > 0 ? 'rgba(0,0,0,0.6)' : null;
 
-        let stateTextStyle ={flex: 1, textAlign: 'center', fontSize: 17, color: '#FFFFFF'};
         let stateTextWidth = imageWidth;
-        let stateTextHeight = imageHeight;
-        if (this.props.uploadType == CJImageUploadType.Success) {
-            stateTextHeight = 0;
-        }
-        //let stateTextHeight = imageHeight * (1-this.props.uploadProgress/100);
-
-        if (this.props.changeShowDebugMessage) {
-            stateTextStyle = [stateTextStyle, {color: '#99ff22'}]
-        } else {
-            stateTextStyle = [stateTextStyle, {lineHeight: stateTextHeight}];
-        }
+        let stateTextHeight = this.props.stateTextHeight;
+        let stateTextStyle ={flex: 1, textAlign: 'center', fontSize: 17, color: '#FFFFFF'};
+        stateTextStyle = [stateTextStyle, {lineHeight: stateTextHeight}];
 
         let stateComponentStyle = [
             {
@@ -345,7 +221,7 @@ export default class CJLoadingImage extends Component {
                 <Text
                     style={stateTextStyle}
                 >
-                    {imageStateText}
+                    {stateTextString}
                 </Text>
             </View>
         );
@@ -403,11 +279,3 @@ export default class CJLoadingImage extends Component {
         );
     }
 }
-
-var styles = StyleSheet.create({
-    imageBorder: {
-        borderRadius: 4,
-        borderWidth: 1,
-        borderColor: "#E5E5E5",
-    }
-})

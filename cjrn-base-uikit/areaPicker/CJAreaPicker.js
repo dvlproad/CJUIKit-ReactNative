@@ -1,5 +1,5 @@
 /**
- * CJAreaPicker.js
+ * CJAreaPickercker.js
  *
  * @Description: 日期选择器
  *
@@ -12,7 +12,6 @@
 import React, { Component } from 'react';
 import {View, ViewPropTypes} from "react-native";
 import PropTypes from "prop-types";
-const viewPropTypes = ViewPropTypes || View.propTypes;
 import CJAreaPickerView, { CJAreaPickShowType } from "./CJAreaPickerView";
 import AreaJson from "./area";
 
@@ -20,8 +19,8 @@ import AreaJson from "./area";
 export var CJAreaPickerCreateTimeType = {
     Free: 0,                //当空闲的时候偷偷执行
     BeCall: 1,              //当需要调用日期选择的时候才去创建(防止进入页面时候卡顿)
-    SuperViewAppear: 2,     //当其所视图显示的时候就创建(会造成初次卡顿)
-}
+    SuperViewAppear: 2     //当其所视图显示的时候就创建(会造成初次卡顿)
+};
 
 export default class CJAreaPicker extends Component {
     static propTypes = {
@@ -33,7 +32,6 @@ export default class CJAreaPicker extends Component {
         onPickerCancel: PropTypes.func,     //地区选择'取消'
         // onPickerSelect: PropTypes.func,     //地区选择'变了下'
         onCoverPress: PropTypes.func,       //点击空白区域
-
         showToolbarValueText: PropTypes.bool,        // 是否显示文本
         toolbarValueText: PropTypes.string,             // 顶部toolbar上的文案
         toolbarValueFixed: PropTypes.bool,           // 是否固定文本(默认false，即会根据选择的值显示)
@@ -42,10 +40,7 @@ export default class CJAreaPicker extends Component {
     static defaultProps = {
         areaPickShowType: CJAreaPickShowType.ProvinceCityArea,
         areaPickerCreateTimeType: CJAreaPickShowType.Free,
-
         toolbarHeight: 40,
-        // selectedValue: [],
-        //
         onPickerConfirm: (selectedValue) => { },
         onPickerCancel: () => { },
         // onPickerSelect: (selectedValue)=>{},
@@ -58,12 +53,9 @@ export default class CJAreaPicker extends Component {
 
     constructor(props) {
         super(props);
-
-        let needCreateAtFirst = this.props.areaPickerCreateTimeType == CJAreaPickerCreateTimeType.SuperViewAppear;
-
+        let createNow = this.props.areaPickerCreateTimeType === CJAreaPickerCreateTimeType.SuperViewAppear;
         this.state = {
-            hasCreate: needCreateAtFirst,
-
+            createNow: createNow,
             dateString: '',
         }
     }
@@ -84,24 +76,21 @@ export default class CJAreaPicker extends Component {
         this.tryShowAreaPicker();
     }
 
-
     /**
      * 尝试弹出地区选择控制器
      */
     tryShowAreaPicker() {
-        if (this.state.hasCreate) {
-            // this.showAreaPicker();
-
+        if (this.state.createNow) {
             // 如果不设置setState无法，重新render选择器
             this.setState({
-                hasCreate: true,
+                createNow: true,
             }, () => {
                 this.showAreaPicker();
             })
 
         } else {
             this.setState({
-                hasCreate: true,
+                createNow: true,
             }, () => {
                 this.showAreaPicker();
             })
@@ -117,33 +106,20 @@ export default class CJAreaPicker extends Component {
             if (selectedValues && selectedValues.length > 0) {
                 this.areaPicker.updateDefaultSelectedValues(selectedValues);
             }
-
-            this.areaPicker.show();
+            // this.areaPicker.show();
         } else {
-            //LKToast.showMessage('Error：你还未创建日期选择器');
+            //CQToast.showMessage('Error：你还未创建日期选择器');
         }
     }
 
-    /**
-     * 获取当前地区选择控制器
-     * @returns {null|CJAreaPickerView}
-     */
-    getAreaPicker() {
-        return this.createAreaPicker();
-    }
-
-    /**
-     * 创建弹出地区选择控制器
-     * @returns {CJAreaPickerView}
-     */
-    createAreaPicker() {
+    createDatePicker() {
         return (
             <CJAreaPickerView
                 areaJson={AreaJson}
                 promptValueText={this.props.toolbarValueText}
                 shouldFixedValueText={this.props.toolbarValueFixed}
                 showValueText={true}
-                // selectedValue={this.state.selectedValue}
+                selectedValues={this.state.selectedValues}
                 onPickerConfirm={(selectedValue) => {
                     this.props.onPickerConfirm && this.props.onPickerConfirm(selectedValue);
                 }}
@@ -158,11 +134,19 @@ export default class CJAreaPicker extends Component {
         );
     }
 
-
-
     render() {
-        return (
-            this.getAreaPicker()
-        );
+        if (!this.state.createNow && this.props.areaPickerCreateTimeType === CJAreaPickerCreateTimeType.Free) {
+            setTimeout(() => {
+                this.setState({
+                    createNow: true,
+                })
+            }, 500);
+        }
+
+        if (this.state.createNow) {
+            return this.createDatePicker();
+        } else {
+            return null;
+        }
     }
 }

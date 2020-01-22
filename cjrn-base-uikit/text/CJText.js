@@ -3,7 +3,7 @@ import {StyleSheet, Text} from "react-native";
 import PropTypes from "prop-types";
 
 
-export default class CJCenterText extends Component {
+export class CJCenterText extends Component {
     static propTypes = {
         text: PropTypes.string,
     };

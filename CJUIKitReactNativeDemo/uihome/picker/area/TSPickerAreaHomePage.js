@@ -1,10 +1,10 @@
 //TSPickerAreaHomePage.js
 import React, { Component } from 'react';
-import { LKDemoTableHomeComponent, LKDemoNavigationFactory  } from "cjrn-demo-base";
+import { CJTSTableHomeBasePage, CJTSNavigationFactory  } from "cjrn-demo-base";
 
-export default class TSPickerAreaHomePage extends LKDemoTableHomeComponent {
+export default class TSPickerAreaHomePage extends CJTSTableHomeBasePage {
     static navigationOptions = ({ navigation }) => {
-        return LKDemoNavigationFactory.backPageNavigationOptions({ navigation }, `按钮`)
+        return CJTSNavigationFactory.backPageNavigationOptions({ navigation }, `按钮`)
     };
 
     constructor(props) {
@@ -16,7 +16,7 @@ export default class TSPickerAreaHomePage extends LKDemoTableHomeComponent {
                     key: "Area",
                     data: [
                         {title: "弹出时候的各种情况 TSAreaPickerShowPage", nextPageName: "TSAreaPickerShowPage"},
-                        // {title: "自定义datePicker位置 TSDatePickerFramePage", nextPageName: "TSDatePickerFramePage"},
+                        // {title: "自定义areaPicker位置 TSAreaPickerFramePage", nextPageName: "TSAreaPickerFramePage"},
                     ]
                 }
             ]

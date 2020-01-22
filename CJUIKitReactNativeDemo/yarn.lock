@@ -1541,15 +1541,21 @@ ci-info@^2.0.0:
   resolved "https://registry.npmjs.org/ci-info/-/ci-info-2.0.0.tgz#67a9e964be31a51e15e5010d58e6f12834002f46"
   integrity sha512-5tK7EtrZ0N+OLFMthtqOj4fI2Jeb88C4CAZPu25LDVUgXJ0A3Js4PMGqrn0JU1W0Mh1/Z8wZzYPxqUrXeBboCQ==
 
-"cjrn-base-uikit@file:../cjrn-base-uikit":
-  version "0.1.1"
+cjrn-base-uikit@^0.6.0:
+  version "0.6.0"
+  resolved "https://registry.yarnpkg.com/cjrn-base-uikit/-/cjrn-base-uikit-0.6.0.tgz#b86d88a58f6cb6c96a355d8855cf5a5f8e177275"
+  integrity sha512-zYp+VttFdhrxx042ONJGB6JR8ruq7r1uX9WbAZtn+Iw7g7smfGF4jHofO/eD3t7sS2HpAVxhkZ0lfd+1mQVFFQ==
   dependencies:
     prop-types "^15.7.2"
     react-native-root-toast "^3.2.0"
-    react-native-svg "^9.13.3"
 
 "cjrn-demo-base@file:../cjrn-demo-base":
-  version "0.1.0"
+  version "0.2.1"
+
+"cjrn-theme-uikit@file:../react-native-theme-uikit":
+  version "0.6.0"
+  dependencies:
+    cjrn-base-uikit "^0.6.0"
 
 class-utils@^0.3.5:
   version "0.3.6"

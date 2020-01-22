@@ -1,5 +1,5 @@
 /**
- * CJMultipleChooseActionSheet.js
+ * CJMultipleChooseActionSheetheet.js
  *
  * @Description: 【多选】的ActionSheet
  *
@@ -13,6 +13,7 @@
 import React, { Component } from 'react';
 import { Modal, Dimensions, Platform } from 'react-native';
 import PropTypes from 'prop-types';
+import { CJTheme } from "../Theme/CJTheme";
 import CJMultipleChooseActionSheetComponent  from "./CJMultipleChooseActionSheetComponent";
 import CJMultipleChooseActionSheetTableView from './CJMultipleChooseActionSheetTableView';
 
@@ -21,7 +22,7 @@ let screenBottomHeight = Platform.OS === 'ios' ? screenHeight >= 812 ? 34 : 0 : 
 let actionSheetTop = 120;
 let actionSheetMaxHeight = screenHeight - actionSheetTop;   //整个完整的actionSheet的最大允许高度
 
-export class CJMultipleChooseActionSheet extends Component {
+export default class CJMultipleChooseActionSheet extends Component {
     static propTypes = {
         showHeader: PropTypes.bool,
         headerTitle: PropTypes.string,      //头部
@@ -76,103 +77,30 @@ export class CJMultipleChooseActionSheet extends Component {
         this.state.selectedItemModels =  selectedItemModels;
     }
 
-    /**
-     * 显示多个选择项的Sheet
-     */
-    show() {
-        this.setState({
-            visible: true,
-        })
-    }
-
-    /**
-     * 隐藏选择Sheet
-     */
-    hide() {
-        this.setState({
-            visible: false,
-        })
-    }
-
-    dealAction = (action) => {
-        action && setTimeout(action, 200);
-    }
 
     render() {
         let listMaxHeight = actionSheetMaxHeight-100;
 
         let visible = this.state && this.state.visible;
         return (
-            <CJMultipleChooseActionSheetFactory visible={visible}
-                                                animationType={'none'}
-                                                showHeader={this.props.showHeader}
-                                                headerTitle={this.props.headerTitle}
-                                                onCoverPress={() => {
-                                                    this.hide();
-                                                    this.dealAction(this.props.onCoverPress);
-                                                }}
-                                                confirmHandle={() => {
-                                                    this.hide();
-                                                    this.dealAction(this.props.confirmHandle(this.state.selectedItemModels));
-                                                }}
+            <CJMultipleChooseActionSheetComponent
+                blankBGColor={CJTheme.style.blankBGColor}
+                actionSheetStyle={CJTheme.style.actionSheetStyle}
+                showHeader={this.props.showHeader}
+                headerTitle={this.props.headerTitle}
+                onCoverPress={this.props.onCoverPress}
+                confirmHandle={() => {
+                    this.props.confirmHandle && this.props.confirmHandle(this.state.selectedItemModels);
+                }}
             >
                 <CJMultipleChooseActionSheetTableView actionCellHeight={50}
-                                                      listMaxHeight={listMaxHeight}
-                                                      itemModels={this.props.itemModels}
-                                                      clickItemCompleteBlock={(selectedItemModels)=>{
-                                                         this.state.selectedItemModels = selectedItemModels;
-                                                      }}
+                                                          listMaxHeight={listMaxHeight}
+                                                          itemModels={this.props.itemModels}
+                                                          clickItemCompleteBlock={(selectedItemModels)=>{
+                                                              this.state.selectedItemModels = selectedItemModels;
+                                                          }}
                 />
-            </CJMultipleChooseActionSheetFactory>
+            </CJMultipleChooseActionSheetComponent>
         )
-    }
-}
-
-
-
-export class CJMultipleChooseActionSheetFactory extends Component {
-    static propTypes = {
-        visible: PropTypes.bool,
-        animationType: PropTypes.string,        // 模态弹出效果
-
-        showHeader: PropTypes.bool,
-        headerTitle: PropTypes.string,          // 头部
-        onCoverPress: PropTypes.func,           // 点击阴影区域
-        confirmHandle: PropTypes.func,          // 确认操作
-
-        children: PropTypes.oneOfType([PropTypes.object, PropTypes.array]),
-    };
-
-    static defaultProps = {
-        visible: false,
-        animationType: 'slide',
-
-        showHeader: false,
-        headerTitle: '',
-        onCoverPress: ()=>{},
-        confirmHandle: ()=>{},
-    };
-
-
-    constructor(props) {
-        super(props);
-    }
-
-    render() {
-        return (
-            <Modal visible={this.props.visible}
-                   animationType={this.props.animationType}
-                   transparent={true}
-                   onRequestClose={() => { }}
-            >
-                <CJMultipleChooseActionSheetComponent
-                    showHeader={this.props.showHeader}
-                    headerTitle={this.props.headerTitle}
-                    onCoverPress={this.props.onCoverPress}
-                    confirmHandle={this.props.confirmHandle}
-                    children={this.props.children}
-                />
-            </Modal>
-        );
     }
 }

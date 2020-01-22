@@ -1,5 +1,5 @@
 /**
- * CJActionSheetComponent.js
+ * CJActionSheetComponent.jst.js
  *
  * @Description: 【单选】ActionSheet中含①顶部标题、②内容区域列表、③底部取消部分的整体视图
  *
@@ -11,7 +11,7 @@
  */
 import React, { Component } from 'react';
 import PropTypes from "prop-types";
-import {Dimensions, Platform, StyleSheet, Text, TouchableOpacity, View, ViewPropTypes} from "react-native";
+import {Dimensions, Platform, Text, TouchableOpacity, View, ViewPropTypes} from "react-native";
 import {CJActionSheetTableCell} from './CJActionSheetTableView';
 
 const viewPropTypes = ViewPropTypes || View.propTypes;
@@ -34,8 +34,8 @@ export default class CJActionSheetComponent extends Component {
     static defaultProps = {
         blankBGColor: 'rgba(40,40,40,0.4)',
         actionSheetStyle: {
-            // borderTopLeftRadius: 0,
-            // borderTopRightRadius: 0,
+            // borderTopLeftRadius: 10,
+            // borderTopRightRadius: 10,
         },
 
         showHeader: false,
@@ -58,7 +58,6 @@ export default class CJActionSheetComponent extends Component {
                     />
                     <Text style={{backgroundColor: '#fff', height: screenBottomHeight}}
                     />
-
                 </View>
             </TouchableOpacity>
         )
@@ -83,7 +82,13 @@ class CJActionSheetHeader extends Component {
                 borderBottomWidth: 1,
                 borderBottomColor: '#eee',
             }}>
-                <Text style={styles.titleText}>
+                <Text style={{
+                    height: 44,
+                    fontSize: 14,
+                    textAlign: 'center',
+                    lineHeight:44,
+                    color: '#aaa'
+                }}>
                     {this.props.actionTitle}
                 </Text>
             </View>
@@ -91,22 +96,3 @@ class CJActionSheetHeader extends Component {
     }
 }
 
-
-
-const styles = StyleSheet.create({
-    titleText: {
-        height: 44,
-        fontSize: 14,
-        textAlign: 'center',
-        lineHeight:44,
-        color: '#aaa'
-    },
-    actionText: {
-        height: 44,
-        fontSize: 17,
-        textAlign: 'center',
-        lineHeight:44,
-        color: '#333333'
-    }
-
-});

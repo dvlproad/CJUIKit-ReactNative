@@ -1,10 +1,10 @@
 //TSEditSubmitButtonPage.js
 import React, {Component} from 'react';
-import {Alert, Text, View, ScrollView, FlatList} from 'react-native';
+import {Text, View, ScrollView, FlatList} from 'react-native';
 import {
-    LKEditSubmitButton,
-    LKToast,
-} from '../../commonUIEmployee/commonUIEmployee';
+    CQThemeNormalSelectedButton,
+    CQToastUtil,
+} from 'cjrn-theme-uikit';
 
 export default class TSEditSubmitButtonPage extends Component {
     renderSeparator() {
@@ -39,13 +39,13 @@ export default class TSEditSubmitButtonPage extends Component {
 class Separator extends Component {
     render() {
         return (
-            <Text style={{justifyContent: "center"}}>--------</Text>
+            <Text style={{justifyContent: "center"}}>  </Text>
         );
     }
 }
 
 
-class TestSubmitButton extends LKEditSubmitButton {
+class TestSubmitButton extends CQThemeNormalSelectedButton {
     // constructor(props) {
     //     super(props);
     //     this.state = {
@@ -57,15 +57,16 @@ class TestSubmitButton extends LKEditSubmitButton {
 
 
         return (
-            <LKEditSubmitButton style={{height: 46, borderRadius: 3}}
-                                selected={this.props.selected}
-                                disabled={this.props.disabled}
-                                onPress={() => {
-                                    Alert.alert("你点击了提交按钮！");
-                                }}
-                                onSelectedPress={() => {
-                                    Alert.alert("你点击了编辑按钮！");
-                                }}
+            <CQThemeNormalSelectedButton
+                style={{height: 46}}
+                selected={this.props.selected}
+                disabled={this.props.disabled}
+                onPress={() => {
+                    CQToastUtil.showMessage("你点击了提交按钮！");
+                }}
+                onSelectedPress={() => {
+                    CQToastUtil.showMessage("你点击了编辑按钮！");
+                }}
             />
         );
     }
