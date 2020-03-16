@@ -12,6 +12,9 @@
 
 'use strict';
 
+// theme
+import {CJTSTheme} from "./Theme/CJTSTheme";
+
 // default
 import { CJTSDefaultImages } from "./Default/CJTSDefault";
 
@@ -31,6 +34,9 @@ import CJTSNavigationFactory from "./Navigation/CJTSNavigationFactory";
 import CJTSRoute from "./Navigation/CJTSRoute";
 
 var CJTSBase = {
+    // theme
+    CJTSTheme,
+
     // default
     CJTSDefaultImages,
 

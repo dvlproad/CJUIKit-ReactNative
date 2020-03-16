@@ -10,12 +10,12 @@
  * Copyright (c) dvlproad. All rights reserved.
  */
 import React, {Component} from 'react';
-import { View, Alert, Dimensions } from 'react-native';
-// import {
-//     CJSectionTableView
-// } from 'cjrn-base-uikit';
+import {View, Alert, Dimensions, Platform} from 'react-native';
 import CJSectionTableView from './CJSectionTableView';
 import CJTSRoute from "../Navigation/CJTSRoute";
+
+let screenHeight = Dimensions.get('window').height;
+let screenBottomHeight = Platform.OS === 'ios' ? screenHeight >= 812 ? 34 : 0 : 0;
 
 export default class CJTSTableChooseBasePage extends Component {
     constructor(props) {
@@ -74,6 +74,7 @@ export default class CJTSTableChooseBasePage extends Component {
         return (
             <View style={{ flex: 1 }}>
                 <CJSectionTableView
+                    style={{marginBottom: screenBottomHeight}}
                     sectionDataModels={this.state.sectionDataModels}
                     clickModuleModel={this._execModuleModel}
                 />

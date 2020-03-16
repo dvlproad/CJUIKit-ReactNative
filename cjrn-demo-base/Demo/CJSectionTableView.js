@@ -3,6 +3,7 @@ import React, {Component} from 'react';
 import { Text, View, SectionList } from 'react-native';
 import PropTypes from "prop-types";
 import CJTableViewCell from "./CJTableViewCell";
+import {CJTSTheme} from "../Theme/CJTSTheme";
 
 export default class CJSectionTableView extends Component {
     static propTypes = {
@@ -42,7 +43,13 @@ export default class CJSectionTableView extends Component {
     _sectionComp = (info) => {
         let txt = info.section.key;
         return <Text
-            style={{ height: 50, lineHeight: 50, textAlign: 'center', textAlignVertical: 'center', backgroundColor: '#9CEBBC', color: 'white', fontSize: 30 }}>{txt}</Text>
+            style={{
+                height: 50, lineHeight: 50,
+                textAlign: 'center', textAlignVertical: 'center',
+                backgroundColor: CJTSTheme.style.themeColor,
+                color: 'white',
+                fontSize: 30
+            }}>{txt}</Text>
     }
 
     render() {
@@ -64,6 +71,7 @@ export default class CJSectionTableView extends Component {
         return (
             <SectionList
                 keyExtractor={(item, index) => index.toString()}
+                style={this.props.style}
                 renderSectionHeader={this._sectionComp}
                 renderItem={this._renderItem}
                 sections={this.props.sectionDataModels}
@@ -86,7 +94,7 @@ class ListHeaderFooter extends Component {
 
     render() {
         return (
-            <View style={{ backgroundColor: '#25B960', alignItems: 'center', height: 30 }}>
+            <View style={{ backgroundColor: CJTSTheme.style.themeColor, alignItems: 'center', height: 30 }}>
                 <Text style={{ fontSize: 18, color: '#ffffff' }}>
                     {this.props.title}
                 </Text>

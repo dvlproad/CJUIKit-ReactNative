@@ -10,14 +10,13 @@
  * Copyright (c) dvlproad. All rights reserved.
  */
 import React, {Component} from 'react';
-import { Alert, Dimensions } from 'react-native';
+import {Alert, Dimensions, Platform} from 'react-native';
 import PropTypes from "prop-types";
-// import {
-//     CJCollectionView
-// } from 'cjrn-base-uikit';
 import CJCollectionView from './CJCollectionView';
 import CJTSRoute from "../Navigation/CJTSRoute";
 
+let screenHeight = Dimensions.get('window').height;
+let screenBottomHeight = Platform.OS === 'ios' ? screenHeight >= 812 ? 34 : 0 : 0;
 
 export default class CJTSCollectionHomeBasePage extends Component {
     constructor(props) {
@@ -49,6 +48,7 @@ export default class CJTSCollectionHomeBasePage extends Component {
         return (
             <CJCollectionView
                 // style={{paddingHorizontal: 40}}   //谨记：这边设置无效
+                style={{marginBottom: screenBottomHeight}}
                 listWidth={listWidth}
                 sectionInset={{top:15, left:15, bottom:15, right:15}}
                 cellWidthFromPerRowMaxShowCount={2} // 水平方向上的列数 & 通过每行可显示的最多个数来设置每个cell的宽度
