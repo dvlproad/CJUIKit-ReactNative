@@ -1541,10 +1541,10 @@ ci-info@^2.0.0:
   resolved "https://registry.npmjs.org/ci-info/-/ci-info-2.0.0.tgz#67a9e964be31a51e15e5010d58e6f12834002f46"
   integrity sha512-5tK7EtrZ0N+OLFMthtqOj4fI2Jeb88C4CAZPu25LDVUgXJ0A3Js4PMGqrn0JU1W0Mh1/Z8wZzYPxqUrXeBboCQ==
 
-cjrn-base-uikit@^0.6.0:
-  version "0.6.0"
-  resolved "https://registry.yarnpkg.com/cjrn-base-uikit/-/cjrn-base-uikit-0.6.0.tgz#b86d88a58f6cb6c96a355d8855cf5a5f8e177275"
-  integrity sha512-zYp+VttFdhrxx042ONJGB6JR8ruq7r1uX9WbAZtn+Iw7g7smfGF4jHofO/eD3t7sS2HpAVxhkZ0lfd+1mQVFFQ==
+cjrn-base-uikit@^0.6.3:
+  version "0.6.3"
+  resolved "https://registry.yarnpkg.com/cjrn-base-uikit/-/cjrn-base-uikit-0.6.3.tgz#5fe5e9d1fb4344912a3c26cc7bc31f8665290526"
+  integrity sha512-S7Zavwf/tfahrsA8hTJZSX9FVuNYOCfFhVOsBRQQ4VA0qX4vi66t2GBQk+euKxxTvNDEz2Lf9DsgPnWZ4SfmTw==
   dependencies:
     prop-types "^15.7.2"
     react-native-root-toast "^3.2.0"
@@ -1552,10 +1552,10 @@ cjrn-base-uikit@^0.6.0:
 "cjrn-demo-base@file:../cjrn-demo-base":
   version "0.2.1"
 
-"cjrn-theme-uikit@file:../react-native-theme-uikit":
-  version "0.6.0"
+"cjrn-theme-uikit@file:../cjrn-theme-uikit":
+  version "0.6.3"
   dependencies:
-    cjrn-base-uikit "^0.6.0"
+    cjrn-base-uikit "^0.6.3"
 
 class-utils@^0.3.5:
   version "0.3.6"
@@ -6445,9 +6445,9 @@ xtend@~4.0.1:
   integrity sha512-LKYU1iAXJXUgAXn9URjiu+MWhyUXHsvfp7mcuYm9dSUKK0/CjtrUwFAxD82/mCWbtLsGjFIad0wIsod4zrTAEQ==
 
 y18n@^3.2.1:
-  version "3.2.1"
-  resolved "https://registry.npmjs.org/y18n/-/y18n-3.2.1.tgz#6d15fba884c08679c0d77e88e7759e811e07fa41"
-  integrity sha1-bRX7qITAhnnA136I53WegR4H+kE=
+  version "3.2.2"
+  resolved "https://registry.yarnpkg.com/y18n/-/y18n-3.2.2.tgz#85c901bd6470ce71fc4bb723ad209b70f7f28696"
+  integrity sha512-uGZHXkHnhF0XeeAPgnKfPv1bgKAYyVvmNL1xlKsPYZPaIHxGti2hHqvOCQv71XMsLxu1QjergkqogUnms5D3YQ==
 
 y18n@^4.0.0:
   version "4.0.0"
