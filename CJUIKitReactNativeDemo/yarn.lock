@@ -1541,10 +1541,10 @@ ci-info@^2.0.0:
   resolved "https://registry.npmjs.org/ci-info/-/ci-info-2.0.0.tgz#67a9e964be31a51e15e5010d58e6f12834002f46"
   integrity sha512-5tK7EtrZ0N+OLFMthtqOj4fI2Jeb88C4CAZPu25LDVUgXJ0A3Js4PMGqrn0JU1W0Mh1/Z8wZzYPxqUrXeBboCQ==
 
-cjrn-base-uikit@^0.6.0:
-  version "0.6.0"
-  resolved "https://registry.yarnpkg.com/cjrn-base-uikit/-/cjrn-base-uikit-0.6.0.tgz#b86d88a58f6cb6c96a355d8855cf5a5f8e177275"
-  integrity sha512-zYp+VttFdhrxx042ONJGB6JR8ruq7r1uX9WbAZtn+Iw7g7smfGF4jHofO/eD3t7sS2HpAVxhkZ0lfd+1mQVFFQ==
+cjrn-base-uikit@^0.6.3:
+  version "0.6.3"
+  resolved "https://registry.yarnpkg.com/cjrn-base-uikit/-/cjrn-base-uikit-0.6.3.tgz#5fe5e9d1fb4344912a3c26cc7bc31f8665290526"
+  integrity sha512-S7Zavwf/tfahrsA8hTJZSX9FVuNYOCfFhVOsBRQQ4VA0qX4vi66t2GBQk+euKxxTvNDEz2Lf9DsgPnWZ4SfmTw==
   dependencies:
     prop-types "^15.7.2"
     react-native-root-toast "^3.2.0"
@@ -1552,10 +1552,10 @@ cjrn-base-uikit@^0.6.0:
 "cjrn-demo-base@file:../cjrn-demo-base":
   version "0.2.1"
 
-"cjrn-theme-uikit@file:../react-native-theme-uikit":
-  version "0.6.0"
+"cjrn-theme-uikit@file:../cjrn-theme-uikit":
+  version "0.6.3"
   dependencies:
-    cjrn-base-uikit "^0.6.0"
+    cjrn-base-uikit "^0.6.3"
 
 class-utils@^0.3.5:
   version "0.3.6"
@@ -2718,9 +2718,9 @@ hoist-non-react-statics@^3.0.1, hoist-non-react-statics@^3.3.0:
     react-is "^16.7.0"
 
 hosted-git-info@^2.1.4:
-  version "2.8.5"
-  resolved "https://registry.npmjs.org/hosted-git-info/-/hosted-git-info-2.8.5.tgz#759cfcf2c4d156ade59b0b2dfabddc42a6b9c70c"
-  integrity sha512-kssjab8CvdXfcXMXVcvsXum4Hwdq9XGtRD3TteMEvEbq0LXyiNQr6AprqKqfeaDXze7SxWvRxdpwE6ku7ikLkg==
+  version "2.8.9"
+  resolved "https://registry.yarnpkg.com/hosted-git-info/-/hosted-git-info-2.8.9.tgz#dffc0bf9a21c02209090f2aa69429e1414daf3f9"
+  integrity sha512-mxIDAb9Lsm6DoOJ7xH+5+X4y1LU/4Hi50L9C5sIswK3JzULS4bwk1FvjdBgvYR4bzT4tuUQiC15FE2f5HbLvYw==
 
 html-encoding-sniffer@^1.0.2:
   version "1.0.2"
